@@ -14,6 +14,10 @@ class ViewController: UITabBarController {
         
         super.viewDidLoad()
         
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.grayColor()], forState:.Normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.redColor()], forState:.Selected)
+        
         let calendardarNavController: UINavigationController = CalendarNavController()
         let upcomingNavController: UINavigationController = UpcomingNavController()
         //let upcoming: UIViewController = UpcomingController()
@@ -22,10 +26,11 @@ class ViewController: UITabBarController {
         
         calendardarNavController.tabBarItem = UITabBarItem()
         calendardarNavController.tabBarItem.title = "Cal"
+       
         upcomingNavController.tabBarItem = UITabBarItem()
         upcomingNavController.tabBarItem.title = "Upcoming"
-        
 
+        
         
         // Do any additional setup after loading the view, typically from a nib.
 
