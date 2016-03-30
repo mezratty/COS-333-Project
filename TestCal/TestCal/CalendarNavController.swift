@@ -1,5 +1,5 @@
 //
-//  UpcomingController.swift
+//  CalendarNavController.swift
 //  TestCal
 //
 //  Created by Alexa Wojak on 3/30/16.
@@ -8,15 +8,17 @@
 
 
 import UIKit
-class UpcomingController: UIViewController {
- 
+class CalendarNavController: UINavigationController {
+    
     override func viewDidLoad() {
         
+        let calendarViewController: PDTSimpleCalendarViewController = CalendarController()
+        self.viewControllers = [calendarViewController]
+        
         super.viewDidLoad()
-        view.backgroundColor = .greenColor()
         
         // Do any additional setup after loading the view, typically from a nib.
-      
+        
     }
     
     override func didReceiveMemoryWarning() {

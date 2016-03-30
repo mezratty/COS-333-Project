@@ -351,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D5DE15A9E9DC821461ECA28C4CA4851E /* PDTSimpleCalendar.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -447,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D5DE15A9E9DC821461ECA28C4CA4851E /* PDTSimpleCalendar.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -464,6 +466,7 @@
 				PRODUCT_NAME = PDTSimpleCalendar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

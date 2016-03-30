@@ -1,5 +1,5 @@
 //
-//  UpcomingController.swift
+//  UpcomingNavController.swift
 //  TestCal
 //
 //  Created by Alexa Wojak on 3/30/16.
@@ -8,15 +8,17 @@
 
 
 import UIKit
-class UpcomingController: UIViewController {
- 
+class UpcomingNavController: UINavigationController {
+    
     override func viewDidLoad() {
         
+        let upcomingViewController: UIViewController = UpcomingController()
+        self.viewControllers = [upcomingViewController]
+        
         super.viewDidLoad()
-        view.backgroundColor = .greenColor()
         
         // Do any additional setup after loading the view, typically from a nib.
-      
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,5 +27,6 @@ class UpcomingController: UIViewController {
     }
     
 }
+
 
 

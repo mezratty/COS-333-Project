@@ -14,22 +14,16 @@ class ViewController: UITabBarController {
         
         super.viewDidLoad()
         
+        let calendardarNavController: UINavigationController = CalendarNavController()
+        let upcomingNavController: UINavigationController = UpcomingNavController()
+        //let upcoming: UIViewController = UpcomingController()
         
-        let calendarViewController: PDTSimpleCalendarViewController = CalendarController()
+        self.viewControllers = [calendardarNavController, upcomingNavController]
         
-        /*
-        FIGURE OUT WHAT THIS DID
-        let defaultNavController: UINavigationController = UINavigationController(rootViewController:calendarViewController)
-        */
-        
-        let upcoming: UIViewController = UpcomingController()
-        
-        self.viewControllers = [calendarViewController, upcoming]
-        
-        calendarViewController.tabBarItem = UITabBarItem()
-        calendarViewController.tabBarItem.title = "Cal"
-        upcoming.tabBarItem = UITabBarItem()
-        upcoming.tabBarItem.title = "Upcoming"
+        calendardarNavController.tabBarItem = UITabBarItem()
+        calendardarNavController.tabBarItem.title = "Cal"
+        upcomingNavController.tabBarItem = UITabBarItem()
+        upcomingNavController.tabBarItem.title = "Upcoming"
         
 
         

@@ -16,9 +16,9 @@ class CalendarController: PDTSimpleCalendarViewController {
         
         self.weekdayHeaderEnabled = true
         
+        
         super.viewDidLoad()
 
-        
         
         // Do any additional setup after loading the view, typically from a nib.
         
