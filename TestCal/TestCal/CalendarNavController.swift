@@ -12,8 +12,19 @@ class CalendarNavController: UINavigationController {
     
     override func viewDidLoad() {
         
+        
         let calendarViewController: PDTSimpleCalendarViewController = CalendarController()
         self.viewControllers = [calendarViewController]
+        
+        
+        self.navigationBarHidden = true
+        let navBar : UINavigationBar = UINavigationBar(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 64.0))
+        navBar.tintColor = UIColor.whiteColor()
+        let navItem: UINavigationItem = UINavigationItem()
+        navItem.title = "CALENDAR"
+        navBar.items = [navItem]
+        self.view.addSubview(navBar)
+
         
         super.viewDidLoad()
         
