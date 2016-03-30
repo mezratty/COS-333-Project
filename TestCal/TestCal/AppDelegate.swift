@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
       
-        
+        /*
         let calendarViewController: PDTSimpleCalendarViewController = PDTSimpleCalendarViewController()
         calendarViewController.weekdayHeaderEnabled = true
         
@@ -30,12 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController: UITabBarController = UITabBarController()
         tabBarController.viewControllers = [defaultNavController, secondaryNavController]
         
-        
         window!.rootViewController = tabBarController
-
+        */
         
+        window!.rootViewController = ViewController()
         window!.makeKeyAndVisible()
-
         
         return true
     }
@@ -61,9 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    
-
 
 
 }

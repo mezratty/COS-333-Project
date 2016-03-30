@@ -8,18 +8,32 @@
 
 import UIKit
 import PDTSimpleCalendar
-class ViewController: UIViewController {
-    
-    //let tomorrow = NSDate(timeInterval: 60*60*24, sinceDate: NSDate())
-   // var selected = didSelectDate(tomorrow)
+class ViewController: UITabBarController {
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         
-        // Do any additional setup after loading the view, typically from a nib.
-        //view.backgroundColor = .yellowColor()
+        let calendarViewController: PDTSimpleCalendarViewController = CalendarController()
         
+        /*
+        FIGURE OUT WHAT THIS DID
+        let defaultNavController: UINavigationController = UINavigationController(rootViewController:calendarViewController)
+        */
+        
+        let upcoming: UIViewController = UpcomingController()
+        
+        self.viewControllers = [calendarViewController, upcoming]
+        
+        calendarViewController.tabBarItem = UITabBarItem()
+        calendarViewController.tabBarItem.title = "Cal"
+        upcoming.tabBarItem = UITabBarItem()
+        upcoming.tabBarItem.title = "Upcoming"
+        
+
+        
+        // Do any additional setup after loading the view, typically from a nib.
 
         
     }
@@ -28,18 +42,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
-    /*func didSelectDate(date:NSDate)
-    {
-        view.backgroundColor = .greenColor()
-        self.title = "TestCal2"
-        //  if (cv.selectedDate == date) {
-        //self.window!.backgroundColor = UIColor.greenColor();
-        // }
-        //NSLog(@"Date Selected : %@",date);
-        //NSLog(@"Date Selected with Locale %@", [date descriptionWithLocale:[NSLocale systemLocale]]);
-    }
 
-*/
 }
 
