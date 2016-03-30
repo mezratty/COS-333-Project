@@ -17,21 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-      
-        /*
-        let calendarViewController: PDTSimpleCalendarViewController = PDTSimpleCalendarViewController()
-        calendarViewController.weekdayHeaderEnabled = true
-        
-        let defaultNavController: UINavigationController = UINavigationController(rootViewController:calendarViewController)
-        calendarViewController.title = "TestCal"
-        let secondaryNavController: UINavigationController = UINavigationController()
-        secondaryNavController.title = "Two"
-        
-        let tabBarController: UITabBarController = UITabBarController()
-        tabBarController.viewControllers = [defaultNavController, secondaryNavController]
-        
-        window!.rootViewController = tabBarController
-        */
         
         window!.rootViewController = ViewController()
         window!.makeKeyAndVisible()
