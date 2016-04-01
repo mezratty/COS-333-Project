@@ -49,7 +49,7 @@ class UpcomingController: UIViewController, UITableViewDelegate, UITableViewData
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
   
         //cell.textLabel?.text = self.items[indexPath.row] as! String
-        cell.textLabel?.text = self.items.objectAtIndex(indexPath.row).objectAtIndex(0) as! String
+        cell.textLabel?.text = self.items.objectAtIndex(indexPath.row).objectAtIndex(0) as? String
         
         return cell
         

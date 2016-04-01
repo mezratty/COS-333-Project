@@ -20,6 +20,7 @@
 		68BF66531CADC7E4007C9662 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68BF66521CADC7E4007C9662 /* Default-568h@2x.png */; };
 		68BF66561CADCFFB007C9662 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BF66551CADCFFB007C9662 /* libsqlite3.tbd */; };
 		68BF665B1CADF9D4007C9662 /* EventsDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = 68BF665A1CADF9D4007C9662 /* EventsDB.sql */; };
+		A0D1E04B1CAF3C9500D29340 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D1E04A1CAF3C9500D29340 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5C1720C41CA9BFB0002E91D0;
 			remoteInfo = TestCal;
+		};
+		A03106521CAEDBB600FDB9A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A031064D1CAEDBB600FDB9A3 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9855DA709EE720E4A4B89B44C93DA4CF;
+			remoteInfo = PDTSimpleCalendar;
+		};
+		A03106541CAEDBB600FDB9A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A031064D1CAEDBB600FDB9A3 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53B4C7A4F5D5E2DD96A810849E2CFAEF;
+			remoteInfo = "Pods-TestCal";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -54,6 +69,8 @@
 		780F1BB4E8F5CF51BF4FCDEF /* Pods-TestCal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestCal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestCal/Pods-TestCal.debug.xcconfig"; sourceTree = "<group>"; };
 		7D130977574A51B735963218 /* Pods-TestCal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestCal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestCal/Pods-TestCal.release.xcconfig"; sourceTree = "<group>"; };
 		87F393B64DFB70D6497E0778 /* Pods_TestCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A031064D1CAEDBB600FDB9A3 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		A0D1E04A1CAF3C9500D29340 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +105,7 @@
 		34D5DD19F811D2584FC1FFB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A031064D1CAEDBB600FDB9A3 /* Pods.xcodeproj */,
 				68BF66551CADCFFB007C9662 /* libsqlite3.tbd */,
 				87F393B64DFB70D6497E0778 /* Pods_TestCal.framework */,
 			);
@@ -126,6 +144,7 @@
 				5C1720CC1CA9BFB0002E91D0 /* ViewController.swift */,
 				5CA425C91CABA5F700B40D93 /* UpcomingController.swift */,
 				5CA425CB1CABA65500B40D93 /* CalendarController.swift */,
+				A0D1E04A1CAF3C9500D29340 /* Storyboard.storyboard */,
 				5CEE9A9D1CAC5BBB00D24304 /* CalendarNavController.swift */,
 				5CEE9A9F1CAC5D3E00D24304 /* UpcomingNavController.swift */,
 				5C1720D11CA9BFB0002E91D0 /* Images.xcassets */,
@@ -157,6 +176,15 @@
 				5C1720DF1CA9BFB0002E91D0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A031064E1CAEDBB600FDB9A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A03106531CAEDBB600FDB9A3 /* PDTSimpleCalendar.framework */,
+				A03106551CAEDBB600FDB9A3 /* Pods_TestCal.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +235,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Alexa Wojak";
 				TargetAttributes = {
 					5C1720C41CA9BFB0002E91D0 = {
@@ -230,6 +258,12 @@
 			mainGroup = 5C1720BC1CA9BFB0002E91D0;
 			productRefGroup = 5C1720C61CA9BFB0002E91D0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A031064E1CAEDBB600FDB9A3 /* Products */;
+					ProjectRef = A031064D1CAEDBB600FDB9A3 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5C1720C41CA9BFB0002E91D0 /* TestCal */,
@@ -238,12 +272,30 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A03106531CAEDBB600FDB9A3 /* PDTSimpleCalendar.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PDTSimpleCalendar.framework;
+			remoteRef = A03106521CAEDBB600FDB9A3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A03106551CAEDBB600FDB9A3 /* Pods_TestCal.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_TestCal.framework;
+			remoteRef = A03106541CAEDBB600FDB9A3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		5C1720C31CA9BFB0002E91D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5C1720D21CA9BFB0002E91D0 /* Images.xcassets in Resources */,
+				A0D1E04B1CAF3C9500D29340 /* Storyboard.storyboard in Resources */,
 				68BF66531CADC7E4007C9662 /* Default-568h@2x.png in Resources */,
 				68BF665B1CADF9D4007C9662 /* EventsDB.sql in Resources */,
 			);
@@ -361,6 +413,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -436,6 +489,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestCal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestCal/TestCal-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
@@ -449,6 +503,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestCal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestCal/TestCal-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
@@ -469,6 +524,7 @@
 				);
 				INFOPLIST_FILE = TestCalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestCal.app/TestCal";
 			};
@@ -484,6 +540,7 @@
 				);
 				INFOPLIST_FILE = TestCalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestCal.app/TestCal";
 			};

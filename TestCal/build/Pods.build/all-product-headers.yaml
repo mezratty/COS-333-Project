@@ -1,0 +1,63 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/HHeffernan/Documents/COS333/COS-333-Project/TestCal/build/Debug-iphonesimulator/PDTSimpleCalendar.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "PDTSimpleCalendar-Swift.h",
+          'external-contents': "/Users/HHeffernan/Documents/COS333/COS-333-Project/TestCal/build/Debug-iphonesimulator/PDTSimpleCalendar.framework/Headers/PDTSimpleCalendar-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "PDTSimpleCalendar-umbrella.h",
+          'external-contents': "/Users/HHeffernan/Documents/COS333/COS-333-Project/TestCal/Pods/Target Support Files/PDTSimpleCalendar/PDTSimpleCalendar-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "PDTSimpleCalendar.h",
+          'external-contents': "/Users/HHeffernan/Documents/COS333/COS-333-Project/TestCal/Pods/PDTSimpleCalendar/PDTSimpleCalendar/PDTSimpleCalendar.h"
+        },
+        {
+          'type': 'file',
+          'name': "PDTSimpleCalendarViewCell.h",
+          'external-contents': "/Users/HHeffernan/Documents/COS333/COS-333-Project/TestCal/Pods/PDTSimpleCalendar/PDTSimpleCalendar/PDTSimpleCalendarViewCell.h"
+        },
+        {
+          'type': 'file',
+          'name': "PDTSimpleCalendarViewController.h",
+          'external-contents': "/Users/HHeffernan/Documents/COS333/COS-333-Project/TestCal/Pods/PDTSimpleCalendar/PDTSimpleCalendar/PDTSimpleCalendarViewController.h"
+        },
+        {
+          'type': 'file',
+          'name': "PDTSimpleCalendarViewFlowLayout.h",
+          'external-contents': "/Users/HHeffernan/Documents/COS333/COS-333-Project/TestCal/Pods/PDTSimpleCalendar/PDTSimpleCalendar/PDTSimpleCalendarViewFlowLayout.h"
+        },
+        {
+          'type': 'file',
+          'name': "PDTSimpleCalendarViewHeader.h",
+          'external-contents': "/Users/HHeffernan/Documents/COS333/COS-333-Project/TestCal/Pods/PDTSimpleCalendar/PDTSimpleCalendar/PDTSimpleCalendarViewHeader.h"
+        },
+        {
+          'type': 'file',
+          'name': "PDTSimpleCalendarViewWeekdayHeader.h",
+          'external-contents': "/Users/HHeffernan/Documents/COS333/COS-333-Project/TestCal/Pods/PDTSimpleCalendar/PDTSimpleCalendar/PDTSimpleCalendarViewWeekdayHeader.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/HHeffernan/Documents/COS333/COS-333-Project/TestCal/build/Debug-iphonesimulator/PDTSimpleCalendar.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/HHeffernan/Documents/COS333/COS-333-Project/TestCal/build/Pods.build/Debug-iphonesimulator/PDTSimpleCalendar.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
