@@ -11,8 +11,13 @@ import UIKit
 class UpcomingController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var tableView: UITableView  =   UITableView()
+
+    let dbManager: DBManager = DBManager(databaseFilename: "EventsDB.sql")
+
+    var items: NSArray{
+        return dbManager.loadDataFromDB("select * from events")
+    }
     
-    var items: [String] = ["BODYHYPE SHOW", "SOCCER GAME"]
     
     
     override func viewDidLoad() {
@@ -27,6 +32,8 @@ class UpcomingController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.view.addSubview(tableView)
         
+        print(self.items.count)
+        
         
         // Do any additional setup after loading the view, typically from a nib.
       
@@ -39,16 +46,17 @@ class UpcomingController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
-        
-        cell.textLabel?.text = self.items[indexPath.row]
+        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+  
+        //cell.textLabel?.text = self.items[indexPath.row] as! String
+        cell.textLabel?.text = self.items.objectAtIndex(indexPath.row).objectAtIndex(0) as! String
         
         return cell
         
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!")
+        print("You selected cell #\(indexPath.row)!")
     }
     
     

@@ -16,6 +16,10 @@
 		5CEE9A9E1CAC5BBB00D24304 /* CalendarNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE9A9D1CAC5BBB00D24304 /* CalendarNavController.swift */; };
 		5CEE9AA01CAC5D3E00D24304 /* UpcomingNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE9A9F1CAC5D3E00D24304 /* UpcomingNavController.swift */; };
 		652428B1B5621AE33573580C /* Pods_TestCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F393B64DFB70D6497E0778 /* Pods_TestCal.framework */; };
+		68BF664E1CADC4A2007C9662 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BF664D1CADC4A1007C9662 /* DBManager.m */; };
+		68BF66531CADC7E4007C9662 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68BF66521CADC7E4007C9662 /* Default-568h@2x.png */; };
+		68BF66561CADCFFB007C9662 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BF66551CADCFFB007C9662 /* libsqlite3.tbd */; };
+		68BF665B1CADF9D4007C9662 /* EventsDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = 68BF665A1CADF9D4007C9662 /* EventsDB.sql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +41,16 @@
 		5C1720DA1CA9BFB0002E91D0 /* TestCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1720DF1CA9BFB0002E91D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C1720E01CA9BFB0002E91D0 /* TestCalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalTests.swift; sourceTree = "<group>"; };
-		5C1720EC1CAAC54E002E91D0 /* TestCal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestCal-Bridging-Header.h"; sourceTree = "<group>"; };
 		5CA425C91CABA5F700B40D93 /* UpcomingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingController.swift; sourceTree = "<group>"; };
 		5CA425CB1CABA65500B40D93 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		5CEE9A9D1CAC5BBB00D24304 /* CalendarNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarNavController.swift; sourceTree = "<group>"; };
 		5CEE9A9F1CAC5D3E00D24304 /* UpcomingNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingNavController.swift; sourceTree = "<group>"; };
+		68BF664D1CADC4A1007C9662 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBManager.m; path = ../DBManager.m; sourceTree = "<group>"; };
+		68BF664F1CADC4AF007C9662 /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DBManager.h; path = ../DBManager.h; sourceTree = "<group>"; };
+		68BF66521CADC7E4007C9662 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		68BF66551CADCFFB007C9662 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		68BF66571CADD12D007C9662 /* TestCal-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestCal-Bridging-Header.h"; sourceTree = "<group>"; };
+		68BF665A1CADF9D4007C9662 /* EventsDB.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = EventsDB.sql; sourceTree = "<group>"; };
 		780F1BB4E8F5CF51BF4FCDEF /* Pods-TestCal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestCal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestCal/Pods-TestCal.debug.xcconfig"; sourceTree = "<group>"; };
 		7D130977574A51B735963218 /* Pods-TestCal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestCal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestCal/Pods-TestCal.release.xcconfig"; sourceTree = "<group>"; };
 		87F393B64DFB70D6497E0778 /* Pods_TestCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68BF66561CADCFFB007C9662 /* libsqlite3.tbd in Frameworks */,
 				652428B1B5621AE33573580C /* Pods_TestCal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +88,7 @@
 		34D5DD19F811D2584FC1FFB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68BF66551CADCFFB007C9662 /* libsqlite3.tbd */,
 				87F393B64DFB70D6497E0778 /* Pods_TestCal.framework */,
 			);
 			name = Frameworks;
@@ -86,7 +97,6 @@
 		5C1720BC1CA9BFB0002E91D0 = {
 			isa = PBXGroup;
 			children = (
-				5C1720EC1CAAC54E002E91D0 /* TestCal-Bridging-Header.h */,
 				5C1720C71CA9BFB0002E91D0 /* TestCal */,
 				5C1720DD1CA9BFB0002E91D0 /* TestCalTests */,
 				5C1720C61CA9BFB0002E91D0 /* Products */,
@@ -107,7 +117,12 @@
 		5C1720C71CA9BFB0002E91D0 /* TestCal */ = {
 			isa = PBXGroup;
 			children = (
+				68BF66521CADC7E4007C9662 /* Default-568h@2x.png */,
+				68BF664D1CADC4A1007C9662 /* DBManager.m */,
+				68BF664F1CADC4AF007C9662 /* DBManager.h */,
+				68BF66571CADD12D007C9662 /* TestCal-Bridging-Header.h */,
 				5C1720CA1CA9BFB0002E91D0 /* AppDelegate.swift */,
+				68BF665A1CADF9D4007C9662 /* EventsDB.sql */,
 				5C1720CC1CA9BFB0002E91D0 /* ViewController.swift */,
 				5CA425C91CABA5F700B40D93 /* UpcomingController.swift */,
 				5CA425CB1CABA65500B40D93 /* CalendarController.swift */,
@@ -191,6 +206,7 @@
 		5C1720BD1CA9BFB0002E91D0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Alexa Wojak";
 				TargetAttributes = {
@@ -228,6 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C1720D21CA9BFB0002E91D0 /* Images.xcassets in Resources */,
+				68BF66531CADC7E4007C9662 /* Default-568h@2x.png in Resources */,
+				68BF665B1CADF9D4007C9662 /* EventsDB.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68BF664E1CADC4A2007C9662 /* DBManager.m in Sources */,
 				5C1720CD1CA9BFB0002E91D0 /* ViewController.swift in Sources */,
 				5CEE9A9E1CAC5BBB00D24304 /* CalendarNavController.swift in Sources */,
 				5CA425CC1CABA65500B40D93 /* CalendarController.swift in Sources */,
@@ -357,12 +376,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = TestCal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "TestCal/TestCal-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -396,10 +418,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = TestCal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "TestCal/TestCal-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -412,7 +437,7 @@
 				INFOPLIST_FILE = TestCal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TestCal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestCal/TestCal-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
@@ -425,7 +450,7 @@
 				INFOPLIST_FILE = TestCal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TestCal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestCal/TestCal-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Release;

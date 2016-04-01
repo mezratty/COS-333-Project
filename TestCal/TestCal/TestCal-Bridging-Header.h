@@ -9,6 +9,7 @@
 #ifndef TestCal_TestCal_Bridging_Header_h
 #define TestCal_TestCal_Bridging_Header_h
 
+#import "DBManager.h"
 #import <PDTSimpleCalendar/PDTSimpleCalendar.h>
 
 #endif
