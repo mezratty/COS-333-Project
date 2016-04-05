@@ -15,6 +15,11 @@
 		680B93AE1CB3555100670E0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680B93AC1CB3555100670E0B /* LaunchScreen.storyboard */; };
 		680B93B91CB3555100670E0B /* _33_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B93B81CB3555100670E0B /* _33_ProjectTests.swift */; };
 		680B93C41CB3555100670E0B /* _33_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B93C31CB3555100670E0B /* _33_ProjectUITests.swift */; };
+		680B93D31CB35FEB00670E0B /* PDTSimpleCalendarViewWeekdayHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B93D21CB35FEB00670E0B /* PDTSimpleCalendarViewWeekdayHeader.m */; };
+		680B93D61CB360C100670E0B /* PDTSimpleCalendarViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B93D51CB360C100670E0B /* PDTSimpleCalendarViewHeader.m */; };
+		680B93D91CB3612400670E0B /* PDTSimpleCalendarViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B93D81CB3612400670E0B /* PDTSimpleCalendarViewFlowLayout.m */; };
+		680B93DC1CB3619900670E0B /* PDTSimpleCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B93DB1CB3619900670E0B /* PDTSimpleCalendarViewController.m */; };
+		680B93DF1CB3625A00670E0B /* PDTSimpleCalendarViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B93DE1CB3625A00670E0B /* PDTSimpleCalendarViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,18 @@
 		680B93BF1CB3555100670E0B /* 333 ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "333 ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		680B93C31CB3555100670E0B /* _33_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _33_ProjectUITests.swift; sourceTree = "<group>"; };
 		680B93C51CB3555100670E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		680B93D21CB35FEB00670E0B /* PDTSimpleCalendarViewWeekdayHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewWeekdayHeader.m; sourceTree = "<group>"; };
+		680B93D41CB3604C00670E0B /* PDTSimpleCalendarViewWeekdayHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewWeekdayHeader.h; sourceTree = "<group>"; };
+		680B93D51CB360C100670E0B /* PDTSimpleCalendarViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewHeader.m; sourceTree = "<group>"; };
+		680B93D71CB360F400670E0B /* PDTSimpleCalendarViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewHeader.h; sourceTree = "<group>"; };
+		680B93D81CB3612400670E0B /* PDTSimpleCalendarViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewFlowLayout.m; sourceTree = "<group>"; };
+		680B93DA1CB3614D00670E0B /* PDTSimpleCalendarViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewFlowLayout.h; sourceTree = "<group>"; };
+		680B93DB1CB3619900670E0B /* PDTSimpleCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewController.m; sourceTree = "<group>"; };
+		680B93DD1CB361CF00670E0B /* PDTSimpleCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewController.h; sourceTree = "<group>"; };
+		680B93DE1CB3625A00670E0B /* PDTSimpleCalendarViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewCell.m; sourceTree = "<group>"; };
+		680B93E01CB3628600670E0B /* PDTSimpleCalendarViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewCell.h; sourceTree = "<group>"; };
+		680B93E31CB3648400670E0B /* PDTSimpleCalender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDTSimpleCalender.h; path = ../PDTSimpleCalender.h; sourceTree = "<group>"; };
+		680B93E41CB364F600670E0B /* 333Project-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "333Project-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +120,18 @@
 				680B93A31CB3555000670E0B /* FirstViewController.swift */,
 				680B93A51CB3555000670E0B /* SecondViewController.swift */,
 				680B93A71CB3555100670E0B /* Main.storyboard */,
+				680B93E31CB3648400670E0B /* PDTSimpleCalender.h */,
+				680B93DB1CB3619900670E0B /* PDTSimpleCalendarViewController.m */,
+				680B93DD1CB361CF00670E0B /* PDTSimpleCalendarViewController.h */,
+				680B93DE1CB3625A00670E0B /* PDTSimpleCalendarViewCell.m */,
+				680B93E01CB3628600670E0B /* PDTSimpleCalendarViewCell.h */,
+				680B93D21CB35FEB00670E0B /* PDTSimpleCalendarViewWeekdayHeader.m */,
+				680B93D51CB360C100670E0B /* PDTSimpleCalendarViewHeader.m */,
+				680B93D71CB360F400670E0B /* PDTSimpleCalendarViewHeader.h */,
+				680B93D81CB3612400670E0B /* PDTSimpleCalendarViewFlowLayout.m */,
+				680B93DA1CB3614D00670E0B /* PDTSimpleCalendarViewFlowLayout.h */,
+				680B93D41CB3604C00670E0B /* PDTSimpleCalendarViewWeekdayHeader.h */,
+				680B93E41CB364F600670E0B /* 333Project-Bridging-Header.h */,
 				680B93AA1CB3555100670E0B /* Assets.xcassets */,
 				680B93AC1CB3555100670E0B /* LaunchScreen.storyboard */,
 				680B93AF1CB3555100670E0B /* Info.plist */,
@@ -260,7 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				680B93A61CB3555000670E0B /* SecondViewController.swift in Sources */,
+				680B93D91CB3612400670E0B /* PDTSimpleCalendarViewFlowLayout.m in Sources */,
+				680B93D31CB35FEB00670E0B /* PDTSimpleCalendarViewWeekdayHeader.m in Sources */,
 				680B93A21CB3555000670E0B /* AppDelegate.swift in Sources */,
+				680B93DC1CB3619900670E0B /* PDTSimpleCalendarViewController.m in Sources */,
+				680B93DF1CB3625A00670E0B /* PDTSimpleCalendarViewCell.m in Sources */,
+				680B93D61CB360C100670E0B /* PDTSimpleCalendarViewHeader.m in Sources */,
 				680B93A41CB3555000670E0B /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,10 +437,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "333 Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-333-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -414,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "333 Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-333-Project";
