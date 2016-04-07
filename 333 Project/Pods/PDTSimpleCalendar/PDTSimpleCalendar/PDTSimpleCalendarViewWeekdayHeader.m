@@ -1,9 +1,12 @@
+//
+//  PDTSimpleCalendarViewWeekdayHeader.m
+//  MorningCall
+//
+//  Created by Yuwen Yan on 3/8/15.
+//  Copyright (c) 2015 MorningCall. All rights reserved.
+//
 
-
-#import <Foundation/Foundation.h>
 #import "PDTSimpleCalendarViewWeekdayHeader.h"
-
-
 
 const CGFloat PDTSimpleCalendarWeekdayHeaderSize = 12.0f;
 const CGFloat PDTSimpleCalendarWeekdayHeaderHeight = 20.0f;
@@ -11,12 +14,12 @@ const CGFloat PDTSimpleCalendarWeekdayHeaderHeight = 20.0f;
 @implementation PDTSimpleCalendarViewWeekdayHeader
 
 /*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect {
- // Drawing code
- }
- */
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
 
 - (id)initWithCalendar:(NSCalendar *)calendar weekdayTextType:(PDTSimpleCalendarViewWeekdayTextType)textType
 {
@@ -82,7 +85,7 @@ const CGFloat PDTSimpleCalendarWeekdayHeaderHeight = 20.0f;
         
         NSString *layoutString = [NSString stringWithFormat:@"|[%@(>=0)]|", [weekdaySymbolLabelNameArr componentsJoinedByString:@"]["]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:layoutString options:NSLayoutFormatAlignAllCenterY metrics:nil views:weekdaySymbolLabelDict]];
-        
+
     }
     
     return self;

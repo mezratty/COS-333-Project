@@ -1,7 +1,10 @@
 //
 //  PDTSimpleCalendarViewFlowLayout.m
 //  PDTSimpleCalendar
-
+//
+//  Created by Jerome Miglino on 10/7/13.
+//  Copyright (c) 2013 Producteev. All rights reserved.
+//
 
 #import "PDTSimpleCalendarViewFlowLayout.h"
 
@@ -30,7 +33,7 @@ const CGFloat PDTSimpleCalendarFlowLayoutHeaderHeight = 30.0f;
         
         //Note: Item Size is defined using the delegate to take into account the width of the view and calculate size dynamically
     }
-    
+
     return self;
 }
 

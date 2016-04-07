@@ -1,7 +1,10 @@
 //
 //  PDTSimpleCalendarViewFlowLayout.h
 //  PDTSimpleCalendar
-
+//
+//  Created by Jerome Miglino on 10/7/13.
+//  Copyright (c) 2013 Producteev. All rights reserved.
+//
 
 #import <UIKit/UIKit.h>
 
