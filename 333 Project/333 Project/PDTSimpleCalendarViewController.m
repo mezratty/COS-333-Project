@@ -82,7 +82,7 @@ static const NSCalendarUnit kCalendarUnitYMD = NSCalendarUnitYear | NSCalendarUn
     self.backgroundColor = [UIColor whiteColor];
     self.overlayTextColor = [UIColor blackColor];
     self.daysPerWeek = 7;
-    self.weekdayHeaderEnabled = NO;
+    self.weekdayHeaderEnabled = YES;
     self.weekdayTextType = PDTSimpleCalendarViewWeekdayTextTypeShort;
 }
 
