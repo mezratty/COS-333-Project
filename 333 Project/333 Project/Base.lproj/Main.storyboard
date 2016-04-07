@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6sS-zR-cIh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6sS-zR-cIh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Upcoming Events-->
         <scene sceneID="tc6-lL-vaf">
             <objects>
                 <viewController storyboardIdentifier="Upcoming" id="hb6-Rb-neN" customClass="SecondViewController" customModule="_33_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,13 +27,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="QcY-SP-Br0"/>
+                    <tabBarItem key="tabBarItem" title="Upcoming Events" id="QcY-SP-Br0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmN-tB-SdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-931" y="96"/>
         </scene>
-        <!--Item 1-->
+        <!--Calendar-->
         <scene sceneID="Qzt-kK-wZ7">
             <objects>
                 <viewController storyboardIdentifier="Calendar" id="Gr9-Jb-tG1" customClass="FirstViewController" customModule="_33_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,7 +45,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmg-8N-VIx">
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmg-8N-VIx">
                                 <rect key="frame" x="20" y="28" width="280" height="483"/>
                                 <connections>
                                     <segue destination="wbj-l9-zK6" kind="embed" id="aXn-Te-THI"/>
@@ -52,8 +53,14 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="mmg-8N-VIx" secondAttribute="leading" id="30c-5Y-Ylf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mmg-8N-VIx" secondAttribute="trailing" id="AeJ-eC-jDf"/>
+                            <constraint firstItem="1G3-ru-zrW" firstAttribute="top" secondItem="mmg-8N-VIx" secondAttribute="bottom" constant="8" id="J6B-A7-coD"/>
+                            <constraint firstItem="mmg-8N-VIx" firstAttribute="top" secondItem="dIj-iU-MER" secondAttribute="bottom" constant="8" id="UKX-NZ-0NE"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="wdX-2F-DJX"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" id="wdX-2F-DJX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2w-NI-cF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,6 +89,10 @@
         <scene sceneID="RYv-Qa-E19">
             <objects>
                 <viewController id="wbj-l9-zK6" customClass="CalendarViewController" customModule="_33_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xvw-jc-cpj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fal-ue-nWR"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3y1-c5-Pgn">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="483"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

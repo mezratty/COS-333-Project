@@ -13,6 +13,7 @@ class CalendarViewController: PDTSimpleCalendarViewController {
 
     override func viewDidLoad() {
         self.weekdayHeaderEnabled = true
+        
         super.viewDidLoad()
 
 
