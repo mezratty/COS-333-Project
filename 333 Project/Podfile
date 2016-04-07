@@ -5,6 +5,7 @@ use_frameworks!
 
 target '333 Project' do
        pod 'PDTSimpleCalendar', '~> 0.9.1'
+       pod 'Alamofire', '~> 3.2.1'
 end
 
 target '333 ProjectTests' do
