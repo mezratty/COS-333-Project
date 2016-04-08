@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Item 2-->
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UPCOMING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sO1-xc-nFM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="UPCOMING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sO1-xc-nFM">
                                 <rect key="frame" x="99" y="165" width="123" height="107"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -25,6 +26,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5dU-F1-Dok" firstAttribute="top" secondItem="sO1-xc-nFM" secondAttribute="bottom" constant="247" id="4X7-6g-vUG"/>
+                            <constraint firstItem="sO1-xc-nFM" firstAttribute="top" secondItem="0t9-lZ-RHp" secondAttribute="bottom" constant="8" symbolic="YES" id="4oP-Kh-4FY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sO1-xc-nFM" secondAttribute="trailing" constant="78" id="4xH-mv-eRw"/>
+                            <constraint firstItem="sO1-xc-nFM" firstAttribute="leading" secondItem="lp6-u9-oYh" secondAttribute="leadingMargin" constant="79" id="KBK-Yl-yvb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="QcY-SP-Br0"/>
                 </viewController>
@@ -44,7 +51,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmg-8N-VIx">
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmg-8N-VIx">
                                 <rect key="frame" x="20" y="28" width="280" height="483"/>
                                 <connections>
                                     <segue destination="wbj-l9-zK6" kind="embed" id="aXn-Te-THI"/>
@@ -52,6 +59,12 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mmg-8N-VIx" firstAttribute="trailing" secondItem="Ln3-9s-pVQ" secondAttribute="trailingMargin" id="8Xe-ZS-iuI"/>
+                            <constraint firstItem="1G3-ru-zrW" firstAttribute="top" secondItem="mmg-8N-VIx" secondAttribute="bottom" constant="8" id="WTP-se-49B"/>
+                            <constraint firstItem="mmg-8N-VIx" firstAttribute="leading" secondItem="Ln3-9s-pVQ" secondAttribute="leadingMargin" id="bIe-Tz-jrY"/>
+                            <constraint firstItem="mmg-8N-VIx" firstAttribute="top" secondItem="dIj-iU-MER" secondAttribute="bottom" constant="8" id="mkV-nH-Oki"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="wdX-2F-DJX"/>
                 </viewController>
@@ -82,6 +95,10 @@
         <scene sceneID="RYv-Qa-E19">
             <objects>
                 <viewController id="wbj-l9-zK6" customClass="CalendarViewController" customModule="_33_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="csG-Nu-k3x"/>
+                        <viewControllerLayoutGuide type="bottom" id="uOD-8g-6tF"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3y1-c5-Pgn">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="483"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

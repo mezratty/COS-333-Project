@@ -46,5 +46,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>http://www.goprincetontigers.com/main/Schedule.dbml?&amp;DB_OEM_ID=10600&amp;DB_OEM_ID=10600.htm</key>
+			<dict>
+				<key>NSThirdPartyExceptionAllowInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>
