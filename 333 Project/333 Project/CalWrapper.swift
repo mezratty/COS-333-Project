@@ -23,9 +23,7 @@ class CalWrapper: UIViewController {
         self.addChildViewController(calViewController)
         self.view.addSubview(calViewController.view)
         calViewController.didMoveToParentViewController(self)
-        
         //if (calViewController.showing == false) {print("hello")}
-        
         
 
         // Do any additional setup after loading the view.
