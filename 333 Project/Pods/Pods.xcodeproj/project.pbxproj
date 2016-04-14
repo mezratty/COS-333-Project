@@ -85,7 +85,6 @@
 		F04D34835F3E38FCB28113D020869411 /* HTMLSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 70198C946CAB1A063D4FE97850178764 /* HTMLSerialization.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		F325E00FBB1A411C834EDB85C3C8F9FC /* HTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2F9E1CB289AF88421852A40CE91F32 /* HTMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		F82198F34DD14753A42F4328CD5E7A6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		F860990E1CC0257E005ABDE0 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F860990D1CC0257E005ABDE0 /* TabBarItem.swift */; };
 		FE94087A5A9527D93B42DF89CE841B11 /* NSString+HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = F1640C508C0D68852F97F96C784385B2 /* NSString+HTMLEntities.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
@@ -214,7 +213,6 @@
 		F1640C508C0D68852F97F96C784385B2 /* NSString+HTMLEntities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+HTMLEntities.m"; path = "Code/NSString+HTMLEntities.m"; sourceTree = "<group>"; };
 		F68B76B6661619517AE0DAD8F70368E0 /* Pods_333_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_333_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DFE08C0B2DCE9077201CD6567DB462 /* HTMLParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLParser.h; path = Code/HTMLParser.h; sourceTree = "<group>"; };
-		F860990D1CC0257E005ABDE0 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		FFB95D10773195B5177BDDE8F28B879F /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -335,7 +333,6 @@
 				889EE87AE69118C603D27988E8E02B6C /* PDTSimpleCalendar.h */,
 				E501602434241C0D0707AEFA5CC8BD0D /* PDTSimpleCalendarViewCell.h */,
 				F12093DB779C434F948AB255157D7437 /* PDTSimpleCalendarViewCell.m */,
-				F860990D1CC0257E005ABDE0 /* TabBarItem.swift */,
 				0318539A662398B6CFAF224D6C006165 /* PDTSimpleCalendarViewController.h */,
 				5077D9A1CE76F78CDC0FDEDFA041F66A /* PDTSimpleCalendarViewController.m */,
 				179BC694F676EE595D0D11877D17EA9E /* PDTSimpleCalendarViewFlowLayout.h */,
@@ -667,7 +664,6 @@
 				62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */,
 				3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */,
 				AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */,
-				F860990E1CC0257E005ABDE0 /* TabBarItem.swift in Sources */,
 				7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */,
 				AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */,
 				16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */,
