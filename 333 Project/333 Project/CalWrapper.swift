@@ -1,5 +1,5 @@
 //
-//  Wrapper.swift
+//  CalWrapper.swift
 //  333 Project
 //
 //  Created by Alexa Wojak on 4/14/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Wrapper: UIViewController {
+class CalWrapper: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
