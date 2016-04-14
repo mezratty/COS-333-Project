@@ -1,10 +1,16 @@
 PODS:
+  - Alamofire (3.2.1)
+  - HTMLReader (0.9.5)
   - PDTSimpleCalendar (0.9.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.2.1)
+  - HTMLReader
   - PDTSimpleCalendar (~> 0.9.1)
 
 SPEC CHECKSUMS:
+  Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
+  HTMLReader: dc02112d761cc346e248e3f65f8b263a062e9934
   PDTSimpleCalendar: d1c03387678422715dc021aa1a85d70f4d1014f2
 
 COCOAPODS: 0.39.0
