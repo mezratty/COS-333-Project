@@ -9,11 +9,22 @@
 import UIKit
 import PDTSimpleCalendar
 
-class CalendarViewController: PDTSimpleCalendarViewController {
+
+class CalendarViewController: PDTSimpleCalendarViewController, PDTSimpleCalendarViewDelegate {
 
     override func viewDidLoad() {
+        
         self.weekdayHeaderEnabled = true
+        self.delegate = self
+        
+        //let dateNow = NSDate()
+        //let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        //let newDate = cal.
+        
+        
+        
         super.viewDidLoad()
+        
 
 
         // Do any additional setup after loading the view.
@@ -22,6 +33,34 @@ class CalendarViewController: PDTSimpleCalendarViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func simpleCalendarViewController(controller: PDTSimpleCalendarViewController!, didSelectDate date: NSDate!) {
+        //let dateNow = NSDate()
+        //let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        //let newDate = cal.startOfDayForDate(dateNow)
+        
+        //if(newDate != date) {
+     //       print("hello")
+        //}
+        
+        self.willMoveToParentViewController(nil)
+        self.view.removeFromSuperview()
+        
+        let parent = self.parentViewController
+        self.removeFromParentViewController()
+        
+        let dest:DayViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Day") as! DayViewController
+        
+        //let dest = self.storyboard?.instantiateViewControllerWithIdentifier("DayViewController")
+       ///let dest = self.storyboard?.instantiateViewControllerWithIdentifier("Day")
+        //let dest = DayViewController()
+        print (date)
+        dest.date = date
+        parent?.performSegueWithIdentifier("DayView", sender: self)
+        
+        
+        
     }
     
 
