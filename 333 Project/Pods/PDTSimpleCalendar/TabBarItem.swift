@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 
-class PushButtonView: UITabBarItem {
+class TabBarItem: UITabBarItem {
     @IBInspectable var fillColor: UIColor = UIColor.greenColor()
     @IBInspectable var isCalendar: Bool = true
     
