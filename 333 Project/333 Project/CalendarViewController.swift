@@ -50,27 +50,32 @@ class CalendarViewController: PDTSimpleCalendarViewController, PDTSimpleCalendar
         let parent = self.parentViewController
         self.removeFromParentViewController()
         
-        let dest:DayViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Day") as! DayViewController
+        //let dest:DayViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Day") as! DayViewController
         
         //let dest = self.storyboard?.instantiateViewControllerWithIdentifier("DayViewController")
        ///let dest = self.storyboard?.instantiateViewControllerWithIdentifier("Day")
         //let dest = DayViewController()
-        print (date)
-        dest.date = date
-        parent?.performSegueWithIdentifier("DayView", sender: self)
+        //print (date)
+        //dest.date = date
+        parent?.performSegueWithIdentifier("DayView", sender: date)
         
         
         
     }
     
-
-    /*
+/*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "DayView") {
+            print (sender)
+            let dest = segue.destinationViewController as! DayViewController
+            dest.date = sender as! NSDate
+        }
     }
     */
 
