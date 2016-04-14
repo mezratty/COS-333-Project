@@ -15,7 +15,7 @@ class DayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(date)
+        //print(date)
 
         // Do any additional setup after loading the view.
     }

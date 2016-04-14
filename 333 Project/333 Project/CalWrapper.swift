@@ -12,10 +12,6 @@ class CalWrapper: UIViewController {
 
     override func viewDidLoad() {
         
-        if (self.navigationController != nil) {print("hello")}
-        
-        navigationItem.title = "Calendar"
-        
         super.viewDidLoad()
         
         
@@ -44,7 +40,7 @@ class CalWrapper: UIViewController {
         // Pass the selected object to the new view controller.
         
         
-       // navigationItem.title = nil
+        navigationItem.title = nil
         if (segue.identifier == "DayView") {
             //print (sender)
             //let destNC = segue.destinationViewController as! UINavigationController
@@ -72,9 +68,9 @@ class CalWrapper: UIViewController {
             formatter.dateFormat = "MMMM"
             let stringFromDate = formatter.stringFromDate(myDate)
             
-            
-            let titleString = String(format: "%@%@%@%d%@%d", "Date: ", stringFromDate," ", day," ", year)
+            let titleString = String(format: "%@%@%d%@%d", stringFromDate," ", day," ", year)
             dest.navigationItem.title = titleString
+
             
             
             
