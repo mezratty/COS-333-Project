@@ -55,12 +55,36 @@ class CalWrapper: UIViewController {
             let dest = segue.destinationViewController as! DayViewController
             dest.date = sender as! NSDate
             
-            let calendar = NSCalendar.init(calendarIdentifier: NSGregorianCalendar)
-            let componenets = calendar?.components(NSCalendarUnit.Day, fromDate: sender as! NSDate)
-            let day:Int! = componenets?.day
-            let dayString = String(day)
             
-            dest.navigationItem.title = dayString
+            let date = sender as! NSDate
+            let calendar = NSCalendar.currentCalendar()
+            let components = calendar.components([.Day , .Month , .Year], fromDate: date)
+            
+            let year =  components.year
+            let month = components.month
+            let day = components.day
+            
+            /* Format month*/
+            let monthNumber = month;
+            let dateString = String(format: "%d", monthNumber)
+            let dateFormatter = NSDateFormatter.init()
+            dateFormatter.dateFormat = "MM"
+            let myDate:NSDate = dateFormatter.dateFromString(dateString)!
+            let formatter = NSDateFormatter.init()
+            formatter.dateFormat = "MMMM"
+            let stringFromDate = formatter.stringFromDate(myDate)
+            
+            
+            let titleString = String(format: "%@%@%@%d%@%d", "Date: ", stringFromDate," ", day," ", year)
+            dest.navigationItem.title = titleString
+            
+            
+            
+            
+            
+            
+            
+            //dest.navigationItem.title = monthString + "/" + dayString + "/" + yearString
         }
     
     }

@@ -52,6 +52,7 @@ class CalendarViewController: PDTSimpleCalendarViewController, PDTSimpleCalendar
         //self.removeFromParentViewController()
         
         //let dest:DayViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Day") as! DayViewController
+
         
         parent?.performSegueWithIdentifier("DayView", sender: date)
         
