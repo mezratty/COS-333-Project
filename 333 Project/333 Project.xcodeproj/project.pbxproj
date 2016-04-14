@@ -66,7 +66,6 @@
 		693E7716F09C4483E24805C7 /* Pods_333_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_333_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A458743883C1FF3AA87A8736 /* Pods-333 Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-333 Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-333 Project/Pods-333 Project.release.xcconfig"; sourceTree = "<group>"; };
 		F860990F1CC02616005ABDE0 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarItem.swift; path = ../Pods/PDTSimpleCalendar/TabBarItem.swift; sourceTree = "<group>"; };
-		F86099111CC0290B005ABDE0 /* DrawUpcoming.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DrawUpcoming.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +124,6 @@
 				680B93A51CB3555000670E0B /* SecondViewController.swift */,
 				2C4613651CB7EB890093F25B /* DataController.swift */,
 				2C4613671CB7EBBD0093F25B /* Chart.swift */,
-				F86099111CC0290B005ABDE0 /* DrawUpcoming.playground */,
 				680B93A71CB3555100670E0B /* Main.storyboard */,
 				5C0A63261CBF5DE900D6A836 /* DayViewController.swift */,
 				680B93E41CB364F600670E0B /* 333Project-Bridging-Header.h */,
