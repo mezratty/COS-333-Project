@@ -39,39 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func createUpcomingImage() -> UIImage {
-        let size = CGSize(width: 120, height: 200)
-        
-        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
-        let context = UIGraphicsGetCurrentContext()
-        
-        var bar1 = UIBezierPath()
-        bar1.moveToPoint(CGPointMake(0, 0))
-        bar1.addLineToPoint(CGPointMake(120,0))
-        bar1.closePath()
-        UIColor.blackColor().setFill()
-        bar1.fill()
-        
-        var bar2 = UIBezierPath()
-        bar2.moveToPoint(CGPointMake(0, 100))
-        bar2.addLineToPoint(CGPointMake(120, 100))
-        bar2.closePath()
-        UIColor.blackColor().setFill()
-        bar2.fill()
-        
-        var bar3 = UIBezierPath()
-        bar3.moveToPoint(CGPointMake(0, 200))
-        bar3.addLineToPoint(CGPointMake(120, 200))
-        bar3.closePath()
-        UIColor.blackColor().setFill()
-        bar3.fill()
-        
-        //This code must always be at the end of the playground
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image
-    }
-
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

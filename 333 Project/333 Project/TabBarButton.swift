@@ -17,12 +17,11 @@ class TabBarButton: UIButton {
     
     
     override func drawRect(rect: CGRect) {
-        let size = CGSize(width: 120, height: 200)
         
         //UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         //let context = UIGraphicsGetCurrentContext()
         
-        var bar1 = UIBezierPath()
+        let bar1 = UIBezierPath()
         bar1.moveToPoint(CGPointMake(0, 0))
         bar1.addLineToPoint(CGPointMake(20,0))
         //bar1.addLineToPoint(CGPointMake(0, 0))
@@ -32,7 +31,7 @@ class TabBarButton: UIButton {
         UIColor.blackColor().setStroke()
         bar1.stroke()
         
-        var bar2 = UIBezierPath()
+        let bar2 = UIBezierPath()
         bar2.moveToPoint(CGPointMake(0, 5))
         bar2.addLineToPoint(CGPointMake(20, 5))
         //bar2.addLineToPoint(CGPointMake(0, 120))
@@ -42,7 +41,7 @@ class TabBarButton: UIButton {
         UIColor.blackColor().setStroke()
         bar2.stroke()
         
-        var bar3 = UIBezierPath()
+        let bar3 = UIBezierPath()
         bar3.moveToPoint(CGPointMake(0, 10))
         bar3.addLineToPoint(CGPointMake(20, 10))
         //bar3.addLineToPoint(CGPointMake(0, 0))
