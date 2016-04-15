@@ -160,7 +160,7 @@
         <scene sceneID="YQQ-4I-BpV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z8h-ws-Ohd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" image="first" id="wdX-2F-DJX" customClass="TabBarItem" customModule="_33_Project" customModuleProvider="target"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="first" id="wdX-2F-DJX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lk6-LM-I1D">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
