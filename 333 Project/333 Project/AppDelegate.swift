@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().barTintColor = UIColor.blackColor()
         UITabBar.appearance().tintColor = UIColor.whiteColor()
         
+        
+        UINavigationBar.appearance().barTintColor = UIColor.blackColor()
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSForegroundColorAttributeName : UIColor.whiteColor()
+        ]
         //UITabBarItem.appearance().image = createUpcomingImage()
         //UITabBarItem.appearance().image! = createUpcomingImage()
 
