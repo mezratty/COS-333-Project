@@ -191,7 +191,7 @@ const CGFloat PDTSimpleCalendarCircleSize = 32.0f;
         return _circleTodayColor;
     }
 
-    return [UIColor grayColor];
+    return [UIColor orangeColor];
 }
 
 - (UIColor *)circleSelectedColor
@@ -204,7 +204,7 @@ const CGFloat PDTSimpleCalendarCircleSize = 32.0f;
         return _circleSelectedColor;
     }
 
-    return [UIColor orangeColor];
+    return [UIColor clearColor];
 }
 
 #pragma mark - Text Label Customizations Color
@@ -245,7 +245,7 @@ const CGFloat PDTSimpleCalendarCircleSize = 32.0f;
         return _textSelectedColor;
     }
 
-    return [UIColor whiteColor];
+    return [UIColor blackColor];
 }
 
 - (UIColor *)textDisabledColor
