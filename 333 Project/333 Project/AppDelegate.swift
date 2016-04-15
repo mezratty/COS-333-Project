@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [
             NSForegroundColorAttributeName : UIColor.whiteColor()
         ]
+        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //UITabBarItem.appearance().image = createUpcomingImage()
         //UITabBarItem.appearance().image! = createUpcomingImage()
 
