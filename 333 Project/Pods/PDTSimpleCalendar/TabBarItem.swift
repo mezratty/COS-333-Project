@@ -14,7 +14,7 @@ class TabBarItem: UITabBarItem {
     @IBInspectable var fillColor: UIColor = UIColor.greenColor()
     @IBInspectable var isCalendar: Bool = true
     
-    override var image: UIImage? = createUpcomingImage()
+    //override var image: UIImage? = createUpcomingImage()
     func createUpcomingImage() -> UIImage {
         let size = CGSize(width: 120, height: 200)
         
