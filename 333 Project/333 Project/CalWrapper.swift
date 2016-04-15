@@ -46,7 +46,7 @@ class CalWrapper: UIViewController {
             //let destNC = segue.destinationViewController as! UINavigationController
             //let dest = destNC.viewControllers.first as! DayViewController
             
-            let dest = segue.destinationViewController as! DayViewController
+            let dest = segue.destinationViewController as! DayTable
             dest.date = sender as! NSDate
             
             

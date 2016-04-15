@@ -10,8 +10,9 @@
 		2C4613661CB7EB890093F25B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4613651CB7EB890093F25B /* DataController.swift */; };
 		2C4613681CB7EBBD0093F25B /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4613671CB7EBBD0093F25B /* Chart.swift */; };
 		5C0A63251CBF54C400D6A836 /* CalWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A63241CBF54C400D6A836 /* CalWrapper.swift */; };
-		5C0A63271CBF5DE900D6A836 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A63261CBF5DE900D6A836 /* DayViewController.swift */; };
 		5C37E2EE1CB6EE4A006CC4B1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37E2ED1CB6EE4A006CC4B1 /* CalendarViewController.swift */; };
+		5CA2288D1CC0A35B00C1DD2D /* DayTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2288C1CC0A35B00C1DD2D /* DayTable.swift */; };
+		5CA2288F1CC0A67900C1DD2D /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2288E1CC0A67900C1DD2D /* EventView.swift */; };
 		680B93A21CB3555000670E0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B93A11CB3555000670E0B /* AppDelegate.swift */; };
 		680B93A41CB3555000670E0B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B93A31CB3555000670E0B /* FirstViewController.swift */; };
 		680B93A61CB3555000670E0B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B93A51CB3555000670E0B /* SecondViewController.swift */; };
@@ -46,8 +47,9 @@
 		2C4613651CB7EB890093F25B /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		2C4613671CB7EBBD0093F25B /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		5C0A63241CBF54C400D6A836 /* CalWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalWrapper.swift; sourceTree = "<group>"; };
-		5C0A63261CBF5DE900D6A836 /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 		5C37E2ED1CB6EE4A006CC4B1 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		5CA2288C1CC0A35B00C1DD2D /* DayTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTable.swift; sourceTree = "<group>"; };
+		5CA2288E1CC0A67900C1DD2D /* EventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		680B939E1CB3555000670E0B /* 333 Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "333 Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		680B93A11CB3555000670E0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		680B93A31CB3555000670E0B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +127,8 @@
 				2C4613651CB7EB890093F25B /* DataController.swift */,
 				2C4613671CB7EBBD0093F25B /* Chart.swift */,
 				680B93A71CB3555100670E0B /* Main.storyboard */,
-				5C0A63261CBF5DE900D6A836 /* DayViewController.swift */,
+				5CA2288E1CC0A67900C1DD2D /* EventView.swift */,
+				5CA2288C1CC0A35B00C1DD2D /* DayTable.swift */,
 				680B93E41CB364F600670E0B /* 333Project-Bridging-Header.h */,
 				680B93AA1CB3555100670E0B /* Assets.xcassets */,
 				680B93AC1CB3555100670E0B /* LaunchScreen.storyboard */,
@@ -355,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4613661CB7EB890093F25B /* DataController.swift in Sources */,
+				5CA2288D1CC0A35B00C1DD2D /* DayTable.swift in Sources */,
 				5C37E2EE1CB6EE4A006CC4B1 /* CalendarViewController.swift in Sources */,
 				2C4613681CB7EBBD0093F25B /* Chart.swift in Sources */,
 				F86099101CC02616005ABDE0 /* TabBarItem.swift in Sources */,
@@ -362,7 +366,7 @@
 				680B93A21CB3555000670E0B /* AppDelegate.swift in Sources */,
 				680B93A41CB3555000670E0B /* FirstViewController.swift in Sources */,
 				5C0A63251CBF54C400D6A836 /* CalWrapper.swift in Sources */,
-				5C0A63271CBF5DE900D6A836 /* DayViewController.swift in Sources */,
+				5CA2288F1CC0A67900C1DD2D /* EventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
