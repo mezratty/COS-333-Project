@@ -36,7 +36,7 @@
                             <constraint firstItem="sO1-xc-nFM" firstAttribute="leading" secondItem="lp6-u9-oYh" secondAttribute="leadingMargin" constant="79" id="KBK-Yl-yvb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Upcoming" image="second" id="QcY-SP-Br0"/>
+                    <tabBarItem key="tabBarItem" title="Upcoming" image="first" selectedImage="first" id="QcY-SP-Br0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmN-tB-SdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -159,7 +159,7 @@
         <scene sceneID="YQQ-4I-BpV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z8h-ws-Ohd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" image="first" id="wdX-2F-DJX"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="first" selectedImage="rsz_1rsz_events-calendar-icon1-300x300.png" id="wdX-2F-DJX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lk6-LM-I1D">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -177,6 +177,6 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="rsz_1rsz_events-calendar-icon1-300x300.png" width="38" height="38"/>
     </resources>
 </document>

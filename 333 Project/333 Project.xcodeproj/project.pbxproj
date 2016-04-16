@@ -25,6 +25,8 @@
 		F86099101CC02616005ABDE0 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F860990F1CC02616005ABDE0 /* TabBarItem.swift */; };
 		F869FB1F1CC08D2C00D519D5 /* OurTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */; };
 		F869FB211CC0CC8F00D519D5 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */; };
+		F869FB251CC1DD2900D519D5 /* events-calendar-icon1-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = F869FB241CC1DD2900D519D5 /* events-calendar-icon1-300x300.png */; };
+		F869FB291CC1DE8600D519D5 /* rsz_1rsz_events-calendar-icon1-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = F869FB281CC1DE8600D519D5 /* rsz_1rsz_events-calendar-icon1-300x300.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		F860990F1CC02616005ABDE0 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarItem.swift; path = ../Pods/PDTSimpleCalendar/TabBarItem.swift; sourceTree = "<group>"; };
 		F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurTabBarController.swift; sourceTree = "<group>"; };
 		F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
+		F869FB241CC1DD2900D519D5 /* events-calendar-icon1-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "events-calendar-icon1-300x300.png"; path = "../../../../../Downloads/events-calendar-icon1-300x300.png"; sourceTree = "<group>"; };
+		F869FB281CC1DE8600D519D5 /* rsz_1rsz_events-calendar-icon1-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rsz_1rsz_events-calendar-icon1-300x300.png"; path = "../../../../../Downloads/rsz_1rsz_events-calendar-icon1-300x300.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				F869FB1D1CC08CCE00D519D5 /* Mitch's musings */,
 				680B93A51CB3555000670E0B /* SecondViewController.swift */,
 				2C4613651CB7EB890093F25B /* DataController.swift */,
+				F869FB281CC1DE8600D519D5 /* rsz_1rsz_events-calendar-icon1-300x300.png */,
+				F869FB241CC1DD2900D519D5 /* events-calendar-icon1-300x300.png */,
 				2C4613671CB7EBBD0093F25B /* Chart.swift */,
 				680B93A71CB3555100670E0B /* Main.storyboard */,
 				5CA2288E1CC0A67900C1DD2D /* EventView.swift */,
@@ -298,6 +304,8 @@
 			files = (
 				680B93AE1CB3555100670E0B /* LaunchScreen.storyboard in Resources */,
 				680B93AB1CB3555100670E0B /* Assets.xcassets in Resources */,
+				F869FB251CC1DD2900D519D5 /* events-calendar-icon1-300x300.png in Resources */,
+				F869FB291CC1DE8600D519D5 /* rsz_1rsz_events-calendar-icon1-300x300.png in Resources */,
 				680B93A91CB3555100670E0B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

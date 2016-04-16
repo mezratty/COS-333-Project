@@ -27,15 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
-        
-        
-        //UITabBarItem.appearance().image = createUpcomingImage()
-        //UITabBarItem.appearance().image! = createUpcomingImage()
-        
-        //UITabBarItem.init(title: "Upcoming", image: createUpcomingImage(), selectedImage: createUpcomingImage())
-        
-        //let this : UIImage = createUpcomingImage()
-        //UITabBarItem.appearance().image = UIImage.init(imageLiteral: "first")
         return true
     }
 
