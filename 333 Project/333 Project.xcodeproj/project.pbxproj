@@ -137,14 +137,11 @@
 				680B93A31CB3555000670E0B /* FirstViewController.swift */,
 				F869FB1D1CC08CCE00D519D5 /* Mitch's musings */,
 				680B93A51CB3555000670E0B /* SecondViewController.swift */,
+				F869FB301CC1F69A00D519D5 /* Images */,
 				2C4613651CB7EB890093F25B /* DataController.swift */,
-				F869FB281CC1DE8600D519D5 /* rsz_1rsz_events-calendar-icon1-300x300.png */,
-				F869FB241CC1DD2900D519D5 /* events-calendar-icon1-300x300.png */,
 				2C4613671CB7EBBD0093F25B /* Chart.swift */,
 				680B93A71CB3555100670E0B /* Main.storyboard */,
-				F869FB2E1CC1ED8600D519D5 /* rsz_1rsz_1rsz_upcoming2.png */,
 				5CA2288E1CC0A67900C1DD2D /* EventView.swift */,
-				F869FB2C1CC1E10000D519D5 /* rsz_1rsz_1rsz_upcoming.png */,
 				5CA2288C1CC0A35B00C1DD2D /* DayTable.swift */,
 				680B93E41CB364F600670E0B /* 333Project-Bridging-Header.h */,
 				680B93AA1CB3555100670E0B /* Assets.xcassets */,
@@ -190,6 +187,17 @@
 				F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */,
 			);
 			name = "Mitch's musings";
+			sourceTree = "<group>";
+		};
+		F869FB301CC1F69A00D519D5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F869FB281CC1DE8600D519D5 /* rsz_1rsz_events-calendar-icon1-300x300.png */,
+				F869FB2E1CC1ED8600D519D5 /* rsz_1rsz_1rsz_upcoming2.png */,
+				F869FB241CC1DD2900D519D5 /* events-calendar-icon1-300x300.png */,
+				F869FB2C1CC1E10000D519D5 /* rsz_1rsz_1rsz_upcoming.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		FA19E4E086093A4344374F49 /* Pods */ = {
