@@ -28,6 +28,7 @@
 		F869FB251CC1DD2900D519D5 /* events-calendar-icon1-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = F869FB241CC1DD2900D519D5 /* events-calendar-icon1-300x300.png */; };
 		F869FB291CC1DE8600D519D5 /* rsz_1rsz_events-calendar-icon1-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = F869FB281CC1DE8600D519D5 /* rsz_1rsz_events-calendar-icon1-300x300.png */; };
 		F869FB2D1CC1E10000D519D5 /* rsz_1rsz_1rsz_upcoming.png in Resources */ = {isa = PBXBuildFile; fileRef = F869FB2C1CC1E10000D519D5 /* rsz_1rsz_1rsz_upcoming.png */; };
+		F869FB2F1CC1ED8600D519D5 /* rsz_1rsz_1rsz_upcoming2.png in Resources */ = {isa = PBXBuildFile; fileRef = F869FB2E1CC1ED8600D519D5 /* rsz_1rsz_1rsz_upcoming2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		F869FB241CC1DD2900D519D5 /* events-calendar-icon1-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "events-calendar-icon1-300x300.png"; path = "../../../../../Downloads/events-calendar-icon1-300x300.png"; sourceTree = "<group>"; };
 		F869FB281CC1DE8600D519D5 /* rsz_1rsz_events-calendar-icon1-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rsz_1rsz_events-calendar-icon1-300x300.png"; path = "../../../../../Downloads/rsz_1rsz_events-calendar-icon1-300x300.png"; sourceTree = "<group>"; };
 		F869FB2C1CC1E10000D519D5 /* rsz_1rsz_1rsz_upcoming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rsz_1rsz_1rsz_upcoming.png; path = ../../../../../Downloads/rsz_1rsz_1rsz_upcoming.png; sourceTree = "<group>"; };
+		F869FB2E1CC1ED8600D519D5 /* rsz_1rsz_1rsz_upcoming2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rsz_1rsz_1rsz_upcoming2.png; path = ../../../../../Downloads/rsz_1rsz_1rsz_upcoming2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				F869FB241CC1DD2900D519D5 /* events-calendar-icon1-300x300.png */,
 				2C4613671CB7EBBD0093F25B /* Chart.swift */,
 				680B93A71CB3555100670E0B /* Main.storyboard */,
+				F869FB2E1CC1ED8600D519D5 /* rsz_1rsz_1rsz_upcoming2.png */,
 				5CA2288E1CC0A67900C1DD2D /* EventView.swift */,
 				F869FB2C1CC1E10000D519D5 /* rsz_1rsz_1rsz_upcoming.png */,
 				5CA2288C1CC0A35B00C1DD2D /* DayTable.swift */,
@@ -309,6 +312,7 @@
 				680B93AB1CB3555100670E0B /* Assets.xcassets in Resources */,
 				F869FB251CC1DD2900D519D5 /* events-calendar-icon1-300x300.png in Resources */,
 				F869FB291CC1DE8600D519D5 /* rsz_1rsz_events-calendar-icon1-300x300.png in Resources */,
+				F869FB2F1CC1ED8600D519D5 /* rsz_1rsz_1rsz_upcoming2.png in Resources */,
 				680B93A91CB3555100670E0B /* Main.storyboard in Resources */,
 				F869FB2D1CC1E10000D519D5 /* rsz_1rsz_1rsz_upcoming.png in Resources */,
 			);

@@ -24,9 +24,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCz-BA-1CU" customClass="TabBarButton" customModule="_33_Project" customModuleProvider="target">
-                                <rect key="frame" x="62" y="280" width="43" height="49"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -36,7 +33,7 @@
                             <constraint firstItem="sO1-xc-nFM" firstAttribute="leading" secondItem="lp6-u9-oYh" secondAttribute="leadingMargin" constant="79" id="KBK-Yl-yvb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Upcoming" image="rsz_1rsz_1rsz_upcoming.png" selectedImage="rsz_1rsz_1rsz_upcoming.png" id="QcY-SP-Br0"/>
+                    <tabBarItem key="tabBarItem" title="Upcoming" image="rsz_1rsz_1rsz_upcoming2.png" selectedImage="rsz_1rsz_1rsz_upcoming2.png" id="QcY-SP-Br0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmN-tB-SdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,7 +173,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rsz_1rsz_1rsz_upcoming.png" width="29" height="29"/>
+        <image name="rsz_1rsz_1rsz_upcoming2.png" width="29" height="29"/>
         <image name="rsz_1rsz_events-calendar-icon1-300x300.png" width="38" height="38"/>
     </resources>
 </document>
