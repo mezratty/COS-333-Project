@@ -24,6 +24,9 @@
 		680B93B91CB3555100670E0B /* _33_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B93B81CB3555100670E0B /* _33_ProjectTests.swift */; };
 		680B93C41CB3555100670E0B /* _33_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B93C31CB3555100670E0B /* _33_ProjectUITests.swift */; };
 		C07E0C936889AAD8711C784F /* Pods_333_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693E7716F09C4483E24805C7 /* Pods_333_Project.framework */; };
+		F85B3D8E1CC6E43D006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = F85B3D8D1CC6E43D006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png */; };
+		F85B3D911CC6E44D006A2E8A /* rsz_1rsz_1rsz_upcoming.png in Resources */ = {isa = PBXBuildFile; fileRef = F85B3D8F1CC6E44D006A2E8A /* rsz_1rsz_1rsz_upcoming.png */; };
+		F85B3D921CC6E44D006A2E8A /* rsz_1rsz_1rsz_upcoming2.png in Resources */ = {isa = PBXBuildFile; fileRef = F85B3D901CC6E44D006A2E8A /* rsz_1rsz_1rsz_upcoming2.png */; };
 		F86099101CC02616005ABDE0 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F860990F1CC02616005ABDE0 /* TabBarItem.swift */; };
 		F869FB1F1CC08D2C00D519D5 /* OurTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */; };
 		F869FB211CC0CC8F00D519D5 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */; };
@@ -73,6 +76,9 @@
 		680B93E41CB364F600670E0B /* 333Project-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "333Project-Bridging-Header.h"; sourceTree = "<group>"; };
 		693E7716F09C4483E24805C7 /* Pods_333_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_333_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A458743883C1FF3AA87A8736 /* Pods-333 Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-333 Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-333 Project/Pods-333 Project.release.xcconfig"; sourceTree = "<group>"; };
+		F85B3D8D1CC6E43D006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rsz_1rsz_events-calendar-icon1-300x300.png"; path = "../../../../Downloads/rsz_1rsz_events-calendar-icon1-300x300.png"; sourceTree = "<group>"; };
+		F85B3D8F1CC6E44D006A2E8A /* rsz_1rsz_1rsz_upcoming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rsz_1rsz_1rsz_upcoming.png; path = ../../../../Downloads/rsz_1rsz_1rsz_upcoming.png; sourceTree = "<group>"; };
+		F85B3D901CC6E44D006A2E8A /* rsz_1rsz_1rsz_upcoming2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rsz_1rsz_1rsz_upcoming2.png; path = ../../../../Downloads/rsz_1rsz_1rsz_upcoming2.png; sourceTree = "<group>"; };
 		F860990F1CC02616005ABDE0 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarItem.swift; path = ../Pods/PDTSimpleCalendar/TabBarItem.swift; sourceTree = "<group>"; };
 		F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurTabBarController.swift; sourceTree = "<group>"; };
 		F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
@@ -107,6 +113,9 @@
 		680B93951CB3555000670E0B = {
 			isa = PBXGroup;
 			children = (
+				F85B3D8F1CC6E44D006A2E8A /* rsz_1rsz_1rsz_upcoming.png */,
+				F85B3D901CC6E44D006A2E8A /* rsz_1rsz_1rsz_upcoming2.png */,
+				F85B3D8D1CC6E43D006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png */,
 				680B93A01CB3555000670E0B /* 333 Project */,
 				680B93B71CB3555100670E0B /* 333 ProjectTests */,
 				680B93C21CB3555100670E0B /* 333 ProjectUITests */,
@@ -310,9 +319,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85B3D921CC6E44D006A2E8A /* rsz_1rsz_1rsz_upcoming2.png in Resources */,
+				F85B3D8E1CC6E43D006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png in Resources */,
 				680B93AE1CB3555100670E0B /* LaunchScreen.storyboard in Resources */,
 				680B93AB1CB3555100670E0B /* Assets.xcassets in Resources */,
 				680B93A91CB3555100670E0B /* Main.storyboard in Resources */,
+				F85B3D911CC6E44D006A2E8A /* rsz_1rsz_1rsz_upcoming.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

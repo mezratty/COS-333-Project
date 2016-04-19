@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="smr-n5-Pgl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="smr-n5-Pgl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -33,7 +33,7 @@
                             <constraint firstItem="sO1-xc-nFM" firstAttribute="leading" secondItem="lp6-u9-oYh" secondAttribute="leadingMargin" constant="79" id="KBK-Yl-yvb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Upcoming" image="second" selectedImage="second" id="QcY-SP-Br0"/>
+                    <tabBarItem key="tabBarItem" title="Upcoming" image="rsz_1rsz_1rsz_upcoming2.png" selectedImage="rsz_1rsz_1rsz_upcoming2.png" id="QcY-SP-Br0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmN-tB-SdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,18 +84,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNY-CB-T1y">
-                                <rect key="frame" x="52" y="66" width="227" height="388"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VNY-CB-T1y">
+                                <rect key="frame" x="20" y="20" width="280" height="528"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="VNY-CB-T1y" firstAttribute="leading" secondItem="L56-qT-her" secondAttribute="leadingMargin" constant="36" id="3ZW-sZ-3fl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VNY-CB-T1y" secondAttribute="trailing" constant="25" id="WAo-JJ-enq"/>
-                            <constraint firstItem="J2O-lo-VeF" firstAttribute="top" secondItem="VNY-CB-T1y" secondAttribute="bottom" constant="114" id="lWl-xr-J5I"/>
-                            <constraint firstItem="VNY-CB-T1y" firstAttribute="top" secondItem="dfo-lB-OHJ" secondAttribute="bottom" constant="46" id="wrn-yB-7xu"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -191,7 +185,7 @@
         <scene sceneID="YQQ-4I-BpV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z8h-ws-Ohd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" image="first" selectedImage="first" id="wdX-2F-DJX"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="rsz_1rsz_events-calendar-icon1-300x300.png" selectedImage="rsz_1rsz_events-calendar-icon1-300x300.png" id="wdX-2F-DJX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lk6-LM-I1D">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -208,7 +202,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="rsz_1rsz_1rsz_upcoming2.png" width="29" height="29"/>
+        <image name="rsz_1rsz_events-calendar-icon1-300x300.png" width="38" height="38"/>
     </resources>
 </document>
