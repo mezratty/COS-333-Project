@@ -20,12 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.whiteColor()
         
         
+    
         UINavigationBar.appearance().barTintColor = UIColor.blackColor()
         UINavigationBar.appearance().titleTextAttributes = [
             NSForegroundColorAttributeName : UIColor.whiteColor()
         ]
         
         UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
         
         return true
     }

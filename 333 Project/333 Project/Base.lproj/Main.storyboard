@@ -39,7 +39,7 @@
             </objects>
             <point key="canvasLocation" x="-931" y="96"/>
         </scene>
-        <!--CALENDAR-->
+        <!--Calendar-->
         <scene sceneID="Qzt-kK-wZ7">
             <objects>
                 <viewController storyboardIdentifier="Calendar" id="Gr9-Jb-tG1" customClass="FirstViewController" customModule="_33_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,7 +66,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="RZ3-5P-He7" secondAttribute="trailing" id="wJN-OF-uzf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="CALENDAR" id="f9l-at-9q5"/>
+                    <navigationItem key="navigationItem" title="Calendar" id="f9l-at-9q5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2w-NI-cF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

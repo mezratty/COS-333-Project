@@ -70,8 +70,9 @@ class CalWrapper: UIViewController {
             
             let titleString = String(format: "%@%@%d%@%d", stringFromDate," ", day," ", year)
             dest.navigationItem.title = titleString
-
             
+            navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+            navigationController?.navigationBar.tintColor = UIColor.whiteColor()
             
             
             
