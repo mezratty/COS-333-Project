@@ -6,6 +6,8 @@
 //  Copyright © 2016 Divya Mehta. All rights reserved.
 //
 
+var globalNetId: String = ""
+
 class WebController: UIViewController, UIWebViewDelegate {
     
     //@IBOutlet weak var myWebView: UIWebView!
@@ -44,31 +46,12 @@ class WebController: UIViewController, UIWebViewDelegate {
             
             let startIndex = request.URLString.startIndex.advancedBy(59)
             let netId = request.URLString.substringFromIndex(startIndex)
+            globalNetId = netId
             
             self.performSegueWithIdentifier("LoggedIn", sender: netId)
             return false
         }
         return true
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
-        
-        navigationItem.title = nil
-        if (segue.identifier == "LoggedIn") {
-            
-            let dest = segue.destinationViewController as! TabBar
-            dest.netId = sender as! String
-            
-           // dest.navigationController?.visibleViewController!.navigationItem.title = sender as! String
-            
-           // dest.navigationItem.title = sender as! String
-            
-            
-        }
-        
-    }
-    
+
 }

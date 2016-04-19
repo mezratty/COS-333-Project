@@ -11,12 +11,10 @@ import UIKit
 class TabBar: UITabBarController {
 
     
-    var netId:String = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(netId)
+        print(globalNetId)
         
         // Do any additional setup after loading the view, typically from a nib.
     }

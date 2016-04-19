@@ -28,12 +28,12 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>http://www.goprincetontigers.com/main/Schedule.dbml?&amp;DB_OEM_ID=10600&amp;DB_OEM_ID=10600.htm</key>
+			<key>http://still-brushlands-47074.herokuapp.com/</key>
 			<dict>
 				<key>NSThirdPartyExceptionAllowInsecureHTTPLoads</key>
 				<true/>
 			</dict>
-			<key>http://www.swiftdeveloperblog.com</key>
+			<key>http://www.goprincetontigers.com/main/Schedule.dbml?&amp;DB_OEM_ID=10600&amp;DB_OEM_ID=10600.htm</key>
 			<dict>
 				<key>NSThirdPartyExceptionAllowInsecureHTTPLoads</key>
 				<true/>
