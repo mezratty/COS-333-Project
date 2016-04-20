@@ -20,21 +20,22 @@ class OurLabel: UILabel {
     
     override func drawRect(rect: CGRect) {
         handleData()
+        super.drawRect(rect)
     }
     
     func handleData() {
         
         if (isTitle) {
-            super.text = "BodyHype Springshow"
+            super.text = "Title: " + "BodyHype Springshow"
         }
         if (isDescription) {
-            super.text = "description"
+            super.text = "Description: " + "BodyHype's spring show"
         }
         if (isTime) {
-            super.text = "9 o clock"
+            super.text = "Time: " + "10:00 PM"
         }
         if (isDate) {
-            super.text = "jan 4"
+            super.text = "Date: " + "May 5"
         }
     }
 }
