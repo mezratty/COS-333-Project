@@ -26,6 +26,7 @@
 		C07E0C936889AAD8711C784F /* Pods_333_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693E7716F09C4483E24805C7 /* Pods_333_Project.framework */; };
 		F85B3D951CC6E5B6006A2E8A /* rsz_1rsz_1rsz_upcoming2.png in Resources */ = {isa = PBXBuildFile; fileRef = F85B3D931CC6E5B6006A2E8A /* rsz_1rsz_1rsz_upcoming2.png */; };
 		F85B3D961CC6E5B6006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = F85B3D941CC6E5B6006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png */; };
+		F85B3D981CC7F655006A2E8A /* OurLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B3D971CC7F655006A2E8A /* OurLabel.swift */; };
 		F86099101CC02616005ABDE0 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F860990F1CC02616005ABDE0 /* TabBarItem.swift */; };
 		F869FB1F1CC08D2C00D519D5 /* OurTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */; };
 		F869FB211CC0CC8F00D519D5 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */; };
@@ -77,6 +78,7 @@
 		A458743883C1FF3AA87A8736 /* Pods-333 Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-333 Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-333 Project/Pods-333 Project.release.xcconfig"; sourceTree = "<group>"; };
 		F85B3D931CC6E5B6006A2E8A /* rsz_1rsz_1rsz_upcoming2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rsz_1rsz_1rsz_upcoming2.png; path = "333 Project/rsz_1rsz_1rsz_upcoming2.png"; sourceTree = "<group>"; };
 		F85B3D941CC6E5B6006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rsz_1rsz_events-calendar-icon1-300x300.png"; path = "333 Project/rsz_1rsz_events-calendar-icon1-300x300.png"; sourceTree = "<group>"; };
+		F85B3D971CC7F655006A2E8A /* OurLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurLabel.swift; sourceTree = "<group>"; };
 		F860990F1CC02616005ABDE0 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarItem.swift; path = ../Pods/PDTSimpleCalendar/TabBarItem.swift; sourceTree = "<group>"; };
 		F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurTabBarController.swift; sourceTree = "<group>"; };
 		F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				F860990F1CC02616005ABDE0 /* TabBarItem.swift */,
+				F85B3D971CC7F655006A2E8A /* OurLabel.swift */,
 				F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */,
 				F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */,
 			);
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CE3E2241CC5CC73000C1F95 /* WebController.swift in Sources */,
+				F85B3D981CC7F655006A2E8A /* OurLabel.swift in Sources */,
 				2C4613661CB7EB890093F25B /* DataController.swift in Sources */,
 				5CA2288D1CC0A35B00C1DD2D /* DayTable.swift in Sources */,
 				5C37E2EE1CB6EE4A006CC4B1 /* CalendarViewController.swift in Sources */,
