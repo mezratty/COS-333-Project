@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-333 Project/Alamofire.framework"
+  install_framework "Pods-333 Project/Firebase.framework"
   install_framework "Pods-333 Project/HTMLReader.framework"
   install_framework "Pods-333 Project/PDTSimpleCalendar.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-333 Project/Alamofire.framework"
+  install_framework "Pods-333 Project/Firebase.framework"
   install_framework "Pods-333 Project/HTMLReader.framework"
   install_framework "Pods-333 Project/PDTSimpleCalendar.framework"
 fi
