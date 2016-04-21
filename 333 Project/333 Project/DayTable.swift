@@ -9,15 +9,18 @@
 import UIKit
 import Firebase
 
+    var items = [NSMutableArray]()
+
 class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var date:NSDate!
     
     var tableView: UITableView  =   UITableView()
     
-    var items: NSArray = NSArray.init(array: [["BodyHype", 0], ["Mens Soccer", 1]])
     
-    var ref = Firebase(url:"https://blistering-torch-3510.firebaseio.com/games")
+    //var items: NSArray = NSArray.init(array: [["BodyHype", 0], ["Mens Soccer", 1]])
+    
+    var ref = Firebase(url:"https://blistering-torch-3510.firebaseio.com/events")
     
     override func viewDidLoad() {
         
@@ -43,33 +46,31 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
         })
         
         
-        /*
-        ref.queryOrderedByChild("date").queryEqualToValue(dateFormatted).observeEventType(.Value, withBlock: {snapshot in
-            var tempGames = [NSMutableArray]()
+        
+        ref.queryOrderedByChild("dateInt").queryEqualToValue(dateFormatted).observeEventType(.Value, withBlock: {snapshot in
+            var tempEvents = [NSMutableArray]()
             
             for item in snapshot.children {
                 
                 
                 let event = NSMutableArray()
                 
-                let name = String(item.value["team"] as! String)
-                let description = String(item.value["opponent"] as? String)
-                
+                let name = String(item.value["name"] as! String)
+                let description = String(item.value["description"] as? String)
+                let date = String(item.value["date"] as? String)
                 let time = String(item.value["time"] as? String)
                 
                 event.addObject(name)
                 event.addObject(description)
                 event.addObject(date)
                 event.addObject(time)
-                tempGames.append(event)
+                tempEvents.append(event)
                 
             }
-            events = tempGames
+            events = tempEvents
             self.tableView.reloadData()
-            print(events.count)
-            
         })
- */
+ 
         
         
         
@@ -94,7 +95,8 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count
+        return items.count
+        //return self.items.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -102,7 +104,8 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
         
         //cell.textLabel?.text = self.items[indexPath.row] as! String
-        cell.textLabel?.text = self.items.objectAtIndex(indexPath.row).objectAtIndex(0) as? String
+        cell.textLabel?.text = (items[indexPath.row]).objectAtIndex(0) as! String
+        //cell.textLabel?.text = self.items.objectAtIndex(indexPath.row).objectAtIndex(0) as? String
         
         return cell
         

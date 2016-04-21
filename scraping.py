@@ -12,10 +12,77 @@ teams = soup.find_all("td", attrs={"class": "team"})
 opponents = soup.find_all("td", attrs={"class": "opponent"})
 dates = soup.find_all("td", attrs={"class": "date"})
 times = soup.find_all("td", attrs={"class": "time"})
+dateInts = []
+for i in range(len(dates)):
+	dateInts.append(0)
+
+
+# get rid of extra tabs and newlines 
+for i in range(len(teams)):
+	temp = ""
+	for j in range(len(teams[i].string)):
+		if (teams[i].string[j] != '\n') and (teams[i].string[j] != '\t'):
+			temp += teams[i].string[j]
+	teams[i] = temp	
+
+for i in range(len(opponents)):
+	temp = ""
+	for j in range(len(opponents[i].string)):
+		if (opponents[i].string[j] != '\n') and (opponents[i].string[j] != '\t'):
+			temp += opponents[i].string[j]
+	opponents[i] = temp
+
+for i in range(len(dates)):
+	temp = ""
+	for j in range(len(str(dates[i].string))):
+		if (str(dates[i].string)[j] != '\n') and (str(dates[i].string)[j] != '\t'):
+			temp += str(dates[i].string)[j]
+	dates[i] = temp
+
+for i in range(len(times)):
+	temp = ""
+	for j in range(len(times[i].string)):
+		if (times[i].string[j] != '\n') and (times[i].string[j] != '\t'):
+			temp += times[i].string[j]
+	times[i] = temp
+
+#convert date format
+for i in range(len(dates)):
+	day = 0
+	if bool(re.search('Jan', dates[i])):
+		dateInts[i] = 1000000
+	if bool(re.search('Feb', dates[i])):
+		dateInts[i] = 4000000
+	if bool(re.search('Mar', dates[i])):
+		dateInts[i] = 3000000
+	if bool(re.search('Apr', dates[i])):
+		dateInts[i] = 4000000
+	if bool(re.search('May', dates[i])):
+		dateInts[i] = 5000000
+	if bool(re.search('Jun', dates[i])):
+		dateInts[i] = 6000000
+	if bool(re.search('Jul', dates[i])):
+		dateInts[i] = 7000000
+	if bool(re.search('Aug', dates[i])):
+		dateInts[i] = 8000000
+	if bool(re.search('Sep', dates[i])):
+		dateInts[i] = 9000000
+	if bool(re.search('Oct', dates[i])):
+		dateInts[i] = 10000000
+	if bool(re.search('Nov', dates[i])):
+		dateInts[i] = 11000000
+	if bool(re.search('Dec', dates[i])):
+		dateInts[i] = 12000000
+	if bool(re.search('[0-9][0-9]?', dates[i])):
+		day = re.search('[0-9][0-9]?', dates[i])
+		dateInts[i] += int(day.group(0))*10000
+	dateInts[i] += 2016
 
 for i in range(len(teams)):
-	data = {'team': teams[i].string, 'opponent': opponents[i].string, 'date': dates[i].string, 'time': times[i].string}
-	firebase.post('/games', data)
+	data = {'name': teams[i], 'description': opponents[i], 'date': dates[i], 'time': times[i], 'dateInt': dateInts[i]}
+	#data = {'name': teams[i].string, 'description': opponents[i].string, 'date': dates[i].string, 'time': times[i].string}
+	#firebase.post('/games', data)
+	firebase.post('/events', data)
 
 
 

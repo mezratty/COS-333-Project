@@ -16,7 +16,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var tableView: UITableView  =   UITableView()
     
     // Get a reference to our posts
-    var ref = Firebase(url:"https://blistering-torch-3510.firebaseio.com/games")
+    var ref = Firebase(url:"https://blistering-torch-3510.firebaseio.com/events")
     //var games : NSMutableArray = []
     
     override func viewDidLoad() {
@@ -46,16 +46,16 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         })
  */
         
-        ref.queryOrderedByChild("date").observeEventType(.Value, withBlock: {snapshot in
+        ref.queryOrderedByChild("dateInt").observeEventType(.Value, withBlock: {snapshot in
             var tempEvents = [NSMutableArray]()
             
             for item in snapshot.children {
                 
                 let event = NSMutableArray()
                 
-                let name = String(item.value["team"] as! String)
+                let name = String(item.value["name"] as! String)
                 //let key = String(item.key as! String)
-                let description = String(item.value["opponent"] as? String)
+                let description = String(item.value["description"] as? String)
                 let date = String(item.value["date"] as? String)
                 let time = String(item.value["time"] as? String)
                 
@@ -96,14 +96,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
-    
-        var text = (events[indexPath.row]).objectAtIndex(0) as! String
         
-        //cell.textLabel?.text = self.games[indexPath.row] as! String
-        let startIndex = text.startIndex.advancedBy(5)
-        let textTwo = text.substringFromIndex(startIndex)
-        
-        cell.textLabel?.text = textTwo
+        cell.textLabel?.text = (events[indexPath.row]).objectAtIndex(0) as! String
         
         
         return cell

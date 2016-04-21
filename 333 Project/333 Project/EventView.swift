@@ -12,7 +12,7 @@ import Firebase
 class EventView: UIViewController {
     
     var eventId:Int = 0
-    var ref = Firebase(url:"https://blistering-torch-3510.firebaseio.com/games")
+    var ref = Firebase(url:"https://blistering-torch-3510.firebaseio.com/events")
     
     @IBOutlet weak var eventTitle: UILabel!
     
@@ -69,14 +69,11 @@ class EventView: UIViewController {
         
         
         var text = event.objectAtIndex(0) as! String
-        
-        var startIndex = text.startIndex.advancedBy(5)
-        let textTwo = text.substringFromIndex(startIndex)
-        eventTitle.text = textTwo
+        eventTitle.text = text
         
         text = event.objectAtIndex(1) as! String
         if text.rangeOfString("Optional") != nil {
-            startIndex = text.startIndex.advancedBy(9)
+            let startIndex = text.startIndex.advancedBy(9)
             text = text.substringFromIndex(startIndex)
         }
         eventDesc.text = text
