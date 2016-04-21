@@ -6,15 +6,18 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Upcoming-->
+        <!--Second View Controller-->
         <scene sceneID="tc6-lL-vaf">
             <objects>
                 <viewController storyboardIdentifier="Upcoming" id="hb6-Rb-neN" customClass="SecondViewController" customModule="_33_Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Upcoming" image="rsz_1rsz_1rsz_upcoming2.png" selectedImage="rsz_1rsz_1rsz_upcoming2.png" id="QcY-SP-Br0"/>
+                    <navigationItem key="navigationItem" id="dQM-7H-5VV"/>
+                    <connections>
+                        <segue destination="T4q-W6-fGd" kind="show" identifier="UpToEvent" id="rhJ-4G-Zld"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmN-tB-SdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-931" y="96"/>
+            <point key="canvasLocation" x="-399" y="96"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="U5e-me-25z">
@@ -33,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efj-d6-CzJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-373" y="-30"/>
+            <point key="canvasLocation" x="619" y="-926"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="Qzt-kK-wZ7">
@@ -109,7 +112,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="z8h-ws-Ohd" kind="relationship" relationship="viewControllers" id="4PS-90-vE5"/>
-                        <segue destination="hb6-Rb-neN" kind="relationship" relationship="viewControllers" id="d7r-Ke-PPr"/>
+                        <segue destination="Rfj-sr-pop" kind="relationship" relationship="viewControllers" id="d7r-Ke-PPr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IxD-6r-WLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQQ-2p-be7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="270" y="-224.5"/>
+            <point key="canvasLocation" x="802" y="-224.5"/>
         </scene>
         <!--Event View-->
         <scene sceneID="Y0c-La-aJM">
@@ -155,40 +158,14 @@
                         <viewControllerLayoutGuide type="bottom" id="oYh-WT-bqS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1us-WA-HUS">
-                        <rect key="frame" x="0.0" y="0.0" width="280" height="439"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4J-3R-bfL" customClass="OurLabel" customModule="_33_Project" customModuleProvider="target">
-                                <rect key="frame" x="20" y="155" width="240" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrd-co-UOr">
+                                <rect key="frame" x="66" y="99" width="156" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isDescription" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9X-zq-Vir" customClass="OurLabel" customModule="_33_Project" customModuleProvider="target">
-                                <rect key="frame" x="20" y="230" width="240" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isDate" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66n-9F-9eN" customClass="OurLabel" customModule="_33_Project" customModuleProvider="target">
-                                <rect key="frame" x="20" y="293" width="240" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isTime" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rS-U4-j3k" customClass="OurLabel" customModule="_33_Project" customModuleProvider="target">
-                                <rect key="frame" x="20" y="75" width="240" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isTitle" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -201,10 +178,13 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="eventTitle" destination="qrd-co-UOr" id="Ks1-iT-3bv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAk-yY-AkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="891" y="-226.5"/>
+            <point key="canvasLocation" x="1423" y="-227"/>
         </scene>
         <!--Cal Wrapper-->
         <scene sceneID="K1Y-mJ-xNJ">
@@ -251,9 +231,31 @@
             </objects>
             <point key="canvasLocation" x="-937" y="-665"/>
         </scene>
+        <!--Upcoming-->
+        <scene sceneID="4mI-6j-xez">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rfj-sr-pop" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Upcoming" image="rsz_1rsz_1rsz_upcoming2.png" selectedImage="rsz_1rsz_1rsz_upcoming2.png" id="QcY-SP-Br0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gkv-Sw-HH6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hb6-Rb-neN" kind="relationship" relationship="rootViewController" id="BVD-lb-dKc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DnE-pY-cfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-931" y="96"/>
+        </scene>
     </scenes>
     <resources>
         <image name="rsz_1rsz_1rsz_upcoming2.png" width="29" height="29"/>
         <image name="rsz_1rsz_events-calendar-icon1-300x300.png" width="38" height="38"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rhJ-4G-Zld"/>
+    </inferredMetricsTieBreakers>
 </document>

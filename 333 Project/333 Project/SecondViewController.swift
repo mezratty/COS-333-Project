@@ -6,6 +6,8 @@
 //  Copyright © 2016 Divya Mehta. All rights reserved.
 //
 
+var events = [NSMutableArray]()
+
 import UIKit
 import Firebase
 
@@ -16,7 +18,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // Get a reference to our posts
     var ref = Firebase(url:"https://blistering-torch-3510.firebaseio.com/games")
     //var games : NSMutableArray = []
-    var games = [String]()
     
     override func viewDidLoad() {
         
@@ -46,17 +47,20 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
  */
         
         ref.observeEventType(.Value, withBlock: {snapshot in
-            var tempGames = [String]()
+            var tempGames = [NSMutableArray]()
             
             for item in snapshot.children {
                 
+                let event = NSMutableArray()
+                
                 let team = String(item.value["team"] as! String)
-                tempGames.append(team)
+                event.addObject(team)
+                tempGames.append(event)
                 
             }
-            self.games = tempGames
+            events = tempGames
             self.tableView.reloadData()
-            print(self.games.count)
+            print(events.count)
         
         })
         
@@ -75,23 +79,48 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.games.count
+        return events.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
     
-        var text = self.games[indexPath.row] as! String
+        var text = (events[indexPath.row]).objectAtIndex(0) as! String
         
         //cell.textLabel?.text = self.games[indexPath.row] as! String
         let startIndex = text.startIndex.advancedBy(5)
         let textTwo = text.substringFromIndex(startIndex)
         
         cell.textLabel?.text = textTwo
-        print(textTwo)
+        //print(textTwo)
         
         return cell
+        
+    }
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.performSegueWithIdentifier("UpToEvent", sender: indexPath.row)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "UpToEvent") {
+            
+            let dest = segue.destinationViewController as! EventView
+            dest.eventId = sender as! Int
+            
+            let titleString = String(format: "%@%d", "Id:", sender as! Int)
+            dest.navigationItem.title = titleString
+            
+            
+            navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+            navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        }
         
     }
     

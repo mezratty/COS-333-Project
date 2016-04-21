@@ -52,7 +52,7 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell #\(indexPath.row)!")
+        //print("You selected cell #\(indexPath.row)!")
         
         self.performSegueWithIdentifier("EventView", sender: self.items.objectAtIndex(indexPath.row).objectAtIndex(1))
     }
