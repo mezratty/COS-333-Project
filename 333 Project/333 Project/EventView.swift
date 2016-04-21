@@ -71,7 +71,7 @@ class EventView: UIViewController {
         var text = event.objectAtIndex(0) as! String
         
         var startIndex = text.startIndex.advancedBy(5)
-        var textTwo = text.substringFromIndex(startIndex)
+        let textTwo = text.substringFromIndex(startIndex)
         eventTitle.text = textTwo
         
         text = event.objectAtIndex(1) as! String
