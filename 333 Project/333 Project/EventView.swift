@@ -81,13 +81,13 @@ class EventView: UIViewController {
         }
         eventDesc.text = text
         
-        //text = event.objectAtIndex(2) as! String
+        text = event.objectAtIndex(2) as! String
         
         //startIndex = text.startIndex.advancedBy(5)
         //textTwo = text.substringFromIndex(startIndex)
         eventDate.text = text
             
-        //text = event.objectAtIndex(3) as! String
+        text = event.objectAtIndex(3) as! String
         
         //startIndex = text.startIndex.advancedBy(5)
         //textTwo = text.substringFromIndex(startIndex)
