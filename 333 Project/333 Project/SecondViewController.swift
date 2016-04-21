@@ -46,26 +46,37 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         })
  */
         
-        ref.observeEventType(.Value, withBlock: {snapshot in
-            var tempGames = [NSMutableArray]()
+        ref.queryOrderedByChild("date").observeEventType(.Value, withBlock: {snapshot in
+            var tempEvents = [NSMutableArray]()
             
             for item in snapshot.children {
                 
                 let event = NSMutableArray()
                 
-                let team = String(item.value["team"] as! String)
-                event.addObject(team)
-                tempGames.append(event)
+                let name = String(item.value["team"] as! String)
+                //let key = String(item.key as! String)
+                let description = String(item.value["opponent"] as? String)
+                let date = String(item.value["date"] as? String)
+                let time = String(item.value["time"] as? String)
+                
+                event.addObject(name)
+                //event.addObject(key)
+                event.addObject(description)
+                event.addObject(date)
+                event.addObject(time)
+                tempEvents.append(event)
+                
+                //print(item.key)
                 
             }
-            events = tempGames
+            events = tempEvents
             self.tableView.reloadData()
             print(events.count)
         
         })
         
         
-        tableView.frame         =   CGRectMake(0, 50, 320, 200);
+        tableView.frame         =   CGRectMake(0, 50, 320, 500);
         tableView.delegate      =   self
         tableView.dataSource    =   self
         
@@ -93,7 +104,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let textTwo = text.substringFromIndex(startIndex)
         
         cell.textLabel?.text = textTwo
-        //print(textTwo)
+        
         
         return cell
         
@@ -102,6 +113,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        //self.performSegueWithIdentifier("UpToEvent", sender: indexPath.row)
         self.performSegueWithIdentifier("UpToEvent", sender: indexPath.row)
     }
     
@@ -113,9 +125,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             let dest = segue.destinationViewController as! EventView
             dest.eventId = sender as! Int
+            //dest.eventId = sender as! String
             
-            let titleString = String(format: "%@%d", "Id:", sender as! Int)
-            dest.navigationItem.title = titleString
+           // let titleString = String(format: "%@%d", "Id:", sender as! Int)
+           // dest.navigationItem.title = titleString
             
             
             navigationController?.navigationBar.barTintColor = UIColor.blackColor()

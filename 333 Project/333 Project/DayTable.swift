@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var date:NSDate!
@@ -15,9 +17,64 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var items: NSArray = NSArray.init(array: [["BodyHype", 0], ["Mens Soccer", 1]])
     
-    
+    var ref = Firebase(url:"https://blistering-torch-3510.firebaseio.com/games")
     
     override func viewDidLoad() {
+        
+        //parse the date
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Day , .Month , .Year], fromDate: date)
+        
+        let year =  components.year
+        let month = components.month
+        let day = components.day
+        
+        let dateFormatted = year + day*10000 + month*1000000
+        
+        print(dateFormatted)
+        
+        
+        
+        //query for date
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            snapshot.value
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+        
+        
+        /*
+        ref.queryOrderedByChild("date").queryEqualToValue(dateFormatted).observeEventType(.Value, withBlock: {snapshot in
+            var tempGames = [NSMutableArray]()
+            
+            for item in snapshot.children {
+                
+                
+                let event = NSMutableArray()
+                
+                let name = String(item.value["team"] as! String)
+                let description = String(item.value["opponent"] as? String)
+                
+                let time = String(item.value["time"] as? String)
+                
+                event.addObject(name)
+                event.addObject(description)
+                event.addObject(date)
+                event.addObject(time)
+                tempGames.append(event)
+                
+            }
+            events = tempGames
+            self.tableView.reloadData()
+            print(events.count)
+            
+        })
+ */
+        
+        
+        
+        
+        
         
         super.viewDidLoad()
         
@@ -54,7 +111,7 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //print("You selected cell #\(indexPath.row)!")
         
-        self.performSegueWithIdentifier("EventView", sender: self.items.objectAtIndex(indexPath.row).objectAtIndex(1))
+        self.performSegueWithIdentifier("EventView", sender: indexPath.row)
     }
     
  
@@ -76,6 +133,7 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             let dest = segue.destinationViewController as! EventView
             dest.eventId = sender as! Int
+            //dest.eventId = sender as! String
             
             let titleString = String(format: "%@%d", "Id:", sender as! Int)
             dest.navigationItem.title = titleString

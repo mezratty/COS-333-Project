@@ -158,11 +158,29 @@
                         <viewControllerLayoutGuide type="bottom" id="oYh-WT-bqS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1us-WA-HUS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="439"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrd-co-UOr">
-                                <rect key="frame" x="66" y="99" width="156" height="23"/>
+                                <rect key="frame" x="66" y="99" width="235" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIg-af-GqS">
+                                <rect key="frame" x="66" y="170" width="229" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6o-SW-iKC">
+                                <rect key="frame" x="70" y="238" width="225" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBD-lc-AzF">
+                                <rect key="frame" x="70" y="297" width="227" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -179,6 +197,9 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="eventDate" destination="G6o-SW-iKC" id="5hq-LN-hfz"/>
+                        <outlet property="eventDesc" destination="aIg-af-GqS" id="Sng-GI-FP8"/>
+                        <outlet property="eventTime" destination="dBD-lc-AzF" id="gQY-uv-QwX"/>
                         <outlet property="eventTitle" destination="qrd-co-UOr" id="Ks1-iT-3bv"/>
                     </connections>
                 </viewController>
@@ -256,6 +277,6 @@
         <image name="rsz_1rsz_events-calendar-icon1-300x300.png" width="38" height="38"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rhJ-4G-Zld"/>
+        <segue reference="dW1-nR-I9a"/>
     </inferredMetricsTieBreakers>
 </document>
