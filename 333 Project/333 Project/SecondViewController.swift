@@ -35,16 +35,17 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             var tempEvents = [NSMutableArray]()
             
             for item in snapshot.children {
+                if (item.value["dateInt"] as! Int != 2016) {
                 
-                let event = NSMutableArray()
+                    let event = NSMutableArray()
                 
-                let name = String(item.value["name"] as! String)
-                let key = String(item.key as! String)
+                    let name = String(item.value["name"] as! String)
+                    let key = String(item.key as! String)
                 
-                event.addObject(name)
-                event.addObject(key)
-                tempEvents.append(event)
-                
+                    event.addObject(name)
+                    event.addObject(key)
+                    tempEvents.append(event)
+                }
             }
             events = tempEvents
             self.tableView.reloadData()

@@ -52,14 +52,32 @@ class EventView: UIViewController {
             
          var description = String(snapshot.value["description"] as? String)
         if description.rangeOfString("Optional") != nil {
-            let startIndex = description.startIndex.advancedBy(9)
+            let startIndex = description.startIndex.advancedBy(10)
             description = description.substringFromIndex(startIndex)
+            let endIndex = description.endIndex.advancedBy(-2)
+            description = description.substringToIndex(endIndex)
         }
+        
         self.eventDesc.text = description
             
-         let date = String(snapshot.value["date"] as? String)
+         var date = String(snapshot.value["date"] as? String)
+            
+            if date.rangeOfString("Optional") != nil {
+                let startIndex = date.startIndex.advancedBy(10)
+                date = date.substringFromIndex(startIndex)
+                let endIndex = date.endIndex.advancedBy(-2)
+                date = date.substringToIndex(endIndex)
+            }
+            
             self.eventDate.text = date
-         let time = String(snapshot.value["time"] as? String)
+            
+         var time = String(snapshot.value["time"] as? String)
+            if time.rangeOfString("Optional") != nil {
+                let startIndex = time.startIndex.advancedBy(10)
+                time = time.substringFromIndex(startIndex)
+                let endIndex = time.endIndex.advancedBy(-2)
+                time = time.substringToIndex(endIndex)
+            }
             self.eventTime.text = time
          
          //}
