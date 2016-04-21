@@ -31,21 +31,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         })
         
         
-        /*
-        ref.queryOrderedByChild("team").observeEventType(.ChildAdded, withBlock: { snapshot in
-        
-            var tempGames = [String]()
-            if let team = snapshot.value["team"] as? String{
-                //print(team)
-                tempGames.append(team)
-                //self.games.addObject(team)
-                self.tableView.reloadData()
-            }
-            self.games = tempGames
-            print(self.games.count)
-        })
- */
-        
         ref.queryOrderedByChild("dateInt").observeEventType(.Value, withBlock: {snapshot in
             var tempEvents = [NSMutableArray]()
             
@@ -54,19 +39,11 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let event = NSMutableArray()
                 
                 let name = String(item.value["name"] as! String)
-                //let key = String(item.key as! String)
-                let description = String(item.value["description"] as? String)
-                let date = String(item.value["date"] as? String)
-                let time = String(item.value["time"] as? String)
+                let key = String(item.key as! String)
                 
                 event.addObject(name)
-                //event.addObject(key)
-                event.addObject(description)
-                event.addObject(date)
-                event.addObject(time)
+                event.addObject(key)
                 tempEvents.append(event)
-                
-                //print(item.key)
                 
             }
             events = tempEvents
@@ -107,8 +84,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        print(events[indexPath.row].objectAtIndex(1))
+        
         //self.performSegueWithIdentifier("UpToEvent", sender: indexPath.row)
-        self.performSegueWithIdentifier("UpToEvent", sender: indexPath.row)
+        self.performSegueWithIdentifier("UpToEvent", sender: events[indexPath.row].objectAtIndex(1))
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -118,8 +97,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if (segue.identifier == "UpToEvent") {
             
             let dest = segue.destinationViewController as! EventView
-            dest.eventId = sender as! Int
-            //dest.eventId = sender as! String
+            //dest.eventId = sender as! Int
+            dest.eventId = sender as! String
             
            // let titleString = String(format: "%@%d", "Id:", sender as! Int)
            // dest.navigationItem.title = titleString

@@ -56,18 +56,20 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 let event = NSMutableArray()
                 
                 let name = String(item.value["name"] as! String)
-                let description = String(item.value["description"] as? String)
-                let date = String(item.value["date"] as? String)
-                let time = String(item.value["time"] as? String)
+                let key = String(item.key as! String)
+                //let description = String(item.value["description"] as? String)
+                //let date = String(item.value["date"] as? String)
+                //let time = String(item.value["time"] as? String)
                 
                 event.addObject(name)
-                event.addObject(description)
-                event.addObject(date)
-                event.addObject(time)
+                event.addObject(key)
+                //event.addObject(description)
+                //event.addObject(date)
+                //event.addObject(time)
                 tempEvents.append(event)
                 
             }
-            events = tempEvents
+            items = tempEvents
             self.tableView.reloadData()
         })
  
@@ -114,7 +116,8 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //print("You selected cell #\(indexPath.row)!")
         
-        self.performSegueWithIdentifier("EventView", sender: indexPath.row)
+        //self.performSegueWithIdentifier("EventView", sender: indexPath.row)
+        self.performSegueWithIdentifier("EventView", sender: (items[indexPath.row]).objectAtIndex(1))
     }
     
  
@@ -135,11 +138,11 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
             //let dest = destNC.viewControllers.first as! DayViewController
             
             let dest = segue.destinationViewController as! EventView
-            dest.eventId = sender as! Int
-            //dest.eventId = sender as! String
+            //dest.eventId = sender as! Int
+            dest.eventId = sender as! String
             
-            let titleString = String(format: "%@%d", "Id:", sender as! Int)
-            dest.navigationItem.title = titleString
+            //let titleString = String(format: "%@%d", "Id:", sender as! Int)
+            //dest.navigationItem.title = titleString
  
         }
         

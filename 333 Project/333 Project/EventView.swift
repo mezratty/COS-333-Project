@@ -11,8 +11,8 @@ import Firebase
 
 class EventView: UIViewController {
     
-    var eventId:Int = 0
-    var ref = Firebase(url:"https://blistering-torch-3510.firebaseio.com/events")
+    //var eventId:Int = 0
+    var eventId:String = ""
     
     @IBOutlet weak var eventTitle: UILabel!
     
@@ -25,9 +25,18 @@ class EventView: UIViewController {
     
     
     override func viewDidLoad() {
+        
+        
+        let urlString = "https://blistering-torch-3510.firebaseio.com/events/" + eventId
+        var ref = Firebase(url:urlString)
+        
+        
+        print(eventId)
+        print(urlString)
+        
         super.viewDidLoad()
         
-        /*
+        
         ref.observeEventType(.Value, withBlock: { snapshot in
             snapshot.value
             }, withCancelBlock: { error in
@@ -36,61 +45,27 @@ class EventView: UIViewController {
         
         
         
-         ref.queryOrderedByKey().queryEqualToValue(eventId).observeEventType(.Value, withBlock: {snapshot in
-         var tempEvents = [NSMutableArray]()
+         ref.observeEventType(.Value, withBlock: {snapshot in
+
+         let name = String(snapshot.value["name"] as! String)
+        self.eventTitle.text = name
+            
+         var description = String(snapshot.value["description"] as? String)
+        if description.rangeOfString("Optional") != nil {
+            let startIndex = description.startIndex.advancedBy(9)
+            description = description.substringFromIndex(startIndex)
+        }
+        self.eventDesc.text = description
+            
+         let date = String(snapshot.value["date"] as? String)
+            self.eventDate.text = date
+         let time = String(snapshot.value["time"] as? String)
+            self.eventTime.text = time
          
-         for item in snapshot.children {
-         
-         
-         let event = NSMutableArray()
-         
-         let name = String(item.value["team"] as! String)
-            print(name)
-         let description = String(item.value["opponent"] as? String)
-         let date = String(item.value["date"] as? String)
-         let time = String(item.value["time"] as? String)
-         
-            event.addObject(name)
-            event.addObject(description)
-            event.addObject(date)
-            event.addObject(time)
-            tempEvents.append(event)
-         
-         }
-         events = tempEvents
-         print(events.count)
+         //}
          
          })
         
-        print(events.count)
-        */
-        
-        let event = events[eventId] as NSMutableArray
-        
-        
-        var text = event.objectAtIndex(0) as! String
-        eventTitle.text = text
-        
-        text = event.objectAtIndex(1) as! String
-        if text.rangeOfString("Optional") != nil {
-            let startIndex = text.startIndex.advancedBy(9)
-            text = text.substringFromIndex(startIndex)
-        }
-        eventDesc.text = text
-        
-        text = event.objectAtIndex(2) as! String
-        
-        //startIndex = text.startIndex.advancedBy(5)
-        //textTwo = text.substringFromIndex(startIndex)
-        eventDate.text = text
-            
-        text = event.objectAtIndex(3) as! String
-        
-        //startIndex = text.startIndex.advancedBy(5)
-        //textTwo = text.substringFromIndex(startIndex)
-        eventTime.text = text
-        
-        //eventTitle = (events[eventId] as NSMutableArray).objectAtIndex(0) as! String
         
         
         
