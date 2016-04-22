@@ -185,6 +185,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLf-2F-8xc">
+                                <rect key="frame" x="68" y="375" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <userDefinedRuntimeAttributes>
@@ -199,6 +205,7 @@
                     <connections>
                         <outlet property="eventDate" destination="G6o-SW-iKC" id="5hq-LN-hfz"/>
                         <outlet property="eventDesc" destination="aIg-af-GqS" id="Sng-GI-FP8"/>
+                        <outlet property="eventLocation" destination="NLf-2F-8xc" id="GbT-KO-tlu"/>
                         <outlet property="eventTime" destination="dBD-lc-AzF" id="gQY-uv-QwX"/>
                         <outlet property="eventTitle" destination="qrd-co-UOr" id="Ks1-iT-3bv"/>
                     </connections>

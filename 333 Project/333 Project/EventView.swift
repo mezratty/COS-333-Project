@@ -24,6 +24,8 @@ class EventView: UIViewController {
     @IBOutlet weak var eventTime: UILabel!
     
     
+    @IBOutlet weak var eventLocation: UILabel!
+    
     override func viewDidLoad() {
         
         
@@ -79,6 +81,15 @@ class EventView: UIViewController {
                 time = time.substringToIndex(endIndex)
             }
             self.eventTime.text = time
+            
+        var location = String(snapshot.value["location"] as? String)
+            if location.rangeOfString("Optional") != nil {
+                let startIndex = location.startIndex.advancedBy(10)
+                location = location.substringFromIndex(startIndex)
+                let endIndex = location.endIndex.advancedBy(-2)
+                location = location.substringToIndex(endIndex)
+            }
+            self.eventLocation.text = location
          
          //}
          
