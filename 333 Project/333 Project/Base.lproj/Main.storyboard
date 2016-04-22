@@ -157,7 +157,7 @@
                         <viewControllerLayoutGuide type="top" id="HuM-Ht-yrE"/>
                         <viewControllerLayoutGuide type="bottom" id="oYh-WT-bqS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1us-WA-HUS">
+                    <view key="view" contentMode="scaleToFill" id="1us-WA-HUS" customClass="BackgroundView" customModule="_33_Project" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -191,6 +191,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmz-Ae-M6T" customClass="TicketButton" customModule="_33_Project" customModuleProvider="target">
+                                <rect key="frame" x="20" y="459" width="52" height="52"/>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBuy" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwL-eX-Bqw" customClass="TicketButton" customModule="_33_Project" customModuleProvider="target">
+                                <rect key="frame" x="253" y="459" width="52" height="52"/>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSell" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <userDefinedRuntimeAttributes>
@@ -199,6 +213,12 @@
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="darkColor">
                                 <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
