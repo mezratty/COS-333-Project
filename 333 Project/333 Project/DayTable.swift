@@ -46,6 +46,9 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 print(error.description)
         })
         
+        tableView.backgroundColor = UIColor.clearColor()
+        UITableViewCell.appearance().backgroundColor = UIColor.clearColor()
+        tableView.separatorColor = UIColor.blackColor()
         
         
         ref.queryOrderedByChild("dateInt").queryEqualToValue(dateFormatted).observeEventType(.Value, withBlock: {snapshot in
