@@ -37,8 +37,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var month = 4
         var day = 1
         var year = 2016
-        for var i = 0; i < 372; i+=1 {
-            if (counter < 31) {day += 1; counter++}
+        for i in 0 ..< 372 {
+            if (counter < 31) {day += 1; counter += 1}
             else {counter = 0; day = 1; month+=1; if(month == 13){month = 1; year+=1}}
             
             var totalDate = month*1000000+day*10000+year
@@ -49,7 +49,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         ref.queryOrderedByChild("dateInt").queryEqualToValue(totalDate).observeEventType(.Value, withBlock: {snapshot in
             var tempEvents = [NSMutableArray]()
             
-            print(snapshot)
+            //print(snapshot)
             
             for item in snapshot.children {
                 //if (item.value["dateInt"] as! Int != 2016) {
@@ -57,7 +57,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     let event = NSMutableArray()
                 
                     let name = String(item.value["name"] as! String)
-                    let key = String(item.key as! String)
+                    let key = String(item.key as String)
                     let date = String(item.value["date"] as! String)
                 
                     event.addObject(name)
@@ -69,8 +69,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if (tempEvents.count > 0) {self.events.addObject(tempEvents)}
             //self.events = tempEvents
             self.tableView.reloadData()
-            print("query")
-            print(self.events.count)
+           // print("query")
+            //print(self.events.count)
         
         })
             

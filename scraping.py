@@ -12,6 +12,7 @@ teams = soup.find_all("td", attrs={"class": "team"})
 opponents = soup.find_all("td", attrs={"class": "opponent"})
 dates = soup.find_all("td", attrs={"class": "date"})
 times = soup.find_all("td", attrs={"class": "time"})
+locations = soup.find_all("td", attrs={"class": "location"})
 dateInts = []
 for i in range(len(dates)):
 	dateInts.append(0)
@@ -46,6 +47,15 @@ for i in range(len(times)):
 			temp += times[i].string[j]
 	times[i] = temp
 
+
+for i in range(len(locations)):
+    temp = ""
+    locationString = locations[i].string
+    for j in range(len(locations[i].string)):
+        if (locationString[j] != '\n') and (locationString[j] != '\t'):
+            temp += locationString[j]
+        locations[i] = temp
+
 #convert date format
 for i in range(len(dates)):
 	day = 0
@@ -79,7 +89,7 @@ for i in range(len(dates)):
 	dateInts[i] += 2016
 
 for i in range(len(teams)):
-	data = {'name': teams[i], 'description': opponents[i], 'date': dates[i], 'time': times[i], 'dateInt': dateInts[i]}
+	data = {'name': teams[i], 'description': opponents[i], 'date': dates[i], 'time': times[i], 'dateInt': dateInts[i], 'location': locations[i]}
 	#data = {'name': teams[i].string, 'description': opponents[i].string, 'date': dates[i].string, 'time': times[i].string}
 	#firebase.post('/games', data)
 	firebase.post('/events', data)
