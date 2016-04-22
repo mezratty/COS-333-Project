@@ -13,7 +13,7 @@ import Firebase
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var tableView: UITableView  =   UITableView()
+    //var tableView: UITableView  =   UITableView()
     var events = NSMutableArray()
     //var events = [NSMutableArray]()
     //var sections: NSArray = NSArray.init(array: [2, 200])
@@ -21,6 +21,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // Get a reference to our posts
     var ref = Firebase(url:"https://blistering-torch-3510.firebaseio.com/events")
     //var games : NSMutableArray = []
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         
@@ -84,7 +85,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        self.view.addSubview(tableView)
+        //self.view.addSubview(tableView)
         
         super.viewDidLoad()
         

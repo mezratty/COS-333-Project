@@ -15,8 +15,9 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var date:NSDate!
     
-    var tableView: UITableView  =   UITableView()
+    //var tableView: UITableView  =   UITableView()
     
+    @IBOutlet weak var tableView: UITableView!
     
     //var items: NSArray = NSArray.init(array: [["BodyHype", 0], ["Mens Soccer", 1]])
     

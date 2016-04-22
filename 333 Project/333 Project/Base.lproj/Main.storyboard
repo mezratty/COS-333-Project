@@ -1,42 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="smr-n5-Pgl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6sS-zR-cIh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Second View Controller-->
+        <!--Upcoming-->
         <scene sceneID="tc6-lL-vaf">
             <objects>
                 <viewController storyboardIdentifier="Upcoming" id="hb6-Rb-neN" customClass="SecondViewController" customModule="_33_Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="dQM-7H-5VV"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gCR-eH-kZg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Upcoming" id="dQM-7H-5VV"/>
                     <connections>
+                        <outlet property="tableView" destination="gCR-eH-kZg" id="aB0-3o-mBS"/>
                         <segue destination="T4q-W6-fGd" kind="show" identifier="UpToEvent" id="rhJ-4G-Zld"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmN-tB-SdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-399" y="96"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="U5e-me-25z">
-            <objects>
-                <viewController id="2XB-vV-Mhe" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lki-vS-Kkf"/>
-                        <viewControllerLayoutGuide type="bottom" id="qtn-B4-5oo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fce-aD-FQ1" customClass="BackgroundView" customModule="_33_Project" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="efj-d6-CzJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="619" y="-926"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="Qzt-kK-wZ7">
@@ -130,7 +117,19 @@
                     <view key="view" contentMode="scaleToFill" id="m7a-Q6-lET">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="439"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y87-sH-bpj">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="439"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y87-sH-bpj" secondAttribute="trailing" constant="-20" id="RpS-P4-oyg"/>
+                            <constraint firstItem="Y87-sH-bpj" firstAttribute="top" secondItem="TuD-pg-nLQ" secondAttribute="bottom" id="Rwd-Ku-9wK"/>
+                            <constraint firstItem="62H-uU-LL1" firstAttribute="top" secondItem="Y87-sH-bpj" secondAttribute="bottom" id="dTh-ep-EBm"/>
+                            <constraint firstItem="Y87-sH-bpj" firstAttribute="leading" secondItem="m7a-Q6-lET" secondAttribute="leadingMargin" constant="-20" id="gGb-NL-qid"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="darkColor">
                                 <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -142,12 +141,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="vKC-5x-kBG"/>
                     <connections>
+                        <outlet property="tableView" destination="Y87-sH-bpj" id="bml-Fb-IPV"/>
                         <segue destination="T4q-W6-fGd" kind="show" identifier="EventView" id="dW1-nR-I9a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQQ-2p-be7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802" y="-224.5"/>
+            <point key="canvasLocation" x="522" y="-440.5"/>
         </scene>
         <!--Event View-->
         <scene sceneID="Y0c-La-aJM">
@@ -158,7 +158,7 @@
                         <viewControllerLayoutGuide type="bottom" id="oYh-WT-bqS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1us-WA-HUS">
-                        <rect key="frame" x="0.0" y="0.0" width="280" height="439"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrd-co-UOr">
@@ -284,6 +284,6 @@
         <image name="rsz_1rsz_events-calendar-icon1-300x300.png" width="38" height="38"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dW1-nR-I9a"/>
+        <segue reference="rhJ-4G-Zld"/>
     </inferredMetricsTieBreakers>
 </document>
