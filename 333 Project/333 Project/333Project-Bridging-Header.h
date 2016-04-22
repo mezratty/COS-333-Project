@@ -10,5 +10,6 @@
 #define Bridging_Header_h
 
 #import <PDTSimpleCalendar/PDTSimpleCalendar.h>
+#import <Firebase/Firebase.h>
 
 #endif

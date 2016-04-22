@@ -28,6 +28,7 @@ class OurLabel: UILabel {
         if (isTitle) {
             super.text = "Title: " + "BodyHype Springshow"
         }
+ 
         if (isDescription) {
             super.text = "Description: " + "BodyHype's spring show"
         }
