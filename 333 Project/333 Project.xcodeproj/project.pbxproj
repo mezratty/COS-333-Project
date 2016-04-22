@@ -29,7 +29,6 @@
 		F85B3D961CC6E5B6006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = F85B3D941CC6E5B6006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png */; };
 		F85B3D981CC7F655006A2E8A /* OurLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B3D971CC7F655006A2E8A /* OurLabel.swift */; };
 		F85B3D9A1CC81404006A2E8A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B3D991CC81404006A2E8A /* BackgroundView.swift */; };
-		F85B3DA41CC9D8F7006A2E8A /* TicketButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B3DA31CC9D8F7006A2E8A /* TicketButton.swift */; };
 		F869FB1F1CC08D2C00D519D5 /* OurTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */; };
 		F869FB211CC0CC8F00D519D5 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */; };
 /* End PBXBuildFile section */
@@ -83,7 +82,6 @@
 		F85B3D941CC6E5B6006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rsz_1rsz_events-calendar-icon1-300x300.png"; path = "333 Project/rsz_1rsz_events-calendar-icon1-300x300.png"; sourceTree = "<group>"; };
 		F85B3D971CC7F655006A2E8A /* OurLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurLabel.swift; sourceTree = "<group>"; };
 		F85B3D991CC81404006A2E8A /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		F85B3DA31CC9D8F7006A2E8A /* TicketButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketButton.swift; sourceTree = "<group>"; };
 		F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurTabBarController.swift; sourceTree = "<group>"; };
 		F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,7 +147,6 @@
 				2C4613651CB7EB890093F25B /* DataController.swift */,
 				2C4613671CB7EBBD0093F25B /* Chart.swift */,
 				680B93A71CB3555100670E0B /* Main.storyboard */,
-				F85B3DA31CC9D8F7006A2E8A /* TicketButton.swift */,
 				5CE3E22A1CC60DD8000C1F95 /* TabBar.swift */,
 				5CE3E2231CC5CC73000C1F95 /* WebController.swift */,
 				5CA2288E1CC0A67900C1DD2D /* EventView.swift */,
@@ -404,7 +401,6 @@
 			files = (
 				5CE3E2241CC5CC73000C1F95 /* WebController.swift in Sources */,
 				F85B3D981CC7F655006A2E8A /* OurLabel.swift in Sources */,
-				F85B3DA41CC9D8F7006A2E8A /* TicketButton.swift in Sources */,
 				2C4613661CB7EB890093F25B /* DataController.swift in Sources */,
 				5CA2288D1CC0A35B00C1DD2D /* DayTable.swift in Sources */,
 				5C37E2EE1CB6EE4A006CC4B1 /* CalendarViewController.swift in Sources */,
