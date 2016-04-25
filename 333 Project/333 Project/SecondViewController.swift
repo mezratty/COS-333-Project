@@ -33,7 +33,29 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }, withCancelBlock: { error in
                 print(error.description)
         })
+
+        let backgroundview = BackgroundView()
+        self.view = backgroundview
+        self.view.addSubview(tableView)
+        backgroundview.startColor = UIColor.orangeColor()
+        backgroundview.endColor = UIColor.whiteColor()
+        tableView.backgroundColor = UIColor.clearColor()
+        UITableViewCell.appearance().backgroundColor = UIColor.clearColor()
+        tableView.separatorColor = UIColor.blackColor()
         
+        
+        
+        //SET CONSTRAINTS FOR TABLVIEW
+        /*tableView.translatesAutoresizingMaskIntoConstraints = false
+        let centerXConstraint = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
+        
+        let centerYConstraint = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)
+        self.view.addConstraint(centerXConstraint)
+        self.view.addConstraint(centerYConstraint)*/
+
+
+        
+        //view.bringSubviewToFront(BackgroundView())
         var counter = 0
         var month = 4
         var day = 1
