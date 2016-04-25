@@ -197,6 +197,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isBuy" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Kef-8h-UJ5" kind="show" id="5kv-Sm-iPO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwL-eX-Bqw" customClass="TicketButton" customModule="_33_Project" customModuleProvider="target">
                                 <rect key="frame" x="253" y="459" width="52" height="52"/>
@@ -243,6 +246,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAk-yY-AkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1423" y="-227"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mT7-MT-YhL">
+            <objects>
+                <viewController id="Kef-8h-UJ5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xnu-gl-c8D"/>
+                        <viewControllerLayoutGuide type="bottom" id="iEx-i6-cY9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Edh-vH-gac" customClass="BackgroundView" customModule="_33_Project" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eN4-Gv-S6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1451" y="406"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TFT-ic-90W">
