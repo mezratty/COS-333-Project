@@ -46,12 +46,20 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         
         //SET CONSTRAINTS FOR TABLVIEW
-        /*tableView.translatesAutoresizingMaskIntoConstraints = false
-        let centerXConstraint = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        let centerXConstraint = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
         
-        let centerYConstraint = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)
+        let centerYConstraint = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)
+        
+        
+        let widthConstraint = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 0)
+        
+        let heightConstraint = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Height, multiplier: 1, constant: 0)
+        
         self.view.addConstraint(centerXConstraint)
-        self.view.addConstraint(centerYConstraint)*/
+        self.view.addConstraint(centerYConstraint)
+        self.view.addConstraint(widthConstraint)
+        self.view.addConstraint(heightConstraint)
 
 
         
