@@ -13,6 +13,8 @@ class EventView: UIViewController {
     
     //var eventId:Int = 0
     var eventId:String = ""
+    var dataToPass: NSMutableArray = []
+    
     
     @IBOutlet weak var eventTitle: UILabel!
     
@@ -97,7 +99,7 @@ class EventView: UIViewController {
         
         
         
-        
+        self.dataToPass.addObject(eventId)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -106,14 +108,33 @@ class EventView: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+   
 
     @IBAction func buySegue(sender: AnyObject) {
-        
-        
+        self.dataToPass.addObject("buy")
+        self.performSegueWithIdentifier("toForm", sender: dataToPass)
     }
     
     @IBAction func sellSegue(sender: AnyObject) {
+        self.dataToPass.addObject("sell")
+        self.performSegueWithIdentifier("toForm", sender: dataToPass)
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "toForm") {
+            
+            let dest = segue.destinationViewController as! FormController
+            dest.data = sender as! NSMutableArray
+            
+            
+            navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+            navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        }
         
     }
     
