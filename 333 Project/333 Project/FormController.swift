@@ -32,32 +32,50 @@ class FormController: UIViewController {
     }
     
     @IBAction func submitName(sender: AnyObject) {
-        let urlString = "https://blistering-torch-3510.firebaseio.com/" + (data.objectAtIndex(1) as! String)
-        let ref = Firebase(url:urlString)
         
-        let first = firstName.text as! AnyObject
-        let last = lastName.text as! AnyObject
+        let urlStringTwo = "https://blistering-torch-3510.firebaseio.com/" + (data.objectAtIndex(2) as! String)
+        let refTwo = Firebase(url:urlStringTwo)
+        var counter = 0
+        var key = ""
+        var matchLast = ""
+        var matchFirst = ""
+        var matchNetId = ""
+        var matchEventId = data.objectAtIndex(0) as! String
         
-        let ticket = ["eventId":data.objectAtIndex(0) as! String, "user": globalNetId, "first": first, "last": last]
-        let ticketRef = ref.childByAutoId()
-        ticketRef.setValue(ticket)
+        refTwo.queryOrderedByChild("eventId").queryEqualToValue(matchEventId).observeEventType(.Value, withBlock: {snapshot in
+            counter+=1
+        })
         
-        //self.performSegueWithIdentifier("submit", sender: data.objectAtIndex(0))
-        
-    }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
-        if (segue.identifier == "submit") {
+        if (counter > 1) {
+            counter = 0
+            refTwo.queryOrderedByChild("eventId").queryEqualToValue(matchEventId).observeEventType(.Value, withBlock: {snapshot in
+                if (counter == 0) {
+                    key = snapshot.key
+                    matchLast = snapshot.value["last"] as! String
+                    matchFirst = snapshot.value["first"] as! String
+                    matchNetId = snapshot.value["user"] as! String
+                }
+                counter += 1
+            })
+            print(matchNetId)
             
-            let dest = segue.destinationViewController as! EventView
-            dest.eventId = sender as! String
-            
-            
-            navigationController?.navigationBar.barTintColor = UIColor.blackColor()
-            navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         }
+        
+        else {
+        
+            let urlString = "https://blistering-torch-3510.firebaseio.com/" + (data.objectAtIndex(1) as! String)
+            let ref = Firebase(url:urlString)
+        
+            let first = firstName.text as! AnyObject
+            let last = lastName.text as! AnyObject
+        
+            let ticket = ["eventId":data.objectAtIndex(0) as! String, "user": globalNetId, "first": first, "last": last]
+            let ticketRef = ref.childByAutoId()
+            ticketRef.setValue(ticket)
+        
+        }
+        
+        
         
     }
 

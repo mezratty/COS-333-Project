@@ -99,7 +99,7 @@ class EventView: UIViewController {
         
         
         
-        self.dataToPass.addObject(eventId)
+        //self.dataToPass.addObject(eventId)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -112,12 +112,18 @@ class EventView: UIViewController {
    
 
     @IBAction func buySegue(sender: AnyObject) {
+        self.dataToPass.removeAllObjects()
+        self.dataToPass.addObject(eventId)
         self.dataToPass.addObject("buy")
+        self.dataToPass.addObject("sell")
         self.performSegueWithIdentifier("toForm", sender: dataToPass)
     }
     
     @IBAction func sellSegue(sender: AnyObject) {
+        self.dataToPass.removeAllObjects()
+        self.dataToPass.addObject(eventId)
         self.dataToPass.addObject("sell")
+        self.dataToPass.addObject("buy")
         self.performSegueWithIdentifier("toForm", sender: dataToPass)
         
     }
