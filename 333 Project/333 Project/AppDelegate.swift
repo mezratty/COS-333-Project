@@ -18,22 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         //ACTIONS
-        var firstAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        let firstAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
         firstAction.identifier = "FIRST_ACTION"
-        firstAction.title = "first action"
+        firstAction.title = "Dismiss"
         firstAction.destructive = true
         firstAction.authenticationRequired = false
         firstAction.activationMode = UIUserNotificationActivationMode.Background
         
-        
-        var secondAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        let secondAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
         secondAction.identifier = "SECOND_ACTION"
-        secondAction.title = "second action"
+        secondAction.title = "Open TigerWire"
         secondAction.destructive = false
         secondAction.authenticationRequired = false
         secondAction.activationMode = UIUserNotificationActivationMode.Foreground
         
-        var thirdAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        let thirdAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
         thirdAction.identifier = "THIRD_ACTION"
         thirdAction.title = "third action"
         thirdAction.destructive = false
@@ -42,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //CATEGORIES
-        var firstCategory: UIMutableUserNotificationCategory = UIMutableUserNotificationCategory()
+        let firstCategory: UIMutableUserNotificationCategory = UIMutableUserNotificationCategory()
         firstCategory.identifier = "FIRST_CATEGORY"
         
         let defaultActions: NSArray = [firstAction, secondAction, thirdAction]
@@ -61,9 +60,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.sharedApplication().registerUserNotificationSettings(mySettings)
         // Override point for customization after application launch.
+        
+        
+        /*Custom looks*/
         UITabBar.appearance().barTintColor = UIColor.blackColor()
         UITabBar.appearance().tintColor = UIColor.whiteColor()
-    
         UINavigationBar.appearance().barTintColor = UIColor.blackColor()
         UINavigationBar.appearance().titleTextAttributes = [
             NSForegroundColorAttributeName : UIColor.whiteColor()
@@ -91,6 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
     }
 
     func applicationWillTerminate(application: UIApplication) {
