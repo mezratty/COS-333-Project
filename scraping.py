@@ -60,33 +60,33 @@ for i in range(len(locations)):
 for i in range(len(dates)):
 	day = 0
 	if bool(re.search('Jan', dates[i])):
-		dateInts[i] = 1000000
+		dateInts[i] = 100
 	if bool(re.search('Feb', dates[i])):
-		dateInts[i] = 4000000
+		dateInts[i] = 200
 	if bool(re.search('Mar', dates[i])):
-		dateInts[i] = 3000000
+		dateInts[i] = 300
 	if bool(re.search('Apr', dates[i])):
-		dateInts[i] = 4000000
+		dateInts[i] = 400
 	if bool(re.search('May', dates[i])):
-		dateInts[i] = 5000000
+		dateInts[i] = 500
 	if bool(re.search('Jun', dates[i])):
-		dateInts[i] = 6000000
+		dateInts[i] = 600
 	if bool(re.search('Jul', dates[i])):
-		dateInts[i] = 7000000
+		dateInts[i] = 700
 	if bool(re.search('Aug', dates[i])):
-		dateInts[i] = 8000000
+		dateInts[i] = 800
 	if bool(re.search('Sep', dates[i])):
-		dateInts[i] = 9000000
+		dateInts[i] = 900
 	if bool(re.search('Oct', dates[i])):
-		dateInts[i] = 10000000
+		dateInts[i] = 1000
 	if bool(re.search('Nov', dates[i])):
-		dateInts[i] = 11000000
+		dateInts[i] = 1100
 	if bool(re.search('Dec', dates[i])):
-		dateInts[i] = 12000000
+		dateInts[i] = 1200
 	if bool(re.search('[0-9][0-9]?', dates[i])):
 		day = re.search('[0-9][0-9]?', dates[i])
-		dateInts[i] += int(day.group(0))*10000
-	dateInts[i] += 2016
+		dateInts[i] += int(day.group(0))
+	dateInts[i] += 20160000
 
 for i in range(len(teams)):
 	data = {'name': teams[i], 'description': opponents[i], 'date': dates[i], 'time': times[i], 'dateInt': dateInts[i], 'location': locations[i]}

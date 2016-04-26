@@ -15,6 +15,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //var tableView: UITableView  =   UITableView()
     var events = NSMutableArray()
+    var temp = []
     //var events = [NSMutableArray]()
     //var sections: NSArray = NSArray.init(array: [2, 200])
     
@@ -61,6 +62,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         
         //view.bringSubviewToFront(BackgroundView())
+        /*
         var counter = 0
         var month = 4
         var day = 1
@@ -69,7 +71,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if (counter < 31) {day += 1; counter += 1}
             else {counter = 0; day = 1; month+=1; if(month == 13){month = 1; year+=1}}
             
-            var totalDate = month*1000000+day*10000+year
+            var totalDate = month*100+day+year*10000
             
             print(totalDate)
         
@@ -102,7 +104,58 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         })
             
-        }
+        }*/
+        
+        
+        ref.queryOrderedByChild("dateInt").observeEventType(.Value, withBlock: {snapshot in
+            var tempEvents = [NSMutableArray]()
+            
+            //print(snapshot)
+            
+            for item in snapshot.children {
+                if (item.value["dateInt"] as! Int != 20160000) {
+                
+                let event = NSMutableArray()
+                
+                let name = String(item.value["name"] as! String)
+                let key = String(item.key as String)
+                let date = String(item.value["date"] as! String)
+                let dateInt = item.value["dateInt"] as! Int
+                
+                event.addObject(name)
+                event.addObject(key)
+                event.addObject(date)
+                event.addObject(dateInt)
+                tempEvents.append(event)
+                }
+            }
+            //if (tempEvents.count > 0) {self.events.addObject(tempEvents)}
+            self.temp = tempEvents
+            print(self.temp)
+            var startIndex = 0
+            var currentDate = 20160401
+            for i in 0 ..< self.temp.count {
+                if (self.temp[i].objectAtIndex(3) as!Int != currentDate) {
+                    var dayEvents = NSMutableArray()
+                    for j in startIndex..<i {
+                        dayEvents.addObject(self.temp[j])
+                    }
+                    if (dayEvents.count > 0) {self.events.addObject(dayEvents)}
+                    startIndex = i
+                    currentDate = self.temp[i].objectAtIndex(3) as! Int
+                }
+            }
+            
+            
+            
+            self.tableView.reloadData()
+            // print("query")
+            //print(self.events.count)
+            
+        })
+        
+        
+        
         
         //self.tableView.reloadData()
         
@@ -149,7 +202,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //print(indexPath.row)
         if (events.count) > 0 {
         
-        print(self.events.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row).objectAtIndex(0))
+        //print(self.events.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row).objectAtIndex(0))
             
         //cell.textLabel?.text = (self.events[indexPath.row]).objectAtIndex(0) as! String
         cell.textLabel?.text = self.events.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row).objectAtIndex(0) as! String

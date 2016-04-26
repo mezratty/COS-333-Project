@@ -33,7 +33,7 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let month = components.month
         let day = components.day
         
-        let dateFormatted = year + day*10000 + month*1000000
+        let dateFormatted = year*10000 + day + month*100
         
         print(dateFormatted)
         
