@@ -137,5 +137,8 @@ class EventView: UIViewController {
         }
         
     }
+    @IBAction func unwindToVC(segue: UIStoryboardSegue) {
+        
+    }
     
 }
