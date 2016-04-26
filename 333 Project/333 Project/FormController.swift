@@ -12,6 +12,11 @@ class FormController: UIViewController {
     
     var data: NSMutableArray = []
     
+    @IBOutlet weak var firstName: UITextField!
+    
+    @IBOutlet weak var lastName: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib

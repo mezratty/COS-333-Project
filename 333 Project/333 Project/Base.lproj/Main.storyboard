@@ -293,6 +293,10 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="firstName" destination="dZV-DJ-Mgt" id="hHP-sM-k9l"/>
+                        <outlet property="lastName" destination="Kgx-C1-iMY" id="rwL-3u-36u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SvC-Gc-2kY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
