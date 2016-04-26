@@ -42,9 +42,30 @@ class FormController: UIViewController {
         var matchNetId = ""
         var matchEventId = data.objectAtIndex(0) as! String
         
-        refTwo.queryOrderedByChild("eventId").queryEqualToValue(matchEventId).observeEventType(.Value, withBlock: {snapshot in
-            counter+=1
-        })
+    refTwo.queryOrderedByChild("eventId").queryEqualToValue(matchEventId).queryLimitedToFirst(1).observeEventType(.Value, withBlock: {snapshot in
+        if (snapshot.exists()) {
+            for item in snapshot.children {
+                key = item.key
+                matchLast = item.value["last"] as! String
+                matchFirst = item.value["first"] as! String
+                matchNetId = item.value["user"] as! String
+                //remove item
+                //add pair to match table
+            }
+        }
+        else {
+            let urlString = "https://blistering-torch-3510.firebaseio.com/" + (self.data.objectAtIndex(1) as! String)
+            let ref = Firebase(url:urlString)
+            
+            let first = self.firstName.text as! AnyObject
+            let last = self.lastName.text as! AnyObject
+            
+            let ticket = ["eventId":self.data.objectAtIndex(0) as! String, "user": globalNetId, "first": first, "last": last]
+            let ticketRef = ref.childByAutoId()
+            ticketRef.setValue(ticket)
+        }
+    })
+        /*
         
         if (counter > 1) {
             counter = 0
@@ -57,6 +78,7 @@ class FormController: UIViewController {
                 }
                 counter += 1
             })
+            
             print(matchNetId)
             
         }
@@ -76,7 +98,7 @@ class FormController: UIViewController {
         }
         
         
-        
+        */
     }
 
 }
