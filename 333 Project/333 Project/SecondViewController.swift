@@ -43,14 +43,11 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         UITableViewCell.appearance().backgroundColor = UIColor.clearColor()
         tableView.separatorColor = UIColor.blackColor()
         
-        
-        
         //SET CONSTRAINTS FOR TABLVIEW
         tableView.translatesAutoresizingMaskIntoConstraints = false
         let centerXConstraint = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
         
         let centerYConstraint = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)
-        
         
         let widthConstraint = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 0)
         

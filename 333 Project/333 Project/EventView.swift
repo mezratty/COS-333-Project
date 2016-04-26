@@ -107,4 +107,14 @@ class EventView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func buySegue(sender: AnyObject) {
+        
+        
+    }
+    
+    @IBAction func sellSegue(sender: AnyObject) {
+        
+        
+    }
+    
 }

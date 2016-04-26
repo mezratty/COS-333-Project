@@ -26,7 +26,7 @@ class TicketButton: UIButton {
              path.fill()
              path.stroke()*/
             
-            fillColor.setFill();
+            fillColor.setFill()
             circlePath.fill()
             
             let shapeLayer = CAShapeLayer()
@@ -69,6 +69,9 @@ class TicketButton: UIButton {
             super.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         }
     }
+    
+    
+    
 }
 
 
