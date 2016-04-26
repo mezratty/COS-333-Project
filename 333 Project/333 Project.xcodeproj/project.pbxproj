@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2C4613661CB7EB890093F25B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4613651CB7EB890093F25B /* DataController.swift */; };
 		2C4613681CB7EBBD0093F25B /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4613671CB7EBBD0093F25B /* Chart.swift */; };
-		2C71081E1CC828E000B36BEB /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C71081D1CC828E000B36BEB /* TabBarItem.swift */; };
 		5C0A63251CBF54C400D6A836 /* CalWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A63241CBF54C400D6A836 /* CalWrapper.swift */; };
 		5C28676C1CCF1FBD006266E4 /* FormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C28676B1CCF1FBD006266E4 /* FormController.swift */; };
 		5C37E2EE1CB6EE4A006CC4B1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37E2ED1CB6EE4A006CC4B1 /* CalendarViewController.swift */; };
@@ -31,8 +30,6 @@
 		F85B3D981CC7F655006A2E8A /* OurLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B3D971CC7F655006A2E8A /* OurLabel.swift */; };
 		F85B3D9A1CC81404006A2E8A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B3D991CC81404006A2E8A /* BackgroundView.swift */; };
 		F85B3DA61CC9DD4D006A2E8A /* TicketButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B3DA51CC9DD4D006A2E8A /* TicketButton.swift */; };
-		F869FB1F1CC08D2C00D519D5 /* OurTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */; };
-		F869FB211CC0CC8F00D519D5 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */; };
 		F8C218B21CCF331300415D4B /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C218B11CCF331300415D4B /* SubmitButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +54,6 @@
 		02F7E466710005AB52114FD7 /* Pods-333 Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-333 Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-333 Project/Pods-333 Project.debug.xcconfig"; sourceTree = "<group>"; };
 		2C4613651CB7EB890093F25B /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		2C4613671CB7EBBD0093F25B /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
-		2C71081D1CC828E000B36BEB /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		5C0A63241CBF54C400D6A836 /* CalWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalWrapper.swift; sourceTree = "<group>"; };
 		5C28676B1CCF1FBD006266E4 /* FormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormController.swift; sourceTree = "<group>"; };
 		5C37E2ED1CB6EE4A006CC4B1 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +83,6 @@
 		F85B3D971CC7F655006A2E8A /* OurLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurLabel.swift; sourceTree = "<group>"; };
 		F85B3D991CC81404006A2E8A /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		F85B3DA51CC9DD4D006A2E8A /* TicketButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketButton.swift; sourceTree = "<group>"; };
-		F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurTabBarController.swift; sourceTree = "<group>"; };
-		F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		F8C218B11CCF331300415D4B /* SubmitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,26 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				680B93A11CB3555000670E0B /* AppDelegate.swift */,
-				680B93A31CB3555000670E0B /* FirstViewController.swift */,
-				F869FB1D1CC08CCE00D519D5 /* Mitch's musings */,
-				680B93A51CB3555000670E0B /* SecondViewController.swift */,
-				F869FB301CC1F69A00D519D5 /* Images */,
-				2C4613651CB7EB890093F25B /* DataController.swift */,
-				5C28676B1CCF1FBD006266E4 /* FormController.swift */,
-				F8C218B11CCF331300415D4B /* SubmitButton.swift */,
-				2C4613671CB7EBBD0093F25B /* Chart.swift */,
 				680B93A71CB3555100670E0B /* Main.storyboard */,
-				5CE3E22A1CC60DD8000C1F95 /* TabBar.swift */,
-				5CE3E2231CC5CC73000C1F95 /* WebController.swift */,
-				5CA2288E1CC0A67900C1DD2D /* EventView.swift */,
-				F85B3DA51CC9DD4D006A2E8A /* TicketButton.swift */,
-				5CA2288C1CC0A35B00C1DD2D /* DayTable.swift */,
 				680B93E41CB364F600670E0B /* 333Project-Bridging-Header.h */,
-				680B93AA1CB3555100670E0B /* Assets.xcassets */,
-				680B93AC1CB3555100670E0B /* LaunchScreen.storyboard */,
-				680B93AF1CB3555100670E0B /* Info.plist */,
-				5C37E2ED1CB6EE4A006CC4B1 /* CalendarViewController.swift */,
-				5C0A63241CBF54C400D6A836 /* CalWrapper.swift */,
+				F8C218B51CCF3A1800415D4B /* Data Items */,
+				F8C218B41CCF398E00415D4B /* Design Items */,
+				F8C218B31CCF38CD00415D4B /* View Controllers */,
+				F8C218B61CCF3A5200415D4B /* Miscellaneous */,
 			);
 			path = "333 Project";
 			sourceTree = "<group>";
@@ -196,23 +176,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F869FB1D1CC08CCE00D519D5 /* Mitch's musings */ = {
+		F8C218B31CCF38CD00415D4B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2C71081D1CC828E000B36BEB /* TabBarItem.swift */,
-				F85B3D991CC81404006A2E8A /* BackgroundView.swift */,
-				F85B3D971CC7F655006A2E8A /* OurLabel.swift */,
-				F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */,
-				F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */,
+				680B93A51CB3555000670E0B /* SecondViewController.swift */,
+				680B93A31CB3555000670E0B /* FirstViewController.swift */,
+				5C37E2ED1CB6EE4A006CC4B1 /* CalendarViewController.swift */,
+				5CE3E2231CC5CC73000C1F95 /* WebController.swift */,
+				5CE3E22A1CC60DD8000C1F95 /* TabBar.swift */,
+				5CA2288C1CC0A35B00C1DD2D /* DayTable.swift */,
+				5CA2288E1CC0A67900C1DD2D /* EventView.swift */,
+				5C0A63241CBF54C400D6A836 /* CalWrapper.swift */,
+				5C28676B1CCF1FBD006266E4 /* FormController.swift */,
 			);
-			name = "Mitch's musings";
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		F869FB301CC1F69A00D519D5 /* Images */ = {
+		F8C218B41CCF398E00415D4B /* Design Items */ = {
 			isa = PBXGroup;
 			children = (
+				F85B3DA51CC9DD4D006A2E8A /* TicketButton.swift */,
+				F85B3D991CC81404006A2E8A /* BackgroundView.swift */,
+				F8C218B11CCF331300415D4B /* SubmitButton.swift */,
 			);
-			path = Images;
+			name = "Design Items";
+			sourceTree = "<group>";
+		};
+		F8C218B51CCF3A1800415D4B /* Data Items */ = {
+			isa = PBXGroup;
+			children = (
+				2C4613671CB7EBBD0093F25B /* Chart.swift */,
+				2C4613651CB7EB890093F25B /* DataController.swift */,
+			);
+			name = "Data Items";
+			sourceTree = "<group>";
+		};
+		F8C218B61CCF3A5200415D4B /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				F85B3D971CC7F655006A2E8A /* OurLabel.swift */,
+				680B93AC1CB3555100670E0B /* LaunchScreen.storyboard */,
+				680B93AA1CB3555100670E0B /* Assets.xcassets */,
+				680B93AF1CB3555100670E0B /* Info.plist */,
+			);
+			name = Miscellaneous;
 			sourceTree = "<group>";
 		};
 		FA19E4E086093A4344374F49 /* Pods */ = {
@@ -415,13 +422,10 @@
 				5CA2288D1CC0A35B00C1DD2D /* DayTable.swift in Sources */,
 				5C37E2EE1CB6EE4A006CC4B1 /* CalendarViewController.swift in Sources */,
 				2C4613681CB7EBBD0093F25B /* Chart.swift in Sources */,
-				F869FB211CC0CC8F00D519D5 /* TabBarButton.swift in Sources */,
 				F8C218B21CCF331300415D4B /* SubmitButton.swift in Sources */,
-				2C71081E1CC828E000B36BEB /* TabBarItem.swift in Sources */,
 				680B93A61CB3555000670E0B /* SecondViewController.swift in Sources */,
 				680B93A21CB3555000670E0B /* AppDelegate.swift in Sources */,
 				F85B3D9A1CC81404006A2E8A /* BackgroundView.swift in Sources */,
-				F869FB1F1CC08D2C00D519D5 /* OurTabBarController.swift in Sources */,
 				680B93A41CB3555000670E0B /* FirstViewController.swift in Sources */,
 				5C0A63251CBF54C400D6A836 /* CalWrapper.swift in Sources */,
 				5C28676C1CCF1FBD006266E4 /* FormController.swift in Sources */,
