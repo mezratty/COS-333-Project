@@ -17,6 +17,7 @@ class FormController: UIViewController {
     
     @IBOutlet weak var lastName: UITextField!
     
+    @IBInspectable var isBuy: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
