@@ -24,6 +24,23 @@ class FormController: UIViewController {
         print(data)
         
         
+        /*var dateComp: NSDateComponents = NSDateComponents()
+        dateComp.year = 2016
+        dateComp.month = 04
+        dateComp.day = 26
+        dateComp.hour = 16
+        dateComp.minute = 48
+        
+        let calendar: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        let date: NSDate = calendar.dateFromComponents(dateComp)!*/
+        let notification: UILocalNotification = UILocalNotification()
+        notification.category = "FIRST_CATEGORY"
+        notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        notification.alertBody = "Someone wants to sell you a ticket!"
+        //notification.fireDate = date
+        
+        //UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
     }
     
     override func didReceiveMemoryWarning() {

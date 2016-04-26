@@ -23,7 +23,6 @@ class DataController {
         var team: String?
         var location: String?
         var time: String?
-        
         if let dateColumn = rowElement.childAtIndex(1) as? HTMLElement {
             date = dateColumn.textContent
                 .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())

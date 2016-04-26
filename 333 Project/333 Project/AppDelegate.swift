@@ -16,11 +16,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        //ACTIONS
+        var firstAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        firstAction.identifier = "FIRST_ACTION"
+        firstAction.title = "first action"
+        firstAction.destructive = true
+        firstAction.authenticationRequired = false
+        firstAction.activationMode = UIUserNotificationActivationMode.Background
+        
+        
+        var secondAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        secondAction.identifier = "SECOND_ACTION"
+        secondAction.title = "second action"
+        secondAction.destructive = false
+        secondAction.authenticationRequired = false
+        secondAction.activationMode = UIUserNotificationActivationMode.Foreground
+        
+        var thirdAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        thirdAction.identifier = "THIRD_ACTION"
+        thirdAction.title = "third action"
+        thirdAction.destructive = false
+        thirdAction.authenticationRequired = false
+        thirdAction.activationMode = UIUserNotificationActivationMode.Background
+        
+        
+        //CATEGORIES
+        var firstCategory: UIMutableUserNotificationCategory = UIMutableUserNotificationCategory()
+        firstCategory.identifier = "FIRST_CATEGORY"
+        
+        let defaultActions: NSArray = [firstAction, secondAction, thirdAction]
+        let minimalActions: NSArray = [firstAction, secondAction]
+        
+        firstCategory.setActions(defaultActions as? [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Default)
+        firstCategory.setActions(minimalActions as? [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Minimal)
+
+        //NSSET OF CATEGORIES
+        
+        let categories: NSSet = NSSet(objects: firstCategory)
+        
+        
+        let types: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge]
+        let mySettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: categories as? Set<UIUserNotificationCategory>)
+        
+        UIApplication.sharedApplication().registerUserNotificationSettings(mySettings)
         // Override point for customization after application launch.
         UITabBar.appearance().barTintColor = UIColor.blackColor()
         UITabBar.appearance().tintColor = UIColor.whiteColor()
-        
-        
     
         UINavigationBar.appearance().barTintColor = UIColor.blackColor()
         UINavigationBar.appearance().titleTextAttributes = [
