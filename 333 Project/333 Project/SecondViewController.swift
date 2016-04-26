@@ -131,7 +131,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
             //if (tempEvents.count > 0) {self.events.addObject(tempEvents)}
             self.temp = tempEvents
-            print(self.temp)
             var startIndex = 0
             var currentDate = 20160401
             for i in 0 ..< self.temp.count {
@@ -216,7 +215,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        print(events[indexPath.row].objectAtIndex(1))
+        //print(events[indexPath.row].objectAtIndex(1))
         
         //self.performSegueWithIdentifier("UpToEvent", sender: indexPath.row)
         //self.performSegueWithIdentifier("UpToEvent", sender: self.events[indexPath.row].objectAtIndex(1))
