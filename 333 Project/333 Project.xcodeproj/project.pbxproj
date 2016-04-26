@@ -33,6 +33,7 @@
 		F85B3DA61CC9DD4D006A2E8A /* TicketButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B3DA51CC9DD4D006A2E8A /* TicketButton.swift */; };
 		F869FB1F1CC08D2C00D519D5 /* OurTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */; };
 		F869FB211CC0CC8F00D519D5 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */; };
+		F8C218B21CCF331300415D4B /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C218B11CCF331300415D4B /* SubmitButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		F85B3DA51CC9DD4D006A2E8A /* TicketButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketButton.swift; sourceTree = "<group>"; };
 		F869FB1E1CC08D2C00D519D5 /* OurTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurTabBarController.swift; sourceTree = "<group>"; };
 		F869FB201CC0CC8F00D519D5 /* TabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
+		F8C218B11CCF331300415D4B /* SubmitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				F869FB301CC1F69A00D519D5 /* Images */,
 				2C4613651CB7EB890093F25B /* DataController.swift */,
 				5C28676B1CCF1FBD006266E4 /* FormController.swift */,
+				F8C218B11CCF331300415D4B /* SubmitButton.swift */,
 				2C4613671CB7EBBD0093F25B /* Chart.swift */,
 				680B93A71CB3555100670E0B /* Main.storyboard */,
 				5CE3E22A1CC60DD8000C1F95 /* TabBar.swift */,
@@ -413,6 +416,7 @@
 				5C37E2EE1CB6EE4A006CC4B1 /* CalendarViewController.swift in Sources */,
 				2C4613681CB7EBBD0093F25B /* Chart.swift in Sources */,
 				F869FB211CC0CC8F00D519D5 /* TabBarButton.swift in Sources */,
+				F8C218B21CCF331300415D4B /* SubmitButton.swift in Sources */,
 				2C71081E1CC828E000B36BEB /* TabBarItem.swift in Sources */,
 				680B93A61CB3555000670E0B /* SecondViewController.swift in Sources */,
 				680B93A21CB3555000670E0B /* AppDelegate.swift in Sources */,

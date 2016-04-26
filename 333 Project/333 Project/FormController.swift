@@ -30,5 +30,8 @@ class FormController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func submitName(sender: AnyObject) {
+        
+    }
 
 }
