@@ -135,9 +135,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         let ref = Firebase(url:urlString)
         
         ref.removeValue()
-        
-        
-        
+                
     }
     
     override func didReceiveMemoryWarning() {
