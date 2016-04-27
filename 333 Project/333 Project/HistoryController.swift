@@ -18,8 +18,20 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
-        var urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId
-        var ref = Firebase(url:urlString)
+        let urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId
+        let ref = Firebase(url:urlString)
+        
+        
+        if (super.superclass?.sharedApplication().applicationIconBadgeNumber > 0) {
+            let imgg:UIImage = UIImage(named: "rsz_1rsz_1rsz_upcoming2.png")!
+            super.tabBarItem.image = imgg
+            super.tabBarItem.selectedImage = imgg
+        }
+        else {
+            let imgg:UIImage = UIImage(named: "rsz_1rsz_staricon.png")!
+            super.tabBarItem.image = imgg
+            super.tabBarItem.selectedImage = imgg
+        }
         
         
         //query for date

@@ -103,13 +103,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let last = String(snapshot.value["last"] as! String)
                 let user = String(snapshot.value["user"] as! String)
             
-                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+                UIApplication.sharedApplication().applicationIconBadgeNumber += 1
                 let notification: UILocalNotification = UILocalNotification()
                 notification.category = "FIRST_CATEGORY"
                 //notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
                 notification.alertBody = "\(first) \(last) (\(user)) wants to buy (sell you) a ticket!"
                 UIApplication.sharedApplication().presentLocalNotificationNow(notification)
-                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+                //UIApplication.sharedApplication().applicationIconBadgeNumber = 0
             
                 var urlStringTwo = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId + "/" + snapshot.key + "/notif/"
                 var refTwo = Firebase(url:urlStringTwo)
@@ -126,7 +126,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        //UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+        
     }
 
     func applicationWillTerminate(application: UIApplication) {
