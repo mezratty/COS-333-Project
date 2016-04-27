@@ -31,26 +31,36 @@ class EventView: UIViewController {
     
     override func viewDidLoad() {
         
-        eventTitle.layer.borderWidth = 4
-        eventTitle.layer.borderColor = UIColor.darkGrayColor().CGColor
+        eventTitle.layer.borderWidth = 2
+        eventTitle.layer.borderColor = UIColor.blackColor().CGColor
         eventTitle.layer.cornerRadius = 10
+        eventTitle.textColor = UIColor.whiteColor()
+        eventTitle.layer.backgroundColor = UIColor.darkGrayColor().CGColor
         
-        eventDesc.layer.borderWidth = 4
-        eventDesc.layer.borderColor = UIColor.darkGrayColor().CGColor
+        eventDesc.layer.borderWidth = 2
+        eventDesc.layer.borderColor = UIColor.blackColor().CGColor
         eventDesc.layer.cornerRadius = 10
+        eventDesc.textColor = UIColor.whiteColor()
+        eventDesc.layer.backgroundColor = UIColor.darkGrayColor().CGColor
         
-        eventDate.layer.borderWidth = 4
-        eventDate.layer.borderColor = UIColor.darkGrayColor().CGColor
+        eventDate.layer.borderWidth = 2
+        eventDate.layer.borderColor = UIColor.blackColor().CGColor
         eventDate.layer.cornerRadius = 10
-        
-        eventTime.layer.borderWidth = 4
-        eventTime.layer.borderColor = UIColor.darkGrayColor().CGColor
+        eventDate.textColor = UIColor.whiteColor()
+        eventDate.layer.backgroundColor = UIColor.darkGrayColor().CGColor
+
+        eventTime.layer.borderWidth = 2
+        eventTime.layer.borderColor = UIColor.blackColor().CGColor
         eventTime.layer.cornerRadius = 10
-        
-        eventLocation.layer.borderWidth = 4
-        eventLocation.layer.borderColor = UIColor.darkGrayColor().CGColor
+        eventTime.textColor = UIColor.whiteColor()
+        eventTime.layer.backgroundColor = UIColor.darkGrayColor().CGColor
+
+        eventLocation.layer.borderWidth = 2
+        eventLocation.layer.borderColor = UIColor.blackColor().CGColor
         eventLocation.layer.cornerRadius = 10
-        
+        eventLocation.textColor = UIColor.whiteColor()
+        eventLocation.layer.backgroundColor = UIColor.darkGrayColor().CGColor
+
         let urlString = "https://blistering-torch-3510.firebaseio.com/events/" + eventId
         var ref = Firebase(url:urlString)
         
