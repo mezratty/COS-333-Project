@@ -58,13 +58,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
             //self.items = tempEvents
             self.tableView.reloadData()
         })
-        
-        
-        
-        
-        
-        
-        
+  
         super.viewDidLoad()
         
         tableView.frame         =   CGRectMake(0, 50, 320, 200);

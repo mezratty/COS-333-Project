@@ -14,8 +14,6 @@ class TabBar: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(globalNetId)
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
