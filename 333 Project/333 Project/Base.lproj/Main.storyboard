@@ -108,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="-1751" y="-235"/>
         </scene>
-        <!--Item-->
+        <!--Matches-->
         <scene sceneID="PIY-hj-ANf">
             <objects>
                 <viewController id="GbW-G5-65F" customClass="HistoryController" customModule="_33_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -135,7 +135,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="fyq-o0-1ym"/>
+                    <tabBarItem key="tabBarItem" title="Matches" id="fyq-o0-1ym"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tableView" destination="N9x-BX-BYP" id="3NH-zE-SCv"/>
