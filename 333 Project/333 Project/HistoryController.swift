@@ -22,7 +22,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         let ref = Firebase(url:urlString)
         
         
-        if (super.superclass?.sharedApplication().applicationIconBadgeNumber > 0) {
+        /*if (super.superclass?.sharedApplication().applicationIconBadgeNumber > 0) {
             let imgg:UIImage = UIImage(named: "rsz_1rsz_1rsz_upcoming2.png")!
             super.tabBarItem.image = imgg
             super.tabBarItem.selectedImage = imgg
@@ -31,7 +31,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
             let imgg:UIImage = UIImage(named: "rsz_1rsz_staricon.png")!
             super.tabBarItem.image = imgg
             super.tabBarItem.selectedImage = imgg
-        }
+        }*/
         
         
         //query for date
