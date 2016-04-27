@@ -22,8 +22,7 @@ class FormController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib
-        print(data)
-        
+        /*
         
         let dateComp: NSDateComponents = NSDateComponents()
         dateComp.year = 2016
@@ -32,16 +31,17 @@ class FormController: UIViewController {
         dateComp.hour = 17
         dateComp.minute = 26
         
-        let calendar: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
-        let date: NSDate = calendar.dateFromComponents(dateComp)!
+         */
+        //let calendar: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        //let date: NSDate = calendar.dateFromComponents(dateComp)!
         let notification: UILocalNotification = UILocalNotification()
         notification.category = "FIRST_CATEGORY"
         notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
         notification.alertBody = "(Someone) wants to buy (sell you) a ticket!"
-        notification.fireDate = date
+        //notification.fireDate = date
         
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        //UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+        //UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
     }
     
     override func didReceiveMemoryWarning() {

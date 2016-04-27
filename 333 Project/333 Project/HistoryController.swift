@@ -33,15 +33,10 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         UITableViewCell.appearance().backgroundColor = UIColor.clearColor()
         tableView.separatorColor = UIColor.blackColor()
         
+        var counter = 0
+        
         
         ref.observeEventType(.ChildAdded, withBlock: {snapshot in
-            print("here")
-            //var tempEvents = [NSMutableArray]()
-            
-            //print(snapshot)
-            
-            //for item in snapshot.children {
-                
                 
                 let event = NSMutableArray()
                 
@@ -53,9 +48,13 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
                 event.addObject(last)
                 event.addObject(user)
                 self.items.append(event)
-                
-            //}
-            //self.items = tempEvents
+            
+            let notification: UILocalNotification = UILocalNotification()
+            notification.category = "FIRST_CATEGORY"
+            notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+            notification.alertBody = "(Someone) wants to buy (sell you) a ticket!"
+            UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+            
             self.tableView.reloadData()
         })
   
