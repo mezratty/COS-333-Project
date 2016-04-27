@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+@IBDesignable
 
 class EventView: UIViewController {
     
@@ -30,6 +31,25 @@ class EventView: UIViewController {
     
     override func viewDidLoad() {
         
+        eventTitle.layer.borderWidth = 4
+        eventTitle.layer.borderColor = UIColor.darkGrayColor().CGColor
+        eventTitle.layer.cornerRadius = 10
+        
+        eventDesc.layer.borderWidth = 4
+        eventDesc.layer.borderColor = UIColor.darkGrayColor().CGColor
+        eventDesc.layer.cornerRadius = 10
+        
+        eventDate.layer.borderWidth = 4
+        eventDate.layer.borderColor = UIColor.darkGrayColor().CGColor
+        eventDate.layer.cornerRadius = 10
+        
+        eventTime.layer.borderWidth = 4
+        eventTime.layer.borderColor = UIColor.darkGrayColor().CGColor
+        eventTime.layer.cornerRadius = 10
+        
+        eventLocation.layer.borderWidth = 4
+        eventLocation.layer.borderColor = UIColor.darkGrayColor().CGColor
+        eventLocation.layer.cornerRadius = 10
         
         let urlString = "https://blistering-torch-3510.firebaseio.com/events/" + eventId
         var ref = Firebase(url:urlString)
