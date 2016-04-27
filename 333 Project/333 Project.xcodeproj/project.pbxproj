@@ -26,7 +26,7 @@
 		680B93B91CB3555100670E0B /* _33_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B93B81CB3555100670E0B /* _33_ProjectTests.swift */; };
 		680B93C41CB3555100670E0B /* _33_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B93C31CB3555100670E0B /* _33_ProjectUITests.swift */; };
 		C07E0C936889AAD8711C784F /* Pods_333_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693E7716F09C4483E24805C7 /* Pods_333_Project.framework */; };
-		F83519D51CD0846000CE9FB3 /* rsz_1rsz_staricon.png in Resources */ = {isa = PBXBuildFile; fileRef = F83519D41CD0846000CE9FB3 /* rsz_1rsz_staricon.png */; };
+		F83519D71CD0867D00CE9FB3 /* rsz_1rsz_staricon.png in Resources */ = {isa = PBXBuildFile; fileRef = F83519D61CD0867D00CE9FB3 /* rsz_1rsz_staricon.png */; };
 		F85B3D951CC6E5B6006A2E8A /* rsz_1rsz_1rsz_upcoming2.png in Resources */ = {isa = PBXBuildFile; fileRef = F85B3D931CC6E5B6006A2E8A /* rsz_1rsz_1rsz_upcoming2.png */; };
 		F85B3D961CC6E5B6006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = F85B3D941CC6E5B6006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png */; };
 		F85B3D981CC7F655006A2E8A /* OurLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B3D971CC7F655006A2E8A /* OurLabel.swift */; };
@@ -81,7 +81,7 @@
 		680B93E41CB364F600670E0B /* 333Project-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "333Project-Bridging-Header.h"; sourceTree = "<group>"; };
 		693E7716F09C4483E24805C7 /* Pods_333_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_333_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A458743883C1FF3AA87A8736 /* Pods-333 Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-333 Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-333 Project/Pods-333 Project.release.xcconfig"; sourceTree = "<group>"; };
-		F83519D41CD0846000CE9FB3 /* rsz_1rsz_staricon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rsz_1rsz_staricon.png; path = ../../../../Downloads/rsz_1rsz_staricon.png; sourceTree = "<group>"; };
+		F83519D61CD0867D00CE9FB3 /* rsz_1rsz_staricon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_1rsz_staricon.png; sourceTree = "<group>"; };
 		F85B3D931CC6E5B6006A2E8A /* rsz_1rsz_1rsz_upcoming2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rsz_1rsz_1rsz_upcoming2.png; path = "333 Project/rsz_1rsz_1rsz_upcoming2.png"; sourceTree = "<group>"; };
 		F85B3D941CC6E5B6006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rsz_1rsz_events-calendar-icon1-300x300.png"; path = "333 Project/rsz_1rsz_events-calendar-icon1-300x300.png"; sourceTree = "<group>"; };
 		F85B3D971CC7F655006A2E8A /* OurLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurLabel.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			children = (
 				F85B3D931CC6E5B6006A2E8A /* rsz_1rsz_1rsz_upcoming2.png */,
 				F85B3D941CC6E5B6006A2E8A /* rsz_1rsz_events-calendar-icon1-300x300.png */,
-				F83519D41CD0846000CE9FB3 /* rsz_1rsz_staricon.png */,
+				F83519D61CD0867D00CE9FB3 /* rsz_1rsz_staricon.png */,
 				680B93A01CB3555000670E0B /* 333 Project */,
 				680B93B71CB3555100670E0B /* 333 ProjectTests */,
 				680B93C21CB3555100670E0B /* 333 ProjectUITests */,
@@ -344,7 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F83519D51CD0846000CE9FB3 /* rsz_1rsz_staricon.png in Resources */,
+				F83519D71CD0867D00CE9FB3 /* rsz_1rsz_staricon.png in Resources */,
 				680B93AE1CB3555100670E0B /* LaunchScreen.storyboard in Resources */,
 				680B93AB1CB3555100670E0B /* Assets.xcassets in Resources */,
 				F85B3D951CC6E5B6006A2E8A /* rsz_1rsz_1rsz_upcoming2.png in Resources */,
