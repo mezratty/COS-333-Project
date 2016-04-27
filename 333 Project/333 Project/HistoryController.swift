@@ -56,7 +56,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
             notification.alertBody = "(Someone) wants to buy (sell you) a ticket!"
             UIApplication.sharedApplication().presentLocalNotificationNow(notification)
             UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-
+            UIApplication.sharedApplication()
             self.tableView.reloadData()
         })
   
