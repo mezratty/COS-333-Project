@@ -119,8 +119,9 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         let user = ((items[indexPath.row]).objectAtIndex(2) as! String)
         
         
-        cell.textLabel?.text =  event + " " + first + " " + last + " " + user
-        
+        //cell.textLabel?.text =  event + " " + first + " " + last + " " + user
+        cell.textLabel?.text = "You bought/sold a ticket for \(event) to/from \(last) \(first) (\(user))"
+
         return cell
         
     }
