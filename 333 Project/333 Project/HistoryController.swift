@@ -51,7 +51,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
             
             let notification: UILocalNotification = UILocalNotification()
             notification.category = "FIRST_CATEGORY"
-            notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+            //notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
             notification.alertBody = "(Someone) wants to buy (sell you) a ticket!"
             UIApplication.sharedApplication().presentLocalNotificationNow(notification)
             
