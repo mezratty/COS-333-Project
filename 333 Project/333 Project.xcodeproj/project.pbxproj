@@ -10,6 +10,7 @@
 		2C4613661CB7EB890093F25B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4613651CB7EB890093F25B /* DataController.swift */; };
 		2C4613681CB7EBBD0093F25B /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4613671CB7EBBD0093F25B /* Chart.swift */; };
 		5C0A63251CBF54C400D6A836 /* CalWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A63241CBF54C400D6A836 /* CalWrapper.swift */; };
+		5C127C101CD046250084FA0A /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C127C0F1CD046250084FA0A /* HistoryController.swift */; };
 		5C28676C1CCF1FBD006266E4 /* FormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C28676B1CCF1FBD006266E4 /* FormController.swift */; };
 		5C37E2EE1CB6EE4A006CC4B1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37E2ED1CB6EE4A006CC4B1 /* CalendarViewController.swift */; };
 		5CA2288D1CC0A35B00C1DD2D /* DayTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2288C1CC0A35B00C1DD2D /* DayTable.swift */; };
@@ -55,6 +56,7 @@
 		2C4613651CB7EB890093F25B /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		2C4613671CB7EBBD0093F25B /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		5C0A63241CBF54C400D6A836 /* CalWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalWrapper.swift; sourceTree = "<group>"; };
+		5C127C0F1CD046250084FA0A /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		5C28676B1CCF1FBD006266E4 /* FormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormController.swift; sourceTree = "<group>"; };
 		5C37E2ED1CB6EE4A006CC4B1 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		5CA2288C1CC0A35B00C1DD2D /* DayTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTable.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				680B93A51CB3555000670E0B /* SecondViewController.swift */,
+				5C127C0F1CD046250084FA0A /* HistoryController.swift */,
 				680B93A31CB3555000670E0B /* FirstViewController.swift */,
 				5C37E2ED1CB6EE4A006CC4B1 /* CalendarViewController.swift */,
 				5CE3E2231CC5CC73000C1F95 /* WebController.swift */,
@@ -428,6 +431,7 @@
 				F85B3D9A1CC81404006A2E8A /* BackgroundView.swift in Sources */,
 				680B93A41CB3555000670E0B /* FirstViewController.swift in Sources */,
 				5C0A63251CBF54C400D6A836 /* CalWrapper.swift in Sources */,
+				5C127C101CD046250084FA0A /* HistoryController.swift in Sources */,
 				5C28676C1CCF1FBD006266E4 /* FormController.swift in Sources */,
 				5CA2288F1CC0A67900C1DD2D /* EventView.swift in Sources */,
 				5CE3E22B1CC60DD8000C1F95 /* TabBar.swift in Sources */,
