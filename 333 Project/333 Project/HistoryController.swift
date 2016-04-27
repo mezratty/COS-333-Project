@@ -130,6 +130,9 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         
     }
     
+    @IBAction func clearMatches(sender: AnyObject) {
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

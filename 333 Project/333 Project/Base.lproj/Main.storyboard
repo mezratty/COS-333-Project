@@ -136,6 +136,9 @@
                                 <state key="normal" title="Clear Matches">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clearMatches:" destination="GbW-G5-65F" eventType="touchUpInside" id="b0B-0o-Ogq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
