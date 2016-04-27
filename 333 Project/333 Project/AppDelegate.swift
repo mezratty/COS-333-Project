@@ -86,14 +86,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
-        var urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId
+        //var urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId
+        var urlString = "https://blistering-torch-3510.firebaseio.com/notifs/" + globalNetId
         var ref = Firebase(url:urlString)
         
+        /*
         ref.observeSingleEventOfType(.ChildAdded, withBlock: {snapshot in
-            var urlStringTwo = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId + "/" + snapshot.key + "/notif/"
-            var refTwo = Firebase(url:urlStringTwo)
-            refTwo.setValue(1)
+            //var urlStringTwo = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId + "/" + snapshot.key + "/notif/"
+            //var refTwo = Firebase(url:urlStringTwo)
+            //refTwo.setValue(1)
+            ref.removeValue()
         })
+        */
+        
         
         ref.observeEventType(.ChildAdded, withBlock: {snapshot in
             
@@ -111,13 +116,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UIApplication.sharedApplication().presentLocalNotificationNow(notification)
                 //UIApplication.sharedApplication().applicationIconBadgeNumber = 0
             
-                var urlStringTwo = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId + "/" + snapshot.key + "/notif/"
-                var refTwo = Firebase(url:urlStringTwo)
-                refTwo.setValue(1)
+                //var urlStringTwo = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId + "/" + snapshot.key + "/notif/"
+               // var refTwo = Firebase(url:urlStringTwo)
+                //refTwo.setValue(1)
+                ref.removeValue()
             }
         })
       
- 
+    
     }
 
     func applicationWillEnterForeground(application: UIApplication) {

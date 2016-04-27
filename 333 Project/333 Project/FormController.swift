@@ -90,14 +90,20 @@ class FormController: UIViewController, UITextFieldDelegate {
                 refTwo.childByAppendingPath(key).removeValue()
                 
                 var urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId
+                var urlStringTwo = "https://blistering-torch-3510.firebaseio.com/notifs/" + globalNetId
                 var ref = Firebase(url:urlString)
+                var refTwo = Firebase(url:urlStringTwo)
                 
                 var ticket = ["eventId":matchEventId, "user": matchNetId, "first": matchFirst, "last": matchLast, "notif":0]
                 var ticketRef = ref.childByAutoId()
+                var ticketRefTwo = refTwo.childByAutoId()
                 ticketRef.setValue(ticket)
+                ticketRefTwo.setValue(ticket)
                 
                 urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + matchNetId
                 ref = Firebase(url:urlString)
+                urlStringTwo = "https://blistering-torch-3510.firebaseio.com/notifs/" + matchNetId
+                refTwo = Firebase(url:urlStringTwo)
                 
                 let first = self.firstName.text as! AnyObject
                 let last = self.lastName.text as! AnyObject
@@ -105,6 +111,8 @@ class FormController: UIViewController, UITextFieldDelegate {
                 ticket = ["eventId":matchEventId, "user": globalNetId, "first": first as! String, "last": last as! String, "notif":0]
                 ticketRef = ref.childByAutoId()
                 ticketRef.setValue(ticket)
+                ticketRefTwo = refTwo.childByAutoId()
+                ticketRefTwo.setValue(ticket)
 
             }
             
