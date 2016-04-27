@@ -40,13 +40,25 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
                 
                 let event = NSMutableArray()
                 
-                let first = String(snapshot.value["first"] as! String)
-                let last = String(snapshot.value["last"] as! String)
-                let user = String(snapshot.value["user"] as! String)
+            let first = String(snapshot.value["first"] as! String)
+            let last = String(snapshot.value["last"] as! String)
+            let user = String(snapshot.value["user"] as! String)
+            let eventId = String(snapshot.value["eventId"] as! String)
+            
+            let urlStringTwo = "https://blistering-torch-3510.firebaseio.com/events/" + eventId
+            
+            let refTwo = Firebase(url:urlStringTwo)
+            
+            var eventName = ""
+            
+            refTwo.observeEventType(.Value, withBlock: {snapshotTwo in
+                eventName = String(snapshotTwo.value["name"] as! String)
+                
                 
                 event.addObject(first)
                 event.addObject(last)
                 event.addObject(user)
+                event.addObject(eventName)
                 self.items.append(event)
             
             UIApplication.sharedApplication().applicationIconBadgeNumber = 0
@@ -57,6 +69,8 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
             UIApplication.sharedApplication().presentLocalNotificationNow(notification)
             UIApplication.sharedApplication().applicationIconBadgeNumber = 0
             self.tableView.reloadData()
+                
+            })
         })
   
         super.viewDidLoad()
@@ -85,9 +99,13 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
         
-        //cell.textLabel?.text = self.items[indexPath.row] as! String
-        cell.textLabel?.text = (items[indexPath.row]).objectAtIndex(0) as! String
-        //cell.textLabel?.text = self.items.objectAtIndex(indexPath.row).objectAtIndex(0) as? String
+        let event = ((items[indexPath.row]).objectAtIndex(3) as! String)
+        let first = ((items[indexPath.row]).objectAtIndex(0) as! String)
+        let last = ((items[indexPath.row]).objectAtIndex(1) as! String)
+        let user = ((items[indexPath.row]).objectAtIndex(2) as! String)
+        
+        
+        cell.textLabel?.text =  event + " " + first + " " + last + " " + user
         
         return cell
         
