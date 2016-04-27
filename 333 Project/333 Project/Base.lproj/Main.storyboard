@@ -130,11 +130,21 @@
                                 <rect key="frame" x="0.0" y="50" width="320" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtd-fn-CZ6">
+                                <rect key="frame" x="8" y="12" width="304" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Clear Matches">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N9x-BX-BYP" firstAttribute="leading" secondItem="jQj-ZR-Zro" secondAttribute="leadingMargin" constant="-8" id="299-vB-XKa"/>
                             <constraint firstItem="N9x-BX-BYP" firstAttribute="top" secondItem="jcM-m2-5Ap" secondAttribute="bottom" constant="30" id="ShL-6Q-uN3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mtd-fn-CZ6" secondAttribute="trailing" id="UA4-eD-gLx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Mtd-fn-CZ6" secondAttribute="leading" id="aB2-hD-ybe"/>
+                            <constraint firstItem="Mtd-fn-CZ6" firstAttribute="top" secondItem="jcM-m2-5Ap" secondAttribute="bottom" constant="-8" id="dms-tW-Rn9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="N9x-BX-BYP" secondAttribute="trailing" constant="-8" id="nc4-T9-XRS"/>
                             <constraint firstItem="rln-EC-lol" firstAttribute="top" secondItem="N9x-BX-BYP" secondAttribute="bottom" id="qoG-YJ-XEO"/>
                         </constraints>
