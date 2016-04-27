@@ -92,7 +92,7 @@ class FormController: UIViewController, UITextFieldDelegate {
                 var urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId
                 var ref = Firebase(url:urlString)
                 
-                var ticket = ["eventId":matchEventId, "user": matchNetId, "first": matchFirst, "last": matchLast]
+                var ticket = ["eventId":matchEventId, "user": matchNetId, "first": matchFirst, "last": matchLast, "notif":0]
                 var ticketRef = ref.childByAutoId()
                 ticketRef.setValue(ticket)
                 
@@ -102,7 +102,7 @@ class FormController: UIViewController, UITextFieldDelegate {
                 let first = self.firstName.text as! AnyObject
                 let last = self.lastName.text as! AnyObject
                 
-                ticket = ["eventId":matchEventId, "user": globalNetId, "first": first as! String, "last": last as! String]
+                ticket = ["eventId":matchEventId, "user": globalNetId, "first": first as! String, "last": last as! String, "notif":0]
                 ticketRef = ref.childByAutoId()
                 ticketRef.setValue(ticket)
 
