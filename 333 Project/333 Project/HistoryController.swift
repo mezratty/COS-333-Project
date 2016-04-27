@@ -14,9 +14,8 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     var items = [NSMutableArray]()
     
-    @IBOutlet weak var tableView: UITableView!
     
-
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         var urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId
