@@ -22,7 +22,6 @@ class CalendarViewController: PDTSimpleCalendarViewController, PDTSimpleCalendar
         //let newDate = cal.
         
         
-        
         super.viewDidLoad()
 
 

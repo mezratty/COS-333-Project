@@ -80,8 +80,25 @@ class FormController: UIViewController {
                 matchNetId = item.value["user"] as! String
                 refTwo.childByAppendingPath(key).removeValue()
                 
-                let urlString = "https://blistering-torch-3510.firebaseio.com/matches"
-                let ref = Firebase(url:urlString)
+                var urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId
+                var ref = Firebase(url:urlString)
+                
+                var ticket = ["eventId":matchEventId, "user": matchNetId, "first": matchFirst, "last": matchLast]
+                var ticketRef = ref.childByAutoId()
+                ticketRef.setValue(ticket)
+                
+                urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + matchNetId
+                ref = Firebase(url:urlString)
+                
+                let first = self.firstName.text as! AnyObject
+                let last = self.lastName.text as! AnyObject
+                
+                ticket = ["eventId":matchEventId, "user": globalNetId, "first": first as! String, "last": last as! String]
+                ticketRef = ref.childByAutoId()
+                ticketRef.setValue(ticket)
+
+                
+                /*
                 
                 let first = self.firstName.text as! AnyObject
                 let last = self.lastName.text as! AnyObject
@@ -89,6 +106,7 @@ class FormController: UIViewController {
                 let ticket = ["eventId":matchEventId, "user1": globalNetId, "first1": first, "last1": last, "user2": matchNetId, "first2": matchFirst, "last2": matchLast]
                 let ticketRef = ref.childByAutoId()
                 ticketRef.setValue(ticket)
+ */
             }
             
         }
