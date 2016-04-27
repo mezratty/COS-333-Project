@@ -38,7 +38,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         ref.observeEventType(.ChildAdded, withBlock: {snapshot in
             
-                let event = NSMutableArray()
+            let event = NSMutableArray()
                 
             let first = String(snapshot.value["first"] as! String)
             let last = String(snapshot.value["last"] as! String)
@@ -48,6 +48,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
             let urlStringTwo = "https://blistering-torch-3510.firebaseio.com/events/" + eventId
             
             let refTwo = Firebase(url:urlStringTwo)
+            print("here")
             
             var eventName = ""
             
@@ -60,7 +61,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
                 event.addObject(user)
                 event.addObject(eventName)
                 self.items.append(event)
-            
+            /*
             UIApplication.sharedApplication().applicationIconBadgeNumber = 0
             let notification: UILocalNotification = UILocalNotification()
             notification.category = "FIRST_CATEGORY"
@@ -68,6 +69,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
             notification.alertBody = "\(first) \(last) (\(user)) wants to buy (sell you) a ticket!"
             UIApplication.sharedApplication().presentLocalNotificationNow(notification)
             UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+                 */
             self.tableView.reloadData()
                 
             })
