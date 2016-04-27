@@ -135,7 +135,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Matches" id="fyq-o0-1ym"/>
+                    <tabBarItem key="tabBarItem" title="Matches" image="rsz_1rsz_staricon.png" selectedImage="rsz_1rsz_staricon.png" id="fyq-o0-1ym"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tableView" destination="N9x-BX-BYP" id="3NH-zE-SCv"/>
@@ -426,6 +426,7 @@
     <resources>
         <image name="rsz_1rsz_1rsz_upcoming2.png" width="29" height="29"/>
         <image name="rsz_1rsz_events-calendar-icon1-300x300.png" width="38" height="38"/>
+        <image name="rsz_1rsz_staricon.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rhJ-4G-Zld"/>
