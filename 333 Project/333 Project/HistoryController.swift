@@ -121,7 +121,8 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         //cell.textLabel?.text =  event + " " + first + " " + last + " " + user
         cell.textLabel?.text = "You bought/sold a ticket for \(event) to/from \(last) \(first) (\(user))"
-
+        cell.textLabel?.adjustsFontSizeToFitWidth = true
+        
         return cell
         
     }
