@@ -16,11 +16,11 @@ class SubmitButton: UIButton {
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
-        super.layer.borderColor = UIColor.darkGrayColor().CGColor
-        super.layer.backgroundColor = UIColor.blackColor().CGColor
+        super.layer.borderColor = UIColor.blackColor().CGColor
+        super.layer.backgroundColor = UIColor.darkGrayColor().CGColor
         super.tintColor = UIColor.whiteColor()
         super.layer.cornerRadius = 10
-        super.layer.borderWidth = 4
+        super.layer.borderWidth = 2
         super.setTitle("Submit", forState: UIControlState.Normal)
     }
 }

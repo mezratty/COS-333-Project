@@ -11,7 +11,7 @@
         <scene sceneID="tc6-lL-vaf">
             <objects>
                 <viewController storyboardIdentifier="Upcoming" id="hb6-Rb-neN" customClass="SecondViewController" customModule="_33_Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gCR-eH-kZg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gCR-eH-kZg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -126,15 +126,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N9x-BX-BYP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N9x-BX-BYP">
                                 <rect key="frame" x="0.0" y="50" width="320" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtd-fn-CZ6">
+                                <rect key="frame" x="8" y="12" width="304" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Clear Matches">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearMatches:" destination="GbW-G5-65F" eventType="touchUpInside" id="b0B-0o-Ogq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N9x-BX-BYP" firstAttribute="leading" secondItem="jQj-ZR-Zro" secondAttribute="leadingMargin" constant="-8" id="299-vB-XKa"/>
                             <constraint firstItem="N9x-BX-BYP" firstAttribute="top" secondItem="jcM-m2-5Ap" secondAttribute="bottom" constant="30" id="ShL-6Q-uN3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mtd-fn-CZ6" secondAttribute="trailing" id="UA4-eD-gLx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Mtd-fn-CZ6" secondAttribute="leading" id="aB2-hD-ybe"/>
+                            <constraint firstItem="Mtd-fn-CZ6" firstAttribute="top" secondItem="jcM-m2-5Ap" secondAttribute="bottom" constant="-8" id="dms-tW-Rn9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="N9x-BX-BYP" secondAttribute="trailing" constant="-8" id="nc4-T9-XRS"/>
                             <constraint firstItem="rln-EC-lol" firstAttribute="top" secondItem="N9x-BX-BYP" secondAttribute="bottom" id="qoG-YJ-XEO"/>
                         </constraints>
@@ -169,7 +182,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="280" height="439"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y87-sH-bpj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y87-sH-bpj">
                                 <rect key="frame" x="0.0" y="0.0" width="280" height="439"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -456,6 +469,6 @@
         <image name="rsz_1rsz_staricon.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rhJ-4G-Zld"/>
+        <segue reference="dW1-nR-I9a"/>
     </inferredMetricsTieBreakers>
 </document>

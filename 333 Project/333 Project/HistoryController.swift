@@ -130,6 +130,13 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         
     }
     
+    @IBAction func clearMatches(sender: AnyObject) {
+        let urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId
+        let ref = Firebase(url:urlString)
+        
+        ref.removeValue()
+                
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
