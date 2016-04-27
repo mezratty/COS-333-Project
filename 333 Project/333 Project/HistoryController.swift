@@ -34,25 +34,28 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.separatorColor = UIColor.blackColor()
         
         
-        ref.observeEventType(.ChildChanged, withBlock: {snapshot in
-            var tempEvents = [NSMutableArray]()
+        ref.observeEventType(.ChildAdded, withBlock: {snapshot in
+            print("here")
+            //var tempEvents = [NSMutableArray]()
             
-            for item in snapshot.children {
+            //print(snapshot)
+            
+            //for item in snapshot.children {
                 
                 
                 let event = NSMutableArray()
                 
-                let first = String(item.value["first"] as? String)
-                let last = String(item.value["last"] as? String)
-                let user = String(item.value["user"] as! String)
+                let first = String(snapshot.value["first"] as! String)
+                let last = String(snapshot.value["last"] as! String)
+                let user = String(snapshot.value["user"] as! String)
                 
                 event.addObject(first)
                 event.addObject(last)
                 event.addObject(user)
-                tempEvents.append(event)
+                self.items.append(event)
                 
-            }
-            self.items = tempEvents
+            //}
+            //self.items = tempEvents
             self.tableView.reloadData()
         })
         
