@@ -1,1 +1,0 @@
- const unsigned char PDTSimpleCalendarVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:PDTSimpleCalendar  PROJECT:Pods-1" "\n"; const double PDTSimpleCalendarVersionNumber __attribute__ ((used)) = (double)1.;
