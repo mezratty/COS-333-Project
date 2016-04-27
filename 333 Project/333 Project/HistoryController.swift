@@ -37,7 +37,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         
         ref.observeEventType(.ChildAdded, withBlock: {snapshot in
-                
+            
                 let event = NSMutableArray()
                 
             let first = String(snapshot.value["first"] as! String)

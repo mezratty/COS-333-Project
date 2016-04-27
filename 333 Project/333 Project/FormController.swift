@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class FormController: UIViewController {
+class FormController: UIViewController, UITextFieldDelegate {
     
     var data: NSMutableArray = []
     
@@ -21,6 +21,14 @@ class FormController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        lastName.returnKeyType = .Done
+        firstName.returnKeyType = .Done
+        lastName.delegate = self
+        firstName.delegate = self
+        
+        /*
         // Do any additional setup after loading the view, typically from a nib
         /*
         
@@ -42,6 +50,7 @@ class FormController: UIViewController {
         
         //UIApplication.sharedApplication().scheduleLocalNotification(notification)
         UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+ */
     }
     
     override func didReceiveMemoryWarning() {
@@ -97,21 +106,15 @@ class FormController: UIViewController {
                 ticketRef = ref.childByAutoId()
                 ticketRef.setValue(ticket)
 
-                
-                /*
-                
-                let first = self.firstName.text as! AnyObject
-                let last = self.lastName.text as! AnyObject
-                
-                let ticket = ["eventId":matchEventId, "user1": globalNetId, "first1": first, "last1": last, "user2": matchNetId, "first2": matchFirst, "last2": matchLast]
-                let ticketRef = ref.childByAutoId()
-                ticketRef.setValue(ticket)
- */
             }
             
         }
         
     })
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }
