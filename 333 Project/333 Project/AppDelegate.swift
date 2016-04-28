@@ -90,19 +90,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var urlString = "https://blistering-torch-3510.firebaseio.com/notifs/" + globalNetId
         var ref = Firebase(url:urlString)
         
-        /*
-        ref.observeSingleEventOfType(.ChildAdded, withBlock: {snapshot in
-            //var urlStringTwo = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId + "/" + snapshot.key + "/notif/"
-            //var refTwo = Firebase(url:urlStringTwo)
-            //refTwo.setValue(1)
-            ref.removeValue()
-        })
-        */
-        
         
         ref.observeEventType(.ChildAdded, withBlock: {snapshot in
-            
-        if(snapshot.value["notif"] as! Int == 0){
+
                 print(snapshot)
                 let first = String(snapshot.value["first"] as! String)
                 let last = String(snapshot.value["last"] as! String)
@@ -115,12 +105,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 notification.alertBody = "\(first) \(last) (\(user)) wants to buy (sell you) a ticket!"
                 UIApplication.sharedApplication().presentLocalNotificationNow(notification)
                 //UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-            
-                //var urlStringTwo = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId + "/" + snapshot.key + "/notif/"
-               // var refTwo = Firebase(url:urlStringTwo)
-                //refTwo.setValue(1)
+
                 ref.removeValue()
-            }
         })
       
     
