@@ -137,6 +137,9 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         let ref = Firebase(url:urlString)
         
         ref.removeValue()
+        items.removeAll()
+        self.tableView.reloadData()
+        
                 
     }
     

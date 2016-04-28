@@ -24,7 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmN-tB-SdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="96"/>
+            <point key="canvasLocation" x="133" y="96"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="Qzt-kK-wZ7">
@@ -107,7 +107,7 @@
                     <connections>
                         <segue destination="z8h-ws-Ohd" kind="relationship" relationship="viewControllers" id="4PS-90-vE5"/>
                         <segue destination="Rfj-sr-pop" kind="relationship" relationship="viewControllers" id="d7r-Ke-PPr"/>
-                        <segue destination="GbW-G5-65F" kind="relationship" relationship="viewControllers" id="dCl-cV-c5T"/>
+                        <segue destination="olR-wf-0vT" kind="relationship" relationship="viewControllers" id="dCl-cV-c5T"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IxD-6r-WLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,7 +160,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Matches" image="rsz_1rsz_staricon.png" selectedImage="rsz_1rsz_staricon.png" id="fyq-o0-1ym"/>
+                    <navigationItem key="navigationItem" title="Matches" id="NW5-3T-puL"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tableView" destination="N9x-BX-BYP" id="3NH-zE-SCv"/>
@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXO-dp-hH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1751" y="446"/>
+            <point key="canvasLocation" x="-1219" y="446"/>
         </scene>
         <!--Day Table-->
         <scene sceneID="RsT-tp-Nkn">
@@ -462,7 +462,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnE-pY-cfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-931" y="96"/>
+            <point key="canvasLocation" x="-399" y="96"/>
+        </scene>
+        <!--Matches-->
+        <scene sceneID="Mmw-ue-lrU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="olR-wf-0vT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Matches" image="rsz_1rsz_staricon.png" selectedImage="rsz_1rsz_staricon.png" id="fyq-o0-1ym"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zvh-hM-89A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GbW-G5-65F" kind="relationship" relationship="rootViewController" id="VHi-Ok-bZa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HpD-KH-bxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1751" y="446"/>
         </scene>
     </scenes>
     <resources>
