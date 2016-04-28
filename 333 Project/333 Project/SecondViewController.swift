@@ -155,7 +155,28 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
      func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.events.objectAtIndex(section).objectAtIndex(0).objectAtIndex(2) as! String
+        
+        let dateInt = self.events.objectAtIndex(section).objectAtIndex(0).objectAtIndex(3) as! Int
+        let dayInt = dateInt % 100
+        let f = (Float(dateInt)/100.0)
+        let monthInt = Int(floor(f)) % 100
+        
+        var monthString = "January"
+        if (monthInt == 2) {monthString = "February"}
+        if (monthInt == 3) {monthString = "March"}
+        if (monthInt == 4) {monthString = "April"}
+        if (monthInt == 5) {monthString = "May"}
+        if (monthInt == 6) {monthString = "June"}
+        if (monthInt == 7) {monthString = "July"}
+        if (monthInt == 8) {monthString = "August"}
+        if (monthInt == 9) {monthString = "September"}
+        if (monthInt == 10) {monthString = "October"}
+        if (monthInt == 11) {monthString = "November"}
+        if (monthInt == 12) {monthString = "December"}
+        
+        
+        return monthString + " " + String(dayInt)
+        //return self.events.objectAtIndex(section).objectAtIndex(0).objectAtIndex(2) as! String
         
     }
     
