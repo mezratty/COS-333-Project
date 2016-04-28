@@ -61,52 +61,15 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.view.addConstraint(heightConstraint)
 
 
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Day , .Month , .Year], fromDate: date)
         
-        //view.bringSubviewToFront(BackgroundView())
-        /*
-        var counter = 0
-        var month = 4
-        var day = 1
-        var year = 2016
-        for i in 0 ..< 372 {
-            if (counter < 31) {day += 1; counter += 1}
-            else {counter = 0; day = 1; month+=1; if(month == 13){month = 1; year+=1}}
-            
-            var totalDate = month*100+day+year*10000
-            
-            print(totalDate)
+        let year =  components.year
+        let month = components.month
+        let day = components.day
         
-        //ref.queryOrderedByChild("dateInt").observeEventType(.Value, withBlock: {snapshot in
-        ref.queryOrderedByChild("dateInt").queryEqualToValue(totalDate).observeEventType(.Value, withBlock: {snapshot in
-            var tempEvents = [NSMutableArray]()
-            
-            //print(snapshot)
-            
-            for item in snapshot.children {
-                //if (item.value["dateInt"] as! Int != 2016) {
-                
-                    let event = NSMutableArray()
-                
-                    let name = String(item.value["name"] as! String)
-                    let key = String(item.key as String)
-                    let date = String(item.value["date"] as! String)
-                
-                    event.addObject(name)
-                    event.addObject(key)
-                    event.addObject(date)
-                    tempEvents.append(event)
-                //}
-            }
-            if (tempEvents.count > 0) {self.events.addObject(tempEvents)}
-            //self.events = tempEvents
-            self.tableView.reloadData()
-           // print("query")
-            //print(self.events.count)
-        
-        })
-            
-        }*/
-        
+        let today = year*10000 + month * 100 + day
         
         ref.queryOrderedByChild("dateInt").observeEventType(.Value, withBlock: {snapshot in
             var tempEvents = [NSMutableArray]()
@@ -114,7 +77,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             //print(snapshot)
             
             for item in snapshot.children {
-                if (item.value["dateInt"] as! Int != 20160000) {
+                //if (item.value["dateInt"] as! Int != 20160000) {
+                if (item.value["dateInt"] as! Int >= today) {
                 
                 let event = NSMutableArray()
                 
