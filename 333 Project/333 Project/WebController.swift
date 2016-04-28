@@ -26,7 +26,7 @@ class WebController: UIViewController, UIWebViewDelegate {
         
         //1. Load web site into my web view
         
-        let myURL = NSURL(string: "http://still-brushlands-47074.herokuapp.com/");
+        let myURL = NSURL(string: "https://awojak.mycpanel2.princeton.edu/333");
         let myURLRequest:NSURLRequest = NSURLRequest(URL: myURL!);
         myWebView.loadRequest(myURLRequest);
 
@@ -40,13 +40,15 @@ class WebController: UIViewController, UIWebViewDelegate {
     
 
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        //if (request.URLString == "https://still-brushlands-47074.herokuapp.com/index1.php") {
-        if request.URLString.rangeOfString("https://still-brushlands-47074.herokuapp.com/index1.php") != nil {
+        //if (request.URLString == "https://awojak.mycpanel2.princeton.edu/333/index1.php") {
+        if request.URLString.rangeOfString("https://awojak.mycpanel2.princeton.edu/333/index1.php") != nil {
             
             
-            let startIndex = request.URLString.startIndex.advancedBy(59)
+            let startIndex = request.URLString.startIndex.advancedBy(57)
             let netId = request.URLString.substringFromIndex(startIndex)
             globalNetId = netId
+            
+            print(globalNetId)
             
             self.performSegueWithIdentifier("LoggedIn", sender: netId)
             return false
