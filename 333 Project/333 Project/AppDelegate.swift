@@ -74,19 +74,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
         
+        var urlString = "https://blistering-torch-3510.firebaseio.com/notifs/" + globalNetId
+        var ref = Firebase(url:urlString)
+        
+        
+        ref.observeEventType(.ChildAdded, withBlock: {snapshot in
+            for child in snapshot.children {
+                print(snapshot)
+                let first = String(child.value["first"] as! String)
+                let last = String(child.value["last"] as! String)
+                let user = String(child.value["user"] as! String)
+                
+                UIApplication.sharedApplication().applicationIconBadgeNumber += 1
+                let notification: UILocalNotification = UILocalNotification()
+                notification.category = "FIRST_CATEGORY"
+                //notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+                notification.alertBody = "\(first) \(last) (\(user)) wants to buy (sell you) a ticket!"
+                UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+                //UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+                
+                ref.removeValue()
+            }
+        })
+        
         return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-        
-        //var urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId
+        /*
         var urlString = "https://blistering-torch-3510.firebaseio.com/notifs/" + globalNetId
         var ref = Firebase(url:urlString)
         
@@ -108,7 +131,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
                 ref.removeValue()
         })
-      
+    */
     
     }
 
