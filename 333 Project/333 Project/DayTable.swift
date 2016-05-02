@@ -109,6 +109,7 @@ class DayTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
         
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         //cell.textLabel?.text = self.items[indexPath.row] as! String
         cell.textLabel?.text = (items[indexPath.row]).objectAtIndex(0) as! String
         //cell.textLabel?.text = self.items.objectAtIndex(indexPath.row).objectAtIndex(0) as? String

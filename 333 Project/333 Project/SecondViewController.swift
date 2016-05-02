@@ -189,6 +189,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //print(indexPath.row)
         if (events.count) > 0 {
         
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         //print(self.events.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row).objectAtIndex(0))
             
         //cell.textLabel?.text = (self.events[indexPath.row]).objectAtIndex(0) as! String
