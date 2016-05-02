@@ -91,8 +91,19 @@ class EventView: UIViewController {
             let endIndex = description.endIndex.advancedBy(-2)
             description = description.substringToIndex(endIndex)
         }
-        
-        self.eventDesc.text = "Opponent: " + description
+            
+            var source = String(snapshot.value["source"] as? String)
+         /*   if source.rangeOfString("Optional") != nil {
+                let startIndex = source.startIndex.advancedBy(10)
+                source = source.substringFromIndex(startIndex)
+                let endIndex = source.endIndex.advancedBy(-2)
+                source = source.substringToIndex(endIndex)
+            }*/
+            
+            if (source.containsString("athletics")) {
+                self.eventDesc.text = "Opponent: " + description
+            }
+            else {self.eventDesc.text = "Description: " + description}
             
          var date = String(snapshot.value["date"] as? String)
             
