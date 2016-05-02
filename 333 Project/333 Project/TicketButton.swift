@@ -19,7 +19,7 @@ class TicketButton: UIButton {
     
     override func drawRect(rect: CGRect) {
         if (isBuy) {
-            let circlePath = UIBezierPath(ovalInRect: rect)
+            /*let circlePath = UIBezierPath(ovalInRect: rect)
             /*let path = UIBezierPath(ovalInRect: rect)
              fillColor.setFill()
              fillColor.setStroke()
@@ -41,10 +41,21 @@ class TicketButton: UIButton {
             
             super.setTitle("Buy", forState: UIControlState.Normal)
             super.layer.addSublayer(shapeLayer)
+            super.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)*/
+            
+            
+            super.drawRect(rect)
+            
+            super.layer.backgroundColor = fillColor.CGColor
+            super.layer.borderColor = strokeColor.CGColor
+            super.layer.borderWidth = 3.0
+            super.layer.cornerRadius = 8.0
+            super.setTitle("Request Ticket", forState: UIControlState.Normal)
             super.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+            
         }
         if (isSell) {
-            let circlePath = UIBezierPath(ovalInRect: rect)
+            /*let circlePath = UIBezierPath(ovalInRect: rect)
             /*let path = UIBezierPath(ovalInRect: rect)
              fillColor.setFill()
              fillColor.setStroke()
@@ -66,6 +77,16 @@ class TicketButton: UIButton {
             
             super.setTitle("Sell", forState: UIControlState.Normal)
             super.layer.addSublayer(shapeLayer)
+            super.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)*/
+            
+            
+            super.drawRect(rect)
+            
+            super.layer.backgroundColor = fillColor.CGColor
+            super.layer.borderColor = strokeColor.CGColor
+            super.layer.borderWidth = 3.0
+            super.layer.cornerRadius = 8.0
+            super.setTitle("Post Ticket", forState: UIControlState.Normal)
             super.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         }
     }
