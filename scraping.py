@@ -89,7 +89,7 @@ for i in range(len(dates)):
 	dateInts[i] += 20160000
 
 for i in range(len(teams)):
-	data = {'name': teams[i], 'description': opponents[i], 'date': dates[i], 'time': times[i], 'dateInt': dateInts[i], 'location': locations[i]}
+	data = {'name': teams[i], 'description': opponents[i], 'date': dates[i], 'time': times[i], 'dateInt': dateInts[i], 'location': locations[i], 'source': "athletics"}
 	#data = {'name': teams[i].string, 'description': opponents[i].string, 'date': dates[i].string, 'time': times[i].string}
 	#firebase.post('/games', data)
 	firebase.post('/events', data)
