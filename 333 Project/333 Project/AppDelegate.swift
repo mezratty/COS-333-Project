@@ -73,14 +73,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
-        
+        /*
         var urlString = "https://blistering-torch-3510.firebaseio.com/notifs/" + globalNetId
+        print(globalNetId + "netid")
         var ref = Firebase(url:urlString)
         
         
         ref.observeEventType(.ChildAdded, withBlock: {snapshot in
+            print(urlString)
+            
+            print(snapshot)
+            
             for child in snapshot.children {
-                print(snapshot)
+                //print(child)
+                
                 let first = String(child.value["first"] as! String)
                 let last = String(child.value["last"] as! String)
                 let user = String(child.value["user"] as! String)
@@ -89,14 +95,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let notification: UILocalNotification = UILocalNotification()
                 notification.category = "FIRST_CATEGORY"
                 //notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+                
+            
                 notification.alertBody = "\(first) \(last) (\(user)) wants to buy (sell you) a ticket!"
                 UIApplication.sharedApplication().presentLocalNotificationNow(notification)
                 //UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-                
+            
                 ref.removeValue()
             }
         })
-        
+        */
         return true
     }
 
@@ -109,29 +117,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-        /*
-        var urlString = "https://blistering-torch-3510.firebaseio.com/notifs/" + globalNetId
-        var ref = Firebase(url:urlString)
-        
-        
-        ref.observeEventType(.ChildAdded, withBlock: {snapshot in
-
-                print(snapshot)
-                let first = String(snapshot.value["first"] as! String)
-                let last = String(snapshot.value["last"] as! String)
-                let user = String(snapshot.value["user"] as! String)
-            
-                UIApplication.sharedApplication().applicationIconBadgeNumber += 1
-                let notification: UILocalNotification = UILocalNotification()
-                notification.category = "FIRST_CATEGORY"
-                //notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
-                notification.alertBody = "\(first) \(last) (\(user)) wants to buy (sell you) a ticket!"
-                UIApplication.sharedApplication().presentLocalNotificationNow(notification)
-                //UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-
-                ref.removeValue()
-        })
-    */
     
     }
 

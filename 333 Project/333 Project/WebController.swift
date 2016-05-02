@@ -6,6 +6,8 @@
 //  Copyright © 2016 Divya Mehta. All rights reserved.
 //
 
+import Firebase
+
 var globalNetId: String = ""
 
 class WebController: UIViewController, UIWebViewDelegate {
@@ -48,7 +50,34 @@ class WebController: UIViewController, UIWebViewDelegate {
             let netId = request.URLString.substringFromIndex(startIndex)
             globalNetId = netId
             
-            print(globalNetId)
+            var urlString = "https://blistering-torch-3510.firebaseio.com/notifs/" + globalNetId
+            var ref = Firebase(url:urlString)
+            
+            
+            ref.observeEventType(.ChildAdded, withBlock: {snapshot in
+                
+                //for child in snapshot.children {
+                    
+                    let first = String(snapshot.value["first"] as! String)
+                    let last = String(snapshot.value["last"] as! String)
+                    let user = String(snapshot.value["user"] as! String)
+                    
+                    UIApplication.sharedApplication().applicationIconBadgeNumber += 1
+                    let notification: UILocalNotification = UILocalNotification()
+                    notification.category = "FIRST_CATEGORY"
+                    //notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+                    
+                    
+                    notification.alertBody = "\(first) \(last) (\(user)) wants to buy (sell you) a ticket!"
+                    UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+                    //UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+                    
+                    ref.removeValue()
+                //}
+            })
+            
+            
+            
             
             self.performSegueWithIdentifier("LoggedIn", sender: netId)
             return false
