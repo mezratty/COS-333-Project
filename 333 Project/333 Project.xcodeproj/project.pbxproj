@@ -149,8 +149,8 @@
 				680B93A11CB3555000670E0B /* AppDelegate.swift */,
 				680B93A71CB3555100670E0B /* Main.storyboard */,
 				680B93E41CB364F600670E0B /* 333Project-Bridging-Header.h */,
-				F8C218B51CCF3A1800415D4B /* Data Items */,
 				F8C218B41CCF398E00415D4B /* Design Items */,
+				F8C218B51CCF3A1800415D4B /* Data Items */,
 				F8C218B31CCF38CD00415D4B /* View Controllers */,
 				F8C218B61CCF3A5200415D4B /* Miscellaneous */,
 			);
