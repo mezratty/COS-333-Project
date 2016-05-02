@@ -29,6 +29,10 @@ class EventView: UIViewController {
     
     @IBOutlet weak var eventLocation: UILabel!
     
+    @IBOutlet weak var buy: TicketButton!
+    
+    @IBOutlet weak var sell: TicketButton!
+    
     override func viewDidLoad() {
         
         eventTitle.layer.borderWidth = 0.5
@@ -104,6 +108,11 @@ class EventView: UIViewController {
                 self.eventDesc.text = "Opponent: " + description
             }
             else {self.eventDesc.text = "Description: " + description}
+            
+            if (!source.containsString("tickets")) {
+                self.buy.hidden = true
+                self.sell.hidden = true
+            }
             
          var date = String(snapshot.value["date"] as? String)
             
