@@ -57,6 +57,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
             let last = String(snapshot.value["last"] as! String)
             let user = String(snapshot.value["user"] as! String)
             let eventId = String(snapshot.value["eventId"] as! String)
+            let type = String(snapshot.value["type"] as! String)
             
             let urlStringTwo = "https://blistering-torch-3510.firebaseio.com/events/" + eventId
             
@@ -73,6 +74,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
                 event.addObject(last)
                 event.addObject(user)
                 event.addObject(eventName)
+                event.addObject(type)
                 self.items.append(event)
             /*
             UIApplication.sharedApplication().applicationIconBadgeNumber = 0
@@ -119,9 +121,12 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         let last = ((items[indexPath.row]).objectAtIndex(1) as! String)
         let user = ((items[indexPath.row]).objectAtIndex(2) as! String)
         
+        var type = "buyer"
+        if ((items[indexPath.row].objectAtIndex(4) as! String).containsString("buy")) {type = "seller"}
+        
         
         //cell.textLabel?.text =  event + " " + first + " " + last + " " + user
-        cell.textLabel?.text = "\(last) \(first) (\(user)): \(event)"
+        cell.textLabel?.text = "\(last) \(first) (\(user)) \(type): \(event)"
         cell.textLabel?.adjustsFontSizeToFitWidth = true
         
         return cell

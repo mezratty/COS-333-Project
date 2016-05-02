@@ -94,7 +94,8 @@ class FormController: UIViewController, UITextFieldDelegate {
                 var ref = Firebase(url:urlString)
                 var refTwo = Firebase(url:urlStringTwo)
                 
-                var ticket = ["eventId":matchEventId, "user": matchNetId, "first": matchFirst, "last": matchLast]
+                var ticket = ["eventId":matchEventId, "user": matchNetId, "first": matchFirst, "last": matchLast,
+                    "type":self.data.objectAtIndex(1)]
                 var ticketRef = ref.childByAutoId()
                 var ticketRefTwo = refTwo.childByAutoId()
                 ticketRef.setValue(ticket)
@@ -108,7 +109,7 @@ class FormController: UIViewController, UITextFieldDelegate {
                 let first = self.firstName.text as! AnyObject
                 let last = self.lastName.text as! AnyObject
                 
-                ticket = ["eventId":matchEventId, "user": globalNetId, "first": first as! String, "last": last as! String]
+                ticket = ["eventId":matchEventId, "user": globalNetId, "first": first as! String, "last": last as! String, "type": self.data.objectAtIndex(2)]
                 ticketRef = ref.childByAutoId()
                 ticketRef.setValue(ticket)
                 ticketRefTwo = refTwo.childByAutoId()
