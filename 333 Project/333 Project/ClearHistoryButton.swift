@@ -9,18 +9,18 @@
 import UIKit
 @IBDesignable
 
-class SubmitButton: UIButton {
+class ClearHistoryButton: UIButton {
 
     @IBInspectable var fillColor: UIColor = UIColor.darkGrayColor()
     @IBInspectable var strokeColor: UIColor = UIColor.orangeColor()
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
-        super.layer.borderColor = UIColor.whiteColor().CGColor
+        super.layer.borderColor = UIColor.orangeColor().CGColor
         super.layer.backgroundColor = UIColor.darkGrayColor().CGColor
         super.tintColor = UIColor.whiteColor()
         super.layer.cornerRadius = 10
         super.layer.borderWidth = 2
-        super.setTitle("Submit", forState: UIControlState.Normal)
+        super.setTitle("Delete Match History", forState: UIControlState.Normal)
     }
 }
