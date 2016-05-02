@@ -31,33 +31,33 @@ class EventView: UIViewController {
     
     override func viewDidLoad() {
         
-        eventTitle.layer.borderWidth = 2
+        eventTitle.layer.borderWidth = 0.5
         eventTitle.layer.borderColor = UIColor.blackColor().CGColor
-        eventTitle.layer.cornerRadius = 10
+        eventTitle.layer.cornerRadius = 3
         eventTitle.textColor = UIColor.blackColor()
         eventTitle.layer.backgroundColor = UIColor.whiteColor().CGColor
         
-        eventDesc.layer.borderWidth = 2
+        eventDesc.layer.borderWidth = 0.5
         eventDesc.layer.borderColor = UIColor.blackColor().CGColor
-        eventDesc.layer.cornerRadius = 10
+        eventDesc.layer.cornerRadius = 3
         eventDesc.textColor = UIColor.blackColor()
         eventDesc.layer.backgroundColor = UIColor.whiteColor().CGColor
         
-        eventDate.layer.borderWidth = 2
+        eventDate.layer.borderWidth = 0.5
         eventDate.layer.borderColor = UIColor.blackColor().CGColor
-        eventDate.layer.cornerRadius = 10
+        eventDate.layer.cornerRadius = 3
         eventDate.textColor = UIColor.blackColor()
         eventDate.layer.backgroundColor = UIColor.whiteColor().CGColor
 
-        eventTime.layer.borderWidth = 2
+        eventTime.layer.borderWidth = 0.5
         eventTime.layer.borderColor = UIColor.blackColor().CGColor
-        eventTime.layer.cornerRadius = 10
+        eventTime.layer.cornerRadius = 3
         eventTime.textColor = UIColor.blackColor()
         eventTime.layer.backgroundColor = UIColor.whiteColor().CGColor
 
-        eventLocation.layer.borderWidth = 2
+        eventLocation.layer.borderWidth = 0.5
         eventLocation.layer.borderColor = UIColor.blackColor().CGColor
-        eventLocation.layer.cornerRadius = 10
+        eventLocation.layer.cornerRadius = 3
         eventLocation.textColor = UIColor.blackColor()
         eventLocation.layer.backgroundColor = UIColor.whiteColor().CGColor
 
