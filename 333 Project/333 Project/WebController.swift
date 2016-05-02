@@ -61,6 +61,10 @@ class WebController: UIViewController, UIWebViewDelegate {
                     let first = String(snapshot.value["first"] as! String)
                     let last = String(snapshot.value["last"] as! String)
                     let user = String(snapshot.value["user"] as! String)
+                    let type = String(snapshot.value["type"] as! String)
+                
+                var action = "buy"
+                if (type.containsString("buy")) {action = "sell you"}
                     
                     UIApplication.sharedApplication().applicationIconBadgeNumber += 1
                     let notification: UILocalNotification = UILocalNotification()
@@ -68,7 +72,7 @@ class WebController: UIViewController, UIWebViewDelegate {
                     //notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
                     
                     
-                    notification.alertBody = "\(first) \(last) (\(user)) wants to buy (sell you) a ticket!"
+                    notification.alertBody = "\(first) \(last) (\(user)) wants to \(action) a ticket!"
                     UIApplication.sharedApplication().presentLocalNotificationNow(notification)
                     //UIApplication.sharedApplication().applicationIconBadgeNumber = 0
                     

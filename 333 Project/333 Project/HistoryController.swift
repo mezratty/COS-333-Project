@@ -46,8 +46,6 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         UITableViewCell.appearance().backgroundColor = UIColor.clearColor()
         tableView.separatorColor = UIColor.blackColor()
         
-        var counter = 0
-        
         
         ref.observeEventType(.ChildAdded, withBlock: {snapshot in
             
