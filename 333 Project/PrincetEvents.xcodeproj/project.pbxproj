@@ -65,7 +65,7 @@
 		5CA2288E1CC0A67900C1DD2D /* EventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		5CE3E2231CC5CC73000C1F95 /* WebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
 		5CE3E22A1CC60DD8000C1F95 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		680B939E1CB3555000670E0B /* 333 Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "333 Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		680B939E1CB3555000670E0B /* PrincetEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrincetEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		680B93A11CB3555000670E0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		680B93A31CB3555000670E0B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		680B93A51CB3555000670E0B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -73,10 +73,10 @@
 		680B93AA1CB3555100670E0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		680B93AD1CB3555100670E0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		680B93AF1CB3555100670E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		680B93B41CB3555100670E0B /* 333 ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "333 ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		680B93B41CB3555100670E0B /* PrincetEvents.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrincetEvents.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		680B93B81CB3555100670E0B /* _33_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _33_ProjectTests.swift; sourceTree = "<group>"; };
 		680B93BA1CB3555100670E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		680B93BF1CB3555100670E0B /* 333 ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "333 ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		680B93BF1CB3555100670E0B /* PrincetEvents.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrincetEvents.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		680B93C31CB3555100670E0B /* _33_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _33_ProjectUITests.swift; sourceTree = "<group>"; };
 		680B93C51CB3555100670E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		680B93E41CB364F600670E0B /* 333Project-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "333Project-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -136,9 +136,9 @@
 		680B939F1CB3555000670E0B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				680B939E1CB3555000670E0B /* 333 Project.app */,
-				680B93B41CB3555100670E0B /* 333 ProjectTests.xctest */,
-				680B93BF1CB3555100670E0B /* 333 ProjectUITests.xctest */,
+				680B939E1CB3555000670E0B /* PrincetEvents.app */,
+				680B93B41CB3555100670E0B /* PrincetEvents.xctest */,
+				680B93BF1CB3555100670E0B /* PrincetEvents.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,9 +243,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		680B939D1CB3555000670E0B /* 333 Project */ = {
+		680B939D1CB3555000670E0B /* PrincetEvents */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 680B93C81CB3555100670E0B /* Build configuration list for PBXNativeTarget "333 Project" */;
+			buildConfigurationList = 680B93C81CB3555100670E0B /* Build configuration list for PBXNativeTarget "PrincetEvents" */;
 			buildPhases = (
 				9DF61BBAA205913FC69181F6 /* Check Pods Manifest.lock */,
 				680B939A1CB3555000670E0B /* Sources */,
@@ -258,14 +258,14 @@
 			);
 			dependencies = (
 			);
-			name = "333 Project";
+			name = PrincetEvents;
 			productName = "333 Project";
-			productReference = 680B939E1CB3555000670E0B /* 333 Project.app */;
+			productReference = 680B939E1CB3555000670E0B /* PrincetEvents.app */;
 			productType = "com.apple.product-type.application";
 		};
-		680B93B31CB3555100670E0B /* 333 ProjectTests */ = {
+		680B93B31CB3555100670E0B /* PrincetEventsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 680B93CB1CB3555100670E0B /* Build configuration list for PBXNativeTarget "333 ProjectTests" */;
+			buildConfigurationList = 680B93CB1CB3555100670E0B /* Build configuration list for PBXNativeTarget "PrincetEventsTests" */;
 			buildPhases = (
 				680B93B01CB3555100670E0B /* Sources */,
 				680B93B11CB3555100670E0B /* Frameworks */,
@@ -276,14 +276,14 @@
 			dependencies = (
 				680B93B61CB3555100670E0B /* PBXTargetDependency */,
 			);
-			name = "333 ProjectTests";
+			name = PrincetEventsTests;
 			productName = "333 ProjectTests";
-			productReference = 680B93B41CB3555100670E0B /* 333 ProjectTests.xctest */;
+			productReference = 680B93B41CB3555100670E0B /* PrincetEvents.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		680B93BE1CB3555100670E0B /* 333 ProjectUITests */ = {
+		680B93BE1CB3555100670E0B /* PrincetEventsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 680B93CE1CB3555100670E0B /* Build configuration list for PBXNativeTarget "333 ProjectUITests" */;
+			buildConfigurationList = 680B93CE1CB3555100670E0B /* Build configuration list for PBXNativeTarget "PrincetEventsUITests" */;
 			buildPhases = (
 				680B93BB1CB3555100670E0B /* Sources */,
 				680B93BC1CB3555100670E0B /* Frameworks */,
@@ -294,9 +294,9 @@
 			dependencies = (
 				680B93C11CB3555100670E0B /* PBXTargetDependency */,
 			);
-			name = "333 ProjectUITests";
+			name = PrincetEventsUITests;
 			productName = "333 ProjectUITests";
-			productReference = 680B93BF1CB3555100670E0B /* 333 ProjectUITests.xctest */;
+			productReference = 680B93BF1CB3555100670E0B /* PrincetEvents.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -322,7 +322,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 680B93991CB3555000670E0B /* Build configuration list for PBXProject "333 Project" */;
+			buildConfigurationList = 680B93991CB3555000670E0B /* Build configuration list for PBXProject "PrincetEvents" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -335,9 +335,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				680B939D1CB3555000670E0B /* 333 Project */,
-				680B93B31CB3555100670E0B /* 333 ProjectTests */,
-				680B93BE1CB3555100670E0B /* 333 ProjectUITests */,
+				680B939D1CB3555000670E0B /* PrincetEvents */,
+				680B93B31CB3555100670E0B /* PrincetEventsTests */,
+				680B93BE1CB3555100670E0B /* PrincetEventsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -467,12 +467,12 @@
 /* Begin PBXTargetDependency section */
 		680B93B61CB3555100670E0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 680B939D1CB3555000670E0B /* 333 Project */;
+			target = 680B939D1CB3555000670E0B /* PrincetEvents */;
 			targetProxy = 680B93B51CB3555100670E0B /* PBXContainerItemProxy */;
 		};
 		680B93C11CB3555100670E0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 680B939D1CB3555000670E0B /* 333 Project */;
+			target = 680B939D1CB3555000670E0B /* PrincetEvents */;
 			targetProxy = 680B93C01CB3555100670E0B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -593,7 +593,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"PODS_FRAMEWORK_BUILD_PATH[arch=*]" = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-333 Project";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-333-Project";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PrincetEvents;
 				SWIFT_OBJC_BRIDGING_HEADER = "333 Project/333Project-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -610,7 +610,7 @@
 				INFOPLIST_FILE = "333 Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-333-Project";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PrincetEvents;
 				SWIFT_OBJC_BRIDGING_HEADER = "333 Project/333Project-Bridging-Header.h";
 			};
 			name = Release;
@@ -622,8 +622,8 @@
 				INFOPLIST_FILE = "333 ProjectTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-33-ProjectTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/333 Project.app/333 Project";
+				PRODUCT_NAME = PrincetEvents;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrincetEvents.app/PrincetEvents";
 			};
 			name = Debug;
 		};
@@ -634,8 +634,8 @@
 				INFOPLIST_FILE = "333 ProjectTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-33-ProjectTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/333 Project.app/333 Project";
+				PRODUCT_NAME = PrincetEvents;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrincetEvents.app/PrincetEvents";
 			};
 			name = Release;
 		};
@@ -645,7 +645,7 @@
 				INFOPLIST_FILE = "333 ProjectUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-33-ProjectUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PrincetEvents;
 				TEST_TARGET_NAME = "333 Project";
 			};
 			name = Debug;
@@ -656,7 +656,7 @@
 				INFOPLIST_FILE = "333 ProjectUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-33-ProjectUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PrincetEvents;
 				TEST_TARGET_NAME = "333 Project";
 			};
 			name = Release;
@@ -664,7 +664,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		680B93991CB3555000670E0B /* Build configuration list for PBXProject "333 Project" */ = {
+		680B93991CB3555000670E0B /* Build configuration list for PBXProject "PrincetEvents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				680B93C61CB3555100670E0B /* Debug */,
@@ -673,7 +673,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		680B93C81CB3555100670E0B /* Build configuration list for PBXNativeTarget "333 Project" */ = {
+		680B93C81CB3555100670E0B /* Build configuration list for PBXNativeTarget "PrincetEvents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				680B93C91CB3555100670E0B /* Debug */,
@@ -682,7 +682,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		680B93CB1CB3555100670E0B /* Build configuration list for PBXNativeTarget "333 ProjectTests" */ = {
+		680B93CB1CB3555100670E0B /* Build configuration list for PBXNativeTarget "PrincetEventsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				680B93CC1CB3555100670E0B /* Debug */,
@@ -691,7 +691,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		680B93CE1CB3555100670E0B /* Build configuration list for PBXNativeTarget "333 ProjectUITests" */ = {
+		680B93CE1CB3555100670E0B /* Build configuration list for PBXNativeTarget "PrincetEventsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				680B93CF1CB3555100670E0B /* Debug */,

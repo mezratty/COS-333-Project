@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "680B939D1CB3555000670E0B"
-               BuildableName = "333 Project.app"
-               BlueprintName = "333 Project"
-               ReferencedContainer = "container:333 Project.xcodeproj">
+               BuildableName = "PrincetEvents.app"
+               BlueprintName = "PrincetEvents"
+               ReferencedContainer = "container:PrincetEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "680B93B31CB3555100670E0B"
-               BuildableName = "333 ProjectTests.xctest"
-               BlueprintName = "333 ProjectTests"
-               ReferencedContainer = "container:333 Project.xcodeproj">
+               BuildableName = "PrincetEvents.xctest"
+               BlueprintName = "PrincetEventsTests"
+               ReferencedContainer = "container:PrincetEvents.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "680B93BE1CB3555100670E0B"
-               BuildableName = "333 ProjectUITests.xctest"
-               BlueprintName = "333 ProjectUITests"
-               ReferencedContainer = "container:333 Project.xcodeproj">
+               BuildableName = "PrincetEvents.xctest"
+               BlueprintName = "PrincetEventsUITests"
+               ReferencedContainer = "container:PrincetEvents.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "680B939D1CB3555000670E0B"
-            BuildableName = "333 Project.app"
-            BlueprintName = "333 Project"
-            ReferencedContainer = "container:333 Project.xcodeproj">
+            BuildableName = "PrincetEvents.app"
+            BlueprintName = "PrincetEvents"
+            ReferencedContainer = "container:PrincetEvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "680B939D1CB3555000670E0B"
-            BuildableName = "333 Project.app"
-            BlueprintName = "333 Project"
-            ReferencedContainer = "container:333 Project.xcodeproj">
+            BuildableName = "PrincetEvents.app"
+            BlueprintName = "PrincetEvents"
+            ReferencedContainer = "container:PrincetEvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "680B939D1CB3555000670E0B"
-            BuildableName = "333 Project.app"
-            BlueprintName = "333 Project"
-            ReferencedContainer = "container:333 Project.xcodeproj">
+            BuildableName = "PrincetEvents.app"
+            BlueprintName = "PrincetEvents"
+            ReferencedContainer = "container:PrincetEvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
