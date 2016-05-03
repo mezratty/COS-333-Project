@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "680B939D1CB3555000670E0B"
-               BuildableName = "PrincetEvents.app"
+               BuildableName = "333 Project.app"
                BlueprintName = "333 Project"
                ReferencedContainer = "container:333 Project.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "680B939D1CB3555000670E0B"
-            BuildableName = "PrincetEvents.app"
+            BuildableName = "333 Project.app"
             BlueprintName = "333 Project"
             ReferencedContainer = "container:333 Project.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "680B939D1CB3555000670E0B"
-            BuildableName = "PrincetEvents.app"
+            BuildableName = "333 Project.app"
             BlueprintName = "333 Project"
             ReferencedContainer = "container:333 Project.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "680B939D1CB3555000670E0B"
-            BuildableName = "PrincetEvents.app"
+            BuildableName = "333 Project.app"
             BlueprintName = "333 Project"
             ReferencedContainer = "container:333 Project.xcodeproj">
          </BuildableReference>
