@@ -77,8 +77,8 @@ for i in range(len(dates)):
 for i in range(len(searchResults)):
 	temp = searchResults[i].split("\", \"")
 	data = {'name': temp[6], 'description': temp[5], 'date': dates[i], 'time': times[i], 'dateInt': dateInts[i], 'location': temp[31], 'source': "tickets"}
-	#firebase.post('/events', data)
-	print(data)
+	firebase.post('/events', data)
+#print(data)
 
 #for i in range(len(script)):
 # 	# data = {'name': teams[i], 'description': opponents[i], 'date': dates[i], 'time': times[i], 'dateInt': dateInts[i]}

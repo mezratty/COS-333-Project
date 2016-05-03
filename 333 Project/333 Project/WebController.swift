@@ -72,7 +72,7 @@ class WebController: UIViewController, UIWebViewDelegate {
                     //notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
                     
                     
-                    notification.alertBody = "\(first) \(last) (\(user)) wants to \(action) a ticket!"
+                    notification.alertBody = "\(last) \(first) (\(user)) wants to \(action) a ticket!"
                     UIApplication.sharedApplication().presentLocalNotificationNow(notification)
                     //UIApplication.sharedApplication().applicationIconBadgeNumber = 0
                     
