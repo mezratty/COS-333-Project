@@ -73,10 +73,10 @@
 		680B93AA1CB3555100670E0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		680B93AD1CB3555100670E0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		680B93AF1CB3555100670E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		680B93B41CB3555100670E0B /* 333 Project.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "333 Project.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		680B93B41CB3555100670E0B /* 333 ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "333 ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		680B93B81CB3555100670E0B /* _33_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _33_ProjectTests.swift; sourceTree = "<group>"; };
 		680B93BA1CB3555100670E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		680B93BF1CB3555100670E0B /* 333 Project.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "333 Project.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		680B93BF1CB3555100670E0B /* 333 ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "333 ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		680B93C31CB3555100670E0B /* _33_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _33_ProjectUITests.swift; sourceTree = "<group>"; };
 		680B93C51CB3555100670E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		680B93E41CB364F600670E0B /* 333Project-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "333Project-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -137,8 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				680B939E1CB3555000670E0B /* 333 Project.app */,
-				680B93B41CB3555100670E0B /* 333 Project.xctest */,
-				680B93BF1CB3555100670E0B /* 333 Project.xctest */,
+				680B93B41CB3555100670E0B /* 333 ProjectTests.xctest */,
+				680B93BF1CB3555100670E0B /* 333 ProjectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 			);
 			name = "333 ProjectTests";
 			productName = "333 ProjectTests";
-			productReference = 680B93B41CB3555100670E0B /* 333 Project.xctest */;
+			productReference = 680B93B41CB3555100670E0B /* 333 ProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		680B93BE1CB3555100670E0B /* 333 ProjectUITests */ = {
@@ -296,7 +296,7 @@
 			);
 			name = "333 ProjectUITests";
 			productName = "333 ProjectUITests";
-			productReference = 680B93BF1CB3555100670E0B /* 333 Project.xctest */;
+			productReference = 680B93BF1CB3555100670E0B /* 333 ProjectUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -593,7 +593,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"PODS_FRAMEWORK_BUILD_PATH[arch=*]" = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-333 Project";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-333-Project";
-				PRODUCT_NAME = "333 Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "333 Project/333Project-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -610,7 +610,7 @@
 				INFOPLIST_FILE = "333 Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-333-Project";
-				PRODUCT_NAME = "333 Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "333 Project/333Project-Bridging-Header.h";
 			};
 			name = Release;
@@ -622,7 +622,7 @@
 				INFOPLIST_FILE = "333 ProjectTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-33-ProjectTests";
-				PRODUCT_NAME = "333 Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/333 Project.app/333 Project";
 			};
 			name = Debug;
@@ -634,7 +634,7 @@
 				INFOPLIST_FILE = "333 ProjectTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-33-ProjectTests";
-				PRODUCT_NAME = "333 Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/333 Project.app/333 Project";
 			};
 			name = Release;
@@ -645,7 +645,7 @@
 				INFOPLIST_FILE = "333 ProjectUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-33-ProjectUITests";
-				PRODUCT_NAME = "333 Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = "333 Project";
 			};
 			name = Debug;
@@ -656,7 +656,7 @@
 				INFOPLIST_FILE = "333 ProjectUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Divya.-33-ProjectUITests";
-				PRODUCT_NAME = "333 Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = "333 Project";
 			};
 			name = Release;
