@@ -248,6 +248,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwL-eX-Bqw" customClass="TicketButton" customModule="_33_Project" customModuleProvider="target">
+                                <rect key="frame" x="168" y="399" width="144" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nwL-eX-Bqw" secondAttribute="height" multiplier="36:13" id="QON-G8-aUA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSell" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sellSegue:" destination="T4q-W6-fGd" eventType="touchUpInside" id="h2k-jS-TGy"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrd-co-UOr">
                                 <rect key="frame" x="8" y="72" width="304" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -255,9 +268,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmz-Ae-M6T" customClass="TicketButton" customModule="_33_Project" customModuleProvider="target">
-                                <rect key="frame" x="8" y="398" width="144" height="53"/>
+                                <rect key="frame" x="8" y="399" width="144" height="52"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="rmz-Ae-M6T" secondAttribute="height" multiplier="144:53" id="u8b-dX-gEL"/>
+                                    <constraint firstAttribute="width" secondItem="rmz-Ae-M6T" secondAttribute="height" multiplier="36:13" id="f6i-1w-HVe"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
@@ -268,24 +281,11 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLf-2F-8xc">
-                                <rect key="frame" x="8" y="333" width="304" height="58"/>
+                                <rect key="frame" x="8" y="365" width="304" height="56"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwL-eX-Bqw" customClass="TicketButton" customModule="_33_Project" customModuleProvider="target">
-                                <rect key="frame" x="168" y="398" width="144" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="nwL-eX-Bqw" secondAttribute="height" multiplier="144:53" id="wt0-nB-Kki"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSell" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="sellSegue:" destination="T4q-W6-fGd" eventType="touchUpInside" id="h2k-jS-TGy"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

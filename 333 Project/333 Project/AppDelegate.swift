@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let secondAction: UIMutableUserNotificationAction = UIMutableUserNotificationAction()
         secondAction.identifier = "SECOND_ACTION"
-        secondAction.title = "Open TigerWire"
+        secondAction.title = "Open PrincetEvents"
         secondAction.destructive = false
         secondAction.authenticationRequired = false
         secondAction.activationMode = UIUserNotificationActivationMode.Foreground
