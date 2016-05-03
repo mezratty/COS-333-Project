@@ -19,8 +19,11 @@ searchResults = re.findall(regex2, script[0])
 
 dates = []
 for i in range(len(searchResults)):
-	temp = searchResults[i].split("\", \"")
-	dates.append(temp[7])
+	temp = searchResults[i].split("\", \"")[7]
+	temp = temp.partition(':')[0]
+	length = len(temp) - 2
+	temp = temp[:length]
+	dates.append(temp)
 
 dateInts = []
 for i in range(len(dates)):
@@ -61,8 +64,10 @@ for i in range(len(dates)):
 # get times
 times = []
 for i in range(len(dates)):
-	temp = dates[i].split(",")
-	times.append(temp[2][6:])
+	date = searchResults[i].split("\", \"")[7]
+	date = date.split(',')
+	date = date[2][6:]
+	times.append(date)
 
 # 6 - name of show
 # 7 - date and time
@@ -72,7 +77,8 @@ for i in range(len(dates)):
 for i in range(len(searchResults)):
 	temp = searchResults[i].split("\", \"")
 	data = {'name': temp[6], 'description': temp[5], 'date': dates[i], 'time': times[i], 'dateInt': dateInts[i], 'location': temp[31], 'source': "tickets"}
-	firebase.post('/events', data)
+	#firebase.post('/events', data)
+	print(data)
 
 #for i in range(len(script)):
 # 	# data = {'name': teams[i], 'description': opponents[i], 'date': dates[i], 'time': times[i], 'dateInt': dateInts[i]}
