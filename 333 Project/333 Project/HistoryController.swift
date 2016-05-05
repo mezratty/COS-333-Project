@@ -20,8 +20,10 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         let urlString = "https://blistering-torch-3510.firebaseio.com/matches/" + globalNetId
         let ref = Firebase(url:urlString)
-        
-        
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+        let tabArray = self.tabBarController?.tabBar.items as NSArray!
+        let tabItem = tabArray.objectAtIndex(2) as! UITabBarItem
+        tabItem.badgeValue = nil
         
         /*if (super.superclass?.sharedApplication().applicationIconBadgeNumber > 0) {
             let imgg:UIImage = UIImage(named: "rsz_1rsz_1rsz_upcoming2.png")!
@@ -152,11 +154,44 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
         // Dispose of any resources that can be recreated.
     }
     
+    override func loadView() {
+        super.loadView()
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(false)
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+        let tabArray = self.tabBarController?.tabBar.items as NSArray!
+            let tabItem = tabArray.objectAtIndex(2) as! UITabBarItem
+            tabItem.badgeValue = nil
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(false)
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+        let tabArray = self.tabBarController?.tabBar.items as NSArray!
+            let tabItem = tabArray.objectAtIndex(2) as! UITabBarItem
+            tabItem.badgeValue = nil
+    }
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(false)
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+            let tabArray = self.tabBarController?.tabBar.items as NSArray!
+            let tabItem = tabArray.objectAtIndex(2) as! UITabBarItem
+            tabItem.badgeValue = nil
+    }
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(false)
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+            let tabArray = self.tabBarController?.tabBar.items as NSArray!
+            let tabItem = tabArray.objectAtIndex(2) as! UITabBarItem
+            tabItem.badgeValue = nil
     }
     
     

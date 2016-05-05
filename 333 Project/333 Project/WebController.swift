@@ -25,7 +25,6 @@ class WebController: UIViewController, UIWebViewDelegate {
         myWebView.delegate = self
         myWebView.scalesPageToFit = true
         
-        
         //1. Load web site into my web view
         
         let myURL = NSURL(string: "https://awojak.mycpanel2.princeton.edu/333");
@@ -75,7 +74,6 @@ class WebController: UIViewController, UIWebViewDelegate {
                     notification.alertBody = "\(last) \(first) (\(user)) wants to \(action) a ticket!"
                     UIApplication.sharedApplication().presentLocalNotificationNow(notification)
                     //UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-                    
                     ref.removeValue()
                 //}
             })
