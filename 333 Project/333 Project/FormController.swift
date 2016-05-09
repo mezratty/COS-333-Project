@@ -27,30 +27,6 @@ class FormController: UIViewController, UITextFieldDelegate {
         firstName.returnKeyType = .Done
         lastName.delegate = self
         firstName.delegate = self
-        
-        /*
-        // Do any additional setup after loading the view, typically from a nib
-        /*
-        
-        let dateComp: NSDateComponents = NSDateComponents()
-        dateComp.year = 2016
-        dateComp.month = 04
-        dateComp.day = 26
-        dateComp.hour = 17
-        dateComp.minute = 26
-        
-         */
-        //let calendar: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
-        //let date: NSDate = calendar.dateFromComponents(dateComp)!
-        let notification: UILocalNotification = UILocalNotification()
-        notification.category = "FIRST_CATEGORY"
-        notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
-        notification.alertBody = "(Someone) wants to buy (sell you) a ticket!"
-        //notification.fireDate = date
-        
-        //UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
- */
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,8 +43,12 @@ class FormController: UIViewController, UITextFieldDelegate {
         var matchFirst = ""
         var matchNetId = ""
         let matchEventId = data.objectAtIndex(0) as! String
+        let eventTitle = data.objectAtIndex(3) as! String
+        let eventDate = data.objectAtIndex(4) as! String
+        let eventTime = data.objectAtIndex(5) as! String
         
-    refTwo.queryOrderedByChild("eventId").queryEqualToValue(matchEventId).queryLimitedToFirst(1).observeSingleEventOfType(.Value, withBlock: {snapshot in
+    //refTwo.queryOrderedByChild("eventId").queryEqualToValue(matchEventId).queryLimitedToFirst(1).observeSingleEventOfType(.Value, withBlock: {snapshot in
+        refTwo.queryOrderedByChild("event").queryEqualToValue("\(eventTitle)#\(eventDate)#\(eventTime)").queryLimitedToFirst(1).observeSingleEventOfType(.Value, withBlock: {snapshot in
         if (!snapshot.exists()) {
             let urlString = "https://blistering-torch-3510.firebaseio.com/" + (self.data.objectAtIndex(1) as! String)
             let ref = Firebase(url:urlString)
@@ -76,7 +56,8 @@ class FormController: UIViewController, UITextFieldDelegate {
             let first = self.firstName.text as! AnyObject
             let last = self.lastName.text as! AnyObject
             
-            let ticket = ["eventId":matchEventId, "user": globalNetId, "first": first, "last": last]
+            //let ticket = ["eventId":matchEventId, "user": globalNetId, "first": first, "last": last]
+            let ticket = ["event": "\(eventTitle)#\(eventDate)#\(eventTime)", "user": globalNetId, "first": first, "last": last]
             let ticketRef = ref.childByAutoId()
             ticketRef.setValue(ticket)
             
@@ -94,7 +75,9 @@ class FormController: UIViewController, UITextFieldDelegate {
                 var ref = Firebase(url:urlString)
                 var refTwo = Firebase(url:urlStringTwo)
                 
-                var ticket = ["eventId":matchEventId, "user": matchNetId, "first": matchFirst, "last": matchLast,
+                /*var ticket = ["eventId":matchEventId, "user": matchNetId, "first": matchFirst, "last": matchLast,
+                    "type":self.data.objectAtIndex(1)]*/
+                var ticket = ["event":"\(eventTitle)#\(eventDate)#\(eventTime)", "user": matchNetId, "first": matchFirst, "last": matchLast,
                     "type":self.data.objectAtIndex(1)]
                 var ticketRef = ref.childByAutoId()
                 var ticketRefTwo = refTwo.childByAutoId()
@@ -109,7 +92,8 @@ class FormController: UIViewController, UITextFieldDelegate {
                 let first = self.firstName.text as! AnyObject
                 let last = self.lastName.text as! AnyObject
                 
-                ticket = ["eventId":matchEventId, "user": globalNetId, "first": first as! String, "last": last as! String, "type": self.data.objectAtIndex(2)]
+                /* ticket = ["eventId":matchEventId, "user": globalNetId, "first": first as! String, "last": last as! String, "type": self.data.objectAtIndex(2)] */
+                ticket = ["event":"\(eventTitle)#\(eventDate)#\(eventTime)", "user": globalNetId, "first": first as! String, "last": last as! String, "type": self.data.objectAtIndex(2)]
                 ticketRef = ref.childByAutoId()
                 ticketRef.setValue(ticket)
                 ticketRefTwo = refTwo.childByAutoId()

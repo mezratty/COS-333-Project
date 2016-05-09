@@ -15,6 +15,9 @@ class EventView: UIViewController {
     //var eventId:Int = 0
     var eventId:String = ""
     var dataToPass: NSMutableArray = []
+    var nameString:String = ""
+    var dateString:String = ""
+    var timeString:String = ""
     
     
     @IBOutlet weak var eventTitle: UILabel!
@@ -86,6 +89,7 @@ class EventView: UIViewController {
          ref.observeEventType(.Value, withBlock: {snapshot in
 
          let name = String(snapshot.value["name"] as! String)
+        self.nameString = name
         self.eventTitle.text = "Event: " + name
             
          var description = String(snapshot.value["description"] as? String)
@@ -123,6 +127,7 @@ class EventView: UIViewController {
                 date = date.substringToIndex(endIndex)
             }
             
+            self.dateString = date
             self.eventDate.text = "Date: " + date
             
          var time = String(snapshot.value["time"] as? String)
@@ -132,6 +137,8 @@ class EventView: UIViewController {
                 let endIndex = time.endIndex.advancedBy(-2)
                 time = time.substringToIndex(endIndex)
             }
+            
+            self.timeString = time
             self.eventTime.text = "Time: " + time
             
         var location = String(snapshot.value["location"] as? String)
@@ -166,6 +173,9 @@ class EventView: UIViewController {
         self.dataToPass.addObject(eventId)
         self.dataToPass.addObject("buy")
         self.dataToPass.addObject("sell")
+        self.dataToPass.addObject(nameString)
+        self.dataToPass.addObject(dateString)
+        self.dataToPass.addObject(timeString)
         self.performSegueWithIdentifier("toForm", sender: dataToPass)
     }
     
@@ -174,6 +184,9 @@ class EventView: UIViewController {
         self.dataToPass.addObject(eventId)
         self.dataToPass.addObject("sell")
         self.dataToPass.addObject("buy")
+        self.dataToPass.addObject(nameString)
+        self.dataToPass.addObject(dateString)
+        self.dataToPass.addObject(timeString)
         self.performSegueWithIdentifier("toForm", sender: dataToPass)
         
     }

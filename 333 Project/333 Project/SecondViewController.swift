@@ -113,43 +113,26 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             
             self.tableView.reloadData()
-            // print("query")
-            //print(self.events.count)
             
         })
         
-        
-        
-        
-        //self.tableView.reloadData()
         
         tableView.frame         =   CGRectMake(0, 50, 320, 500);
         tableView.delegate      =   self
         tableView.dataSource    =   self
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
-        //self.view.addSubview(tableView)
-
-        //tableView.layer.borderColor = UIColor.blackColor().CGColor
-        //tableView.layer.backgroundColor = UIColor.redColor().CGColor
         super.viewDidLoad()
         
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return events.count
-        //if (section == 0) {print("here"); return 2}
-        //if (section == 1) {print("here2"); return events.count-2}
-        //return 1
         return self.events.objectAtIndex(section).count
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        
-        //return 2
         return self.events.count
         
     }
@@ -190,9 +173,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if (events.count) > 0 {
         
         cell.selectionStyle = UITableViewCellSelectionStyle.None
-        //print(self.events.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row).objectAtIndex(0))
-            
-        //cell.textLabel?.text = (self.events[indexPath.row]).objectAtIndex(0) as! String
         cell.textLabel?.text = self.events.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row).objectAtIndex(0) as! String
         }
         
@@ -204,10 +184,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        //print(events[indexPath.row].objectAtIndex(1))
-        
-        //self.performSegueWithIdentifier("UpToEvent", sender: indexPath.row)
-        //self.performSegueWithIdentifier("UpToEvent", sender: self.events[indexPath.row].objectAtIndex(1))
         self.performSegueWithIdentifier("UpToEvent", sender: self.events.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row).objectAtIndex(1))
     }
     
@@ -220,11 +196,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let dest = segue.destinationViewController as! EventView
             //dest.eventId = sender as! Int
             dest.eventId = sender as! String
-            
-           // let titleString = String(format: "%@%d", "Id:", sender as! Int)
-           // dest.navigationItem.title = titleString
-            
-            
+        
             navigationController?.navigationBar.barTintColor = UIColor.blackColor()
             navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         }

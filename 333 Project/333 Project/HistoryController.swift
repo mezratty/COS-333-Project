@@ -56,13 +56,14 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
             let first = String(snapshot.value["first"] as! String)
             let last = String(snapshot.value["last"] as! String)
             let user = String(snapshot.value["user"] as! String)
-            let eventId = String(snapshot.value["eventId"] as! String)
+            //let eventId = String(snapshot.value["eventId"] as! String)
+            let eventId = String(snapshot.value["event"] as! String)
             let type = String(snapshot.value["type"] as! String)
             
+            /*
             let urlStringTwo = "https://blistering-torch-3510.firebaseio.com/events/" + eventId
             
             let refTwo = Firebase(url:urlStringTwo)
-            print("here")
             
             var eventName = ""
             
@@ -85,9 +86,21 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
             UIApplication.sharedApplication().presentLocalNotificationNow(notification)
             UIApplication.sharedApplication().applicationIconBadgeNumber = 0
                  */
+ 
+             */
+            
+            let eventArr = eventId.characters.split{$0 == "#"}.map(String.init)
+            
+            event.addObject(first)
+            event.addObject(last)
+            event.addObject(user)
+            event.addObject(eventArr[0])
+            event.addObject(type)
+            self.items.append(event)
+            
             self.tableView.reloadData()
                 
-            })
+            //})
         })
   
         super.viewDidLoad()
