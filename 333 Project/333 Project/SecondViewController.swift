@@ -97,7 +97,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             //if (tempEvents.count > 0) {self.events.addObject(tempEvents)}
             self.temp = tempEvents
             var startIndex = 0
-            var currentDate = 20160401
+            //var currentDate = 20160401
+            var currentDate = today
             for i in 0 ..< self.temp.count {
                 if (self.temp[i].objectAtIndex(3) as!Int != currentDate) {
                     var dayEvents = NSMutableArray()
