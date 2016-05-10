@@ -7,10 +7,11 @@ import sys
 
 firebase = firebase.FirebaseApplication('https://blistering-torch-3510.firebaseio.com/', None)
 
-# r = requests.get('https://tickets.princeton.edu/Online/')
+#r = requests.get('https://tickets.princeton.edu/Online/')
 # soup = BeautifulSoup(r.content, 'html5lib')
+#soup = BeautifulSoup(r.content)
 
-# script = soup.find_all("script")[18].text
+#script = soup.find_all("script")[18].text
 script = sys.stdin.read()
 regex =  re.compile('searchResults.:[^`]*searchFilters', re.MULTILINE)
 script = re.findall(regex, script)
